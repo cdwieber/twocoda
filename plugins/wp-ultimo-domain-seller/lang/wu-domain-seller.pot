@@ -1,0 +1,468 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: ../inc/class-wu-domain-seller-opensrs.php:213
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wp-ultimo-domain-seller 0.0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-20 17:50-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../wp-ultimo-domain-seller.php:91
+msgid "WP Ultimo - Feature Plugin: Domain Selling"
+msgstr ""
+
+#: ../wp-ultimo-domain-seller.php:247
+msgid ""
+"WP Ultimo - Feature Plugin: Domain Selling requires WP Ultimo to run. "
+"Install and active WP Ultimo to use WP Ultimo - Feature Plugin: Domain "
+"Selling."
+msgstr ""
+
+#: ../wp-ultimo-domain-seller.php:268
+msgid ""
+"WP Ultimo - Feature Plugin: Domain Selling requires WP Ultimo version 1.6.0. "
+msgstr ""
+
+#: ../inc/class-wu-addon-updater-free.php:103
+msgid "Status: Activated - Golden Ticket"
+msgstr ""
+
+#: ../inc/class-wu-addon-updater-free.php:113
+msgid "Status: Activated"
+msgstr ""
+
+#: ../inc/class-wu-addon-updater-free.php:117
+msgid "Status: License no longer valid - Refund issued"
+msgstr ""
+
+#: ../inc/class-wu-addon-updater-free.php:123
+msgid "Status: Not Activated - Invalid License Key"
+msgstr ""
+
+#: ../inc/class-wu-addon-updater-free.php:162
+msgid "Activate your Add-ons"
+msgstr ""
+
+#: ../inc/class-wu-addon-updater-free.php:163
+msgid ""
+"Use the license key you received with the add-on files to activate your copy "
+"and be notified of new versions automatically."
+msgstr ""
+
+#: ../inc/class-wu-addon-updater-free.php:178
+#: ../inc/class-wu-addon-updater-free.php:189
+#, php-format
+msgid "License Key - %s"
+msgstr ""
+
+#: ../inc/class-wu-addon-updater-free.php:179
+msgid ""
+"You have a golden ticket license. There's no need to activate each add-on "
+"individually."
+msgstr ""
+
+#: ../inc/class-wu-addon-updater-free.php:190
+msgid ""
+"Put the code you received alongside the add-on when you finalized your "
+"purchase."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:124
+#, php-format
+msgid "Domain %s saved to site ID %s"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:181
+#, php-format
+msgid "Order created on OpenSRS with id %s and status %s, domain: %s"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:192
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:272
+#, php-format
+msgid ""
+"Adding domain %s as an inactive mapping to site ID %s. Waiting for DNS "
+"propagation to occur."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:202
+#, php-format
+msgid "Error registering domain %s to site ID %s: $s"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:327
+#, php-format
+msgid ""
+"DNS propagation for domain %s and site ID %s over, activating domain mapping"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:472
+msgid "Select Provider"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:524
+msgid "Domain Registration Options"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:525
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:579
+msgid "Configure domain registration during signup."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:531
+msgid "Enable Domain Registration"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:532
+msgid ""
+"Do you want to enable domain registration for your clients? You will need to "
+"enable this feature on each of the plans individually."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:533
+msgid "You can select which plans can have access to this feature."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:540
+msgid "Display Domain Registration Step for all Plans"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:541
+msgid ""
+"If enabled, this option will display the domain register step for all plans, "
+"even when they do not support domain registration (in this case, an error "
+"message will be displayed)."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:552
+msgid "Previous Step Helper Text"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:553
+msgid ""
+"Allows you to edit the message that is displayed to the user on the Site "
+"Title/Subdomain step. Leave blank to hide."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:557
+msgid "Don't worry! You'll be able to select a custom domain on the next step!"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:565
+msgid "Domain Search Step Helper Text"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:566
+msgid ""
+"Allows you to edit the message that is displayed to the user on the Domain "
+"Search step. Leave blank to hide."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:570
+msgid "Let's pick an awesome domain name for your site!"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:578
+msgid "Domain Registration Contact Options"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:588
+msgid "First Name"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:601
+msgid "Last Name"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:614
+msgid "Organization Name"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:627
+msgid "Phone"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:628
+msgid "+1.4165550123x1902"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:640
+msgid "Address"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:641
+msgid "32 Oak Street"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:653
+msgid "City"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:654
+msgid "Santa Clara"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:666
+msgid "State"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:667
+msgid "CA"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:679
+msgid "Country"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:680
+msgid "US"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:693
+msgid "Postal Code"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:694
+msgid "90210"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:706
+msgid "Domain Registration Provider Options"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:707
+msgid "Configure specific domain registration provider options."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:716
+msgid "Domain Registration Provider"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-action-dispatcher.php:717
+msgid "Select which domain registration provider you want to use."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:154
+#, php-format
+msgid ""
+"In order for OpenSRS to work, you'll need to whitelist the network IP "
+"address on your OpenSRS management panel (test and live). You can find more "
+"instructions on the %s. <br>Your network's IP Address is <strong>%s</strong>"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:154
+msgid "OpenSRS tutorial page"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:172
+msgid "OpenSRS Options"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:173
+msgid "Configure the OpenSRS integration."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:179
+msgid "OpenSRS Sandbox"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:180
+msgid "Enable/Disable the test mode."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:181
+msgid ""
+"If you use the sandbox mode, keep in mind that the management panel is "
+"different from the live one. The same is valid for the API key and IP "
+"whitelist. Be sure to get the integration info from the right OpenSRS "
+"environment."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:188
+msgid "OpenSRS Reseller Username"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:189
+msgid "Your OpenSRS username"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:196
+msgid "OpenSRS API Key"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:197
+msgid "Your OpenSRS API Key"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:204
+msgid "OpenSRS IP Instructions"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:211
+msgid "Allowed TLDs"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:212
+#, php-format
+msgid ""
+"Select the TLDs you want to make available for your end users to choose "
+"from. Keep in mind that due to technical limitations, WP Ultimo does not yet "
+"support all TLDs available on OpenSRS. Each TLD has a different price. Check "
+"the %spricing page%s on OpenSRS for more information."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:214
+msgid ".com, .org, .net"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:222
+msgid "Order Bahavior"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:223
+msgid ""
+"Select if you want the domain to be purchased right after the signup is "
+"over, or if you wish to save the order as a draft and only execute it (pay "
+"for it) when you receive the first payment from your client."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:228
+msgid "Only finalize order after first payment from user"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:229
+msgid "Finalize order right after the registration is over"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:235
+msgid "Registration Period"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:236
+msgid "The length of the registration period in years."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:248
+msgid "Auto-renew Domains?"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:249
+msgid "If enabled, domains will be registered with a auto-renew flag."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:257
+msgid "Enable WHOIS Privacy Protection?"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:258
+msgid ""
+"If enabled, domains will be registered with the WHOIS Privacy Protection "
+"flag on OpenSRS. This adds an extra cost to the domain purchase value."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:266
+msgid "Test Connectivity"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:267
+msgid ""
+"Clicking the button will try to send an API request to the provider's server "
+"to see if your settings are correctly set up."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:268
+msgid "Send Test API Call"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-opensrs.php:307
+msgid "Successfully able to connect to OpenSRS!"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-plan-support.php:82
+msgid "Domain Register"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-ui-elements.php:142
+msgid "The plan you selected does not support custom domain registration."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-ui-elements.php:148
+#, php-format
+msgid ""
+"A custom domain will allow your visitors to access your site via a URL that "
+"looks something like %s instead of %s."
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-ui-elements.php:154
+msgid "&larr; Select a Different Plan"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-ui-elements.php:160
+msgid "Move on to the Next Step &rarr;"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-ui-elements.php:174
+msgid "Search Custom Domain"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-ui-elements.php:218
+msgid "Select Domain and Continue"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-ui-elements.php:242
+msgid "Skip this Step &rarr;"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-ui-elements.php:283
+msgid "Site URL Preview"
+msgstr ""
+
+#: ../inc/class-wu-domain-seller-ui-elements.php:296
+msgid "Custom Domain"
+msgstr ""
+
+#: ../views/domain-search-results.php:6
+msgid "Searching domains..."
+msgstr ""
+
+#: ../views/domain-search-results.php:14
+msgid "Type a domain to search..."
+msgstr ""
+
+#: ../views/domain-search-results.php:23
+msgid "Taken"
+msgstr ""
+
+#: ../views/domain-search-results.php:24
+msgid "Available"
+msgstr ""
+
+#: ../views/domain-search-results.php:27
+#, php-format
+msgid "Your website URL will be <strong>%s</strong>"
+msgstr ""
+
+#: ../views/domain-search-results.php:30
+msgid "Free"
+msgstr ""
+
+#: ../views/options-panel.php:15
+msgid "Domain Registration"
+msgstr ""
+
+#: ../views/options-panel.php:17
+msgid ""
+"Enable clients of this plan to register a custom domain while signing up for "
+"an account."
+msgstr ""

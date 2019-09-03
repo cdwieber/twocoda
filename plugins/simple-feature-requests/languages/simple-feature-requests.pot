@@ -1,0 +1,264 @@
+# Copyright (C) 2018 simple-feature-requests
+# This file is distributed under the same license as the simple-feature-requests package.
+msgid ""
+msgstr ""
+"Project-Id-Version: simple-feature-requests\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: inc/class-ajax.php:49, inc/class-ajax.php:104, svn/trunk/inc/class-ajax.php:49, svn/trunk/inc/class-ajax.php:104, svn/tags/1.0.0/inc/class-ajax.php:49, svn/tags/1.0.0/inc/class-ajax.php:104, svn/tags/1.0.1/inc/class-ajax.php:49, svn/tags/1.0.1/inc/class-ajax.php:104
+msgid "Nonce check failed."
+msgstr ""
+
+#: inc/class-ajax.php:57, svn/trunk/inc/class-ajax.php:57, svn/tags/1.0.0/inc/class-ajax.php:57, svn/tags/1.0.1/inc/class-ajax.php:57
+msgid "Simple Feature Requests: No post ID sent to AJAX."
+msgstr ""
+
+#: inc/class-ajax.php:64, svn/trunk/inc/class-ajax.php:64, svn/tags/1.0.0/inc/class-ajax.php:64, svn/tags/1.0.1/inc/class-ajax.php:64
+msgid "Simple Feature Requests: No post found for ID %d"
+msgstr ""
+
+#: inc/class-assets.php:43, svn/trunk/inc/class-assets.php:43, svn/tags/1.0.0/inc/class-assets.php:43, svn/tags/1.0.1/inc/class-assets.php:43
+msgid "Vote"
+msgstr ""
+
+#: inc/class-assets.php:44, svn/trunk/inc/class-assets.php:44, svn/tags/1.0.0/inc/class-assets.php:44, svn/tags/1.0.1/inc/class-assets.php:44
+msgid "Voting"
+msgstr ""
+
+#: inc/class-assets.php:45, svn/trunk/inc/class-assets.php:45, svn/tags/1.0.0/inc/class-assets.php:45, svn/tags/1.0.1/inc/class-assets.php:45
+msgid "Voted"
+msgstr ""
+
+#: inc/class-factory.php:119, svn/trunk/inc/class-factory.php:41, svn/tags/1.0.0/inc/class-factory.php:41, svn/tags/1.0.1/inc/class-factory.php:41
+msgid "A request with that title already exists."
+msgstr ""
+
+#: inc/class-factory.php:137, svn/trunk/inc/class-factory.php:56, svn/tags/1.0.0/inc/class-factory.php:56, svn/tags/1.0.1/inc/class-factory.php:56
+msgid "There was an error adding your feature request. Please try again."
+msgstr ""
+
+#: inc/class-factory.php:149
+msgid "Thank you for your request."
+msgstr ""
+
+#: inc/class-factory.php:152
+msgid "It is currently %s."
+msgstr ""
+
+#: inc/class-post-types.php:30, svn/trunk/inc/class-post-types.php:30, svn/tags/1.0.0/inc/class-post-types.php:30, svn/tags/1.0.1/inc/class-post-types.php:30
+msgid "Feature Requests"
+msgstr ""
+
+#: inc/class-post-types.php:31, svn/trunk/inc/class-post-types.php:31, svn/tags/1.0.0/inc/class-post-types.php:31, svn/tags/1.0.1/inc/class-post-types.php:31
+msgid "Feature Request"
+msgstr ""
+
+#: inc/class-post-types.php:32, svn/trunk/inc/class-post-types.php:32, svn/tags/1.0.0/inc/class-post-types.php:32, svn/tags/1.0.1/inc/class-post-types.php:32
+msgid "Requests"
+msgstr ""
+
+#: inc/class-post-types.php:183, svn/trunk/inc/class-post-types.php:183, svn/tags/1.0.0/inc/class-post-types.php:183, svn/tags/1.0.1/inc/class-post-types.php:183
+msgid "Author"
+msgstr ""
+
+#: inc/class-post-types.php:184, inc/class-template-methods.php:48, svn/trunk/inc/class-post-types.php:184, svn/tags/1.0.0/inc/class-post-types.php:184, svn/tags/1.0.1/inc/class-post-types.php:184
+msgid "Status"
+msgstr ""
+
+#: inc/class-post-types.php:185, svn/trunk/inc/class-post-types.php:185, svn/tags/1.0.0/inc/class-post-types.php:185, svn/tags/1.0.1/inc/class-post-types.php:185
+msgid "Votes"
+msgstr ""
+
+#: inc/class-post-types.php:248, svn/trunk/inc/class-post-types.php:248, svn/tags/1.0.0/inc/class-post-types.php:248, svn/tags/1.0.1/inc/class-post-types.php:248
+msgid "Information"
+msgstr ""
+
+#: inc/class-submission.php:37, svn/trunk/inc/class-submission.php:37, svn/tags/1.0.0/inc/class-submission.php:37, svn/tags/1.0.1/inc/class-submission.php:37
+msgid "There was an error submitting your request."
+msgstr ""
+
+#: inc/class-submission.php:41, svn/trunk/inc/class-submission.php:41, svn/tags/1.0.0/inc/class-submission.php:41, svn/tags/1.0.1/inc/class-submission.php:41
+msgid "Please enter a request title."
+msgstr ""
+
+#: inc/class-submission.php:45, svn/trunk/inc/class-submission.php:45, svn/tags/1.0.0/inc/class-submission.php:45, svn/tags/1.0.1/inc/class-submission.php:45
+msgid "Please enter a request description."
+msgstr ""
+
+#: inc/class-template-hooks.php:227, svn/trunk/inc/class-template-hooks.php:227, svn/tags/1.0.0/inc/class-template-hooks.php:227, svn/tags/1.0.1/inc/class-template-hooks.php:227
+msgid "Powered by"
+msgstr ""
+
+#: inc/class-template-hooks.php:229, svn/trunk/inc/class-template-hooks.php:229, svn/tags/1.0.0/inc/class-template-hooks.php:229, svn/tags/1.0.1/inc/class-template-hooks.php:229
+msgid "Simple feature Requests"
+msgstr ""
+
+#: inc/class-template-methods.php:24, svn/trunk/inc/class-template-methods.php:23, svn/tags/1.0.0/inc/class-template-methods.php:23, svn/tags/1.0.1/inc/class-template-methods.php:23
+msgid "Latest"
+msgstr ""
+
+#: inc/class-template-methods.php:30, svn/trunk/inc/class-template-methods.php:28, svn/tags/1.0.0/inc/class-template-methods.php:28, svn/tags/1.0.1/inc/class-template-methods.php:28
+msgid "Top"
+msgstr ""
+
+#: inc/class-template-methods.php:39, svn/trunk/inc/class-template-methods.php:36, svn/tags/1.0.0/inc/class-template-methods.php:36, svn/tags/1.0.1/inc/class-template-methods.php:36
+msgid "My Requests"
+msgstr ""
+
+#: inc/class-template-methods.php:147, svn/trunk/inc/class-template-methods.php:79, svn/tags/1.0.0/inc/class-template-methods.php:79, svn/tags/1.0.1/inc/class-template-methods.php:79
+msgid "vote"
+msgid_plural "votes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-template-methods.php:199, svn/trunk/inc/class-template-methods.php:121, svn/tags/1.0.0/inc/class-template-methods.php:121, svn/tags/1.0.1/inc/class-template-methods.php:121
+msgid "shared this idea"
+msgstr ""
+
+#: inc/class-template-methods.php:255, svn/trunk/inc/class-template-methods.php:177, svn/tags/1.0.0/inc/class-template-methods.php:177, svn/tags/1.0.1/inc/class-template-methods.php:177
+msgid "&larr; All Feature Requests"
+msgstr ""
+
+#: inc/class-user.php:86, svn/trunk/inc/class-user.php:86, svn/tags/1.0.0/inc/class-user.php:86, svn/tags/1.0.1/inc/class-user.php:86
+msgid "There was an error logging you in."
+msgstr ""
+
+#: inc/class-user.php:176, svn/trunk/inc/class-user.php:176, svn/tags/1.0.0/inc/class-user.php:176, svn/tags/1.0.1/inc/class-user.php:176
+msgid "You need to login to vote for a feature."
+msgstr ""
+
+#: inc/class-user.php:182, svn/trunk/inc/class-user.php:182, svn/tags/1.0.0/inc/class-user.php:182, svn/tags/1.0.1/inc/class-user.php:182
+msgid "You have already voted for this feature."
+msgstr ""
+
+#: inc/class-user.php:194, svn/trunk/inc/class-user.php:194, svn/tags/1.0.0/inc/class-user.php:194, svn/tags/1.0.1/inc/class-user.php:194
+msgid "There was an error adding your vote."
+msgstr ""
+
+#: inc/class-user.php:221, svn/trunk/inc/class-user.php:221, svn/tags/1.0.0/inc/class-user.php:221, svn/tags/1.0.1/inc/class-user.php:221
+msgid "You need to login to remove a vote from a feature."
+msgstr ""
+
+#: inc/class-user.php:227, svn/trunk/inc/class-user.php:227, svn/tags/1.0.0/inc/class-user.php:227, svn/tags/1.0.1/inc/class-user.php:227
+msgid "You have not voted for this feature yet."
+msgstr ""
+
+#: inc/class-user.php:235, svn/trunk/inc/class-user.php:235, svn/tags/1.0.0/inc/class-user.php:235, svn/tags/1.0.1/inc/class-user.php:235
+msgid "You cannot remove a vote for your own request."
+msgstr ""
+
+#: inc/class-user.php:248, svn/trunk/inc/class-user.php:248, svn/tags/1.0.0/inc/class-user.php:248, svn/tags/1.0.1/inc/class-user.php:248
+msgid "There was an error removing your vote."
+msgstr ""
+
+#: inc/class-user.php:275, inc/class-user.php:323, svn/trunk/inc/class-user.php:275, svn/trunk/inc/class-user.php:323, svn/tags/1.0.0/inc/class-user.php:275, svn/tags/1.0.0/inc/class-user.php:323, svn/tags/1.0.1/inc/class-user.php:275, svn/tags/1.0.1/inc/class-user.php:323
+msgid "Please enter an email."
+msgstr ""
+
+#: inc/class-user.php:280, inc/class-user.php:328, svn/trunk/inc/class-user.php:280, svn/trunk/inc/class-user.php:328, svn/tags/1.0.0/inc/class-user.php:280, svn/tags/1.0.0/inc/class-user.php:328, svn/tags/1.0.1/inc/class-user.php:280, svn/tags/1.0.1/inc/class-user.php:328
+msgid "Please enter a password."
+msgstr ""
+
+#: inc/class-user.php:318, svn/trunk/inc/class-user.php:318, svn/tags/1.0.0/inc/class-user.php:318, svn/tags/1.0.1/inc/class-user.php:318
+msgid "Please enter a username."
+msgstr ""
+
+#: inc/class-user.php:333, svn/trunk/inc/class-user.php:333, svn/tags/1.0.0/inc/class-user.php:333, svn/tags/1.0.1/inc/class-user.php:333
+msgid "Please enter a repeat password."
+msgstr ""
+
+#: inc/class-user.php:338, svn/trunk/inc/class-user.php:338, svn/tags/1.0.0/inc/class-user.php:338, svn/tags/1.0.1/inc/class-user.php:338
+msgid "Your passwords did not match."
+msgstr ""
+
+#: inc/class-user.php:350, svn/trunk/inc/class-user.php:350, svn/tags/1.0.0/inc/class-user.php:350, svn/tags/1.0.1/inc/class-user.php:350
+msgid "That username has already been registered."
+msgstr ""
+
+#: inc/class-user.php:355, svn/trunk/inc/class-user.php:355, svn/tags/1.0.0/inc/class-user.php:355, svn/tags/1.0.1/inc/class-user.php:355
+msgid "That email has already been registered."
+msgstr ""
+
+#: inc/class-user.php:366, svn/trunk/inc/class-user.php:366, svn/tags/1.0.0/inc/class-user.php:366, svn/tags/1.0.1/inc/class-user.php:366
+msgid "There was an issue registering your account. Please try again."
+msgstr ""
+
+#: templates/archive/submission-form.php:22, svn/trunk/templates/archive/submission-form.php:22, svn/tags/1.0.0/templates/archive/submission-form.php:22, svn/tags/1.0.1/templates/archive/submission-form.php:22
+msgid "Your Request"
+msgstr ""
+
+#: templates/archive/submission-form.php:24, svn/trunk/templates/archive/submission-form.php:24, svn/tags/1.0.0/templates/archive/submission-form.php:24, svn/tags/1.0.1/templates/archive/submission-form.php:24
+msgid "Enter your request..."
+msgstr ""
+
+#: templates/archive/submission-form.php:31, svn/trunk/templates/archive/submission-form.php:31, svn/tags/1.0.0/templates/archive/submission-form.php:31, svn/tags/1.0.1/templates/archive/submission-form.php:31
+msgid "Description"
+msgstr ""
+
+#: templates/archive/submission-form.php:47, svn/trunk/templates/archive/submission-form.php:47, svn/tags/1.0.0/templates/archive/submission-form.php:47, svn/tags/1.0.1/templates/archive/submission-form.php:47
+msgid "Submit"
+msgstr ""
+
+#: templates/archive/submission-form.php:52, svn/trunk/templates/archive/submission-form.php:52, svn/tags/1.0.0/templates/archive/submission-form.php:52, svn/tags/1.0.1/templates/archive/submission-form.php:52
+msgid "Vote for an existing request (%s)"
+msgstr ""
+
+#: templates/archive/submission-form.php:54, svn/trunk/templates/archive/submission-form.php:54, svn/tags/1.0.0/templates/archive/submission-form.php:54, svn/tags/1.0.1/templates/archive/submission-form.php:54
+msgid "Post a new request"
+msgstr ""
+
+#: templates/components/login-form-fields.php:19, svn/trunk/templates/components/login-form-fields.php:19, svn/tags/1.0.0/templates/components/login-form-fields.php:19, svn/tags/1.0.1/templates/components/login-form-fields.php:19
+msgid "Don't have an account?"
+msgstr ""
+
+#: templates/components/login-form-fields.php:21, templates/sidebar/login.php:29, svn/trunk/templates/components/login-form-fields.php:21, svn/trunk/templates/sidebar/login.php:29, svn/tags/1.0.0/templates/components/login-form-fields.php:21, svn/tags/1.0.0/templates/sidebar/login.php:29, svn/tags/1.0.1/templates/components/login-form-fields.php:21, svn/tags/1.0.1/templates/sidebar/login.php:29
+msgid "Register"
+msgstr ""
+
+#: templates/components/login-form-fields.php:25, svn/trunk/templates/components/login-form-fields.php:25, svn/tags/1.0.0/templates/components/login-form-fields.php:25, svn/tags/1.0.1/templates/components/login-form-fields.php:25
+msgid "Already have an account?"
+msgstr ""
+
+#: templates/components/login-form-fields.php:27, templates/sidebar/login.php:28, svn/trunk/templates/components/login-form-fields.php:27, svn/trunk/templates/sidebar/login.php:28, svn/tags/1.0.0/templates/components/login-form-fields.php:27, svn/tags/1.0.0/templates/sidebar/login.php:28, svn/tags/1.0.1/templates/components/login-form-fields.php:27, svn/tags/1.0.1/templates/sidebar/login.php:28
+msgid "Login"
+msgstr ""
+
+#: templates/components/login-form-fields.php:33, templates/components/login-form-fields.php:38, svn/trunk/templates/components/login-form-fields.php:33, svn/trunk/templates/components/login-form-fields.php:38, svn/tags/1.0.0/templates/components/login-form-fields.php:33, svn/tags/1.0.0/templates/components/login-form-fields.php:38, svn/tags/1.0.1/templates/components/login-form-fields.php:33, svn/tags/1.0.1/templates/components/login-form-fields.php:38
+msgid "Username"
+msgstr ""
+
+#: templates/components/login-form-fields.php:38, svn/trunk/templates/components/login-form-fields.php:38, svn/tags/1.0.0/templates/components/login-form-fields.php:38, svn/tags/1.0.1/templates/components/login-form-fields.php:38
+msgid "Email"
+msgstr ""
+
+#: templates/components/login-form-fields.php:43, svn/trunk/templates/components/login-form-fields.php:43, svn/tags/1.0.0/templates/components/login-form-fields.php:43, svn/tags/1.0.1/templates/components/login-form-fields.php:43
+msgid "Password"
+msgstr ""
+
+#: templates/components/login-form-fields.php:48, svn/trunk/templates/components/login-form-fields.php:48, svn/tags/1.0.0/templates/components/login-form-fields.php:48, svn/tags/1.0.1/templates/components/login-form-fields.php:48
+msgid "Repeat Password"
+msgstr ""
+
+#: templates/loop/no-requests-found.php:14, svn/trunk/templates/loop/no-requests-found.php:14, svn/tags/1.0.0/templates/loop/no-requests-found.php:14, svn/tags/1.0.1/templates/loop/no-requests-found.php:14
+msgid "Sorry, no feature requests were found."
+msgstr ""
+
+#: templates/sidebar/login.php:36, svn/trunk/templates/sidebar/login.php:36, svn/tags/1.0.0/templates/sidebar/login.php:36, svn/tags/1.0.1/templates/sidebar/login.php:36
+msgid "Hey, %s."
+msgstr ""
+
+#: templates/sidebar/login.php:37, svn/trunk/templates/sidebar/login.php:37, svn/tags/1.0.0/templates/sidebar/login.php:37, svn/tags/1.0.1/templates/sidebar/login.php:37
+msgid "Logout"
+msgstr ""
+
+#: svn/trunk/inc/class-template-methods.php:100, svn/tags/1.0.0/inc/class-template-methods.php:100, svn/tags/1.0.1/inc/class-template-methods.php:100
+msgid "Pending"
+msgstr ""

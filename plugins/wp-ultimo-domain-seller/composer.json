@@ -1,0 +1,5 @@
+{
+    "require": {
+        "opensrs/osrs-toolkit-php": "^4.0"
+    }
+}
