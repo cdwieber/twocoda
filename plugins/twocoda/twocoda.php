@@ -115,6 +115,14 @@ final class TwoCoda {
 	protected static $single_instance = null;
 
 	/**
+	 * Instance of TC_Acf
+	 *
+	 * @since0.0.1
+	 * @var TC_Acf
+	 */
+	protected $acf;
+
+	/**
 	 * Creates or returns an instance of this class.
 	 *
 	 * @since   0.0.1
@@ -145,8 +153,8 @@ final class TwoCoda {
 	 * @since  0.0.1
 	 */
 	public function plugin_classes() {
-		// $this->plugin_class = new TC_Plugin_Class( $this );
 
+		$this->acf = new TC_Acf( $this );
 	} // END OF PLUGIN CLASSES FUNCTION
 
 	/**
@@ -302,6 +310,7 @@ final class TwoCoda {
 			case 'basename':
 			case 'url':
 			case 'path':
+			case 'acf':
 				return $this->$field;
 			default:
 				throw new Exception( 'Invalid ' . __CLASS__ . ' property: ' . $field );
