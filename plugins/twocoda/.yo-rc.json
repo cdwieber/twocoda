@@ -1,0 +1,20 @@
+{
+  "generator-plugin-wp": {
+    "name": "TwoCoda Core",
+    "homepage": "http://twocoda.com",
+    "description": "TwoCoda Core functionality",
+    "version": "0.0.1",
+    "author": "Chris Wieber",
+    "authoremail": "chris@errigal.media",
+    "authorurl": "https://www.chriswieber.com",
+    "license": "MIT",
+    "slug": "twocoda",
+    "classname": "TwoCoda",
+    "mainclassname": "TwoCoda",
+    "classprefix": "TC_",
+    "prefix": "twocoda",
+    "year": 2019,
+    "currentVersionWP": "4.8.1",
+    "plugingenversion": "0.20.2"
+  }
+}
