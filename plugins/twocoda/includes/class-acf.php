@@ -32,6 +32,7 @@ class TC_Acf {
 		$this->plugin = $plugin;
 		$this->hooks();
 		$this->create_acf_options_pages();
+		$this->create_acf_policy_fields();
 	}
 
 	/**
