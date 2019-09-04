@@ -1,0 +1,2269 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Fusion 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-14 21:21-0600\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Lucio Benini <iiriya@iiriya.com>\n"
+"Language-Team: Lucio Benini <iiriya@iiriya.com>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _x;_n;_e;__;esc_html__;esc_html_e;esc_attr__;"
+"esc_attr_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.7.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../comments.php:4
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Questo post è protetto da password. Inserisci la password per visualizzare i "
+"commenti."
+
+#: ../comments.php:15 ../comments.php:29
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr "<span class=\"meta-nav\">&larr;</span> Commenti meno recenti"
+
+#: ../comments.php:16 ../comments.php:30
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Commenti più recenti <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../comments.php:22
+msgid "0 Comments"
+msgstr "0 Commenti"
+
+#: ../comments.php:22 ../functions.php:225
+msgid "1 Comment"
+msgstr "1 Commento"
+
+#: ../comments.php:22
+msgid "Comments"
+msgstr "Commenti"
+
+#: ../comments.php:36
+msgid "Trackbacks/Pingbacks"
+msgstr "Trackback/Pingback"
+
+#: ../comments.php:54
+msgid "Submit Comment"
+msgstr "Invia commento"
+
+#: ../comments.php:54
+msgid "Post a Reply"
+msgstr "Scrivi una Risposta"
+
+#: ../comments.php:54
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Rispondi a %s"
+
+#: ../content.php:25 ../includes/entry.php:16 ../page-blog.php:44
+#: ../page-blog.php:72 ../page-contact.php:93 ../page-gallery.php:40
+#: ../page-login.php:37 ../page-search.php:37 ../page-sitemap.php:37
+#: ../page-template-portfolio.php:49
+msgid "0 comments"
+msgstr "0 commenti"
+
+#: ../content.php:25 ../includes/entry.php:16 ../page-blog.php:44
+#: ../page-blog.php:72 ../page-contact.php:93 ../page-gallery.php:40
+#: ../page-login.php:37 ../page-search.php:37 ../page-sitemap.php:37
+#: ../page-template-portfolio.php:49
+msgid "1 comment"
+msgstr "1 commento"
+
+#: ../content.php:25 ../includes/entry.php:16 ../page-blog.php:44
+#: ../page-blog.php:72 ../page-contact.php:93 ../page-gallery.php:40
+#: ../page-login.php:37 ../page-search.php:37 ../page-sitemap.php:37
+#: ../page-template-portfolio.php:49
+msgid "comments"
+msgstr "commenti"
+
+#: ../content.php:38 ../image.php:59 ../page-blog.php:57
+#: ../page-contact.php:106 ../page-gallery.php:53 ../page-login.php:50
+#: ../page-search.php:50 ../page-sitemap.php:50
+#: ../page-template-portfolio.php:62
+msgid "Pages:"
+msgstr "Pagine"
+
+#: ../epanel/core_functions.php:26 ../epanel/core_functions.php:391
+msgid "Saving..."
+msgstr "Salvataggio in corso..."
+
+#: ../epanel/core_functions.php:27
+msgid "Options Saved."
+msgstr "Opzioni salvate."
+
+#: ../epanel/core_functions.php:73
+msgid "Options"
+msgstr "Opzioni"
+
+#: ../epanel/core_functions.php:73
+msgid "Theme Options"
+msgstr "Opzioni tema"
+
+#: ../epanel/core_functions.php:90
+msgid "settings saved."
+msgstr "impostazioni salvate."
+
+#: ../epanel/core_functions.php:93
+msgid "settings reset."
+msgstr "impostazioni predefinite ripristinate."
+
+#: ../epanel/core_functions.php:111 ../epanel/options_fusion.php:498
+#: ../epanel/options_fusion.php:649
+msgid "General Settings"
+msgstr "Impostazioni generali"
+
+#: ../epanel/core_functions.php:114
+msgid "Navigation"
+msgstr "Navigazione"
+
+#: ../epanel/core_functions.php:117
+msgid "Layout Settings"
+msgstr "Impostazioni layout"
+
+#: ../epanel/core_functions.php:120
+msgid "Ad Management"
+msgstr "Gestione annunci"
+
+#: ../epanel/core_functions.php:123
+msgid "Colorization"
+msgstr "Colore"
+
+#: ../epanel/core_functions.php:126
+msgid "SEO"
+msgstr "SEO"
+
+#: ../epanel/core_functions.php:129
+msgid "Integration"
+msgstr "Integrazione"
+
+#: ../epanel/core_functions.php:132
+msgid "Support Docs"
+msgstr "Documentazione di supporto"
+
+#: ../epanel/core_functions.php:203 ../epanel/core_functions.php:379
+#: ../page-contact.php:151
+msgid "Reset"
+msgstr "Reset"
+
+#: ../epanel/core_functions.php:204 ../functions.php:331
+msgid "Upload Image"
+msgstr "Carica Immagine"
+
+#: ../epanel/core_functions.php:231
+msgid "You don't have pages"
+msgstr "Non sono ancora presenti pagine"
+
+#: ../epanel/core_functions.php:364
+msgid "Save changes"
+msgstr "Salva modifiche"
+
+#: ../epanel/core_functions.php:375
+msgid ""
+"This will return all of the settings throughout the options page to their "
+"default values. <strong>Are you sure you want to do this?</strong>"
+msgstr ""
+"Questa azione cancellerà tutte le impostazioni personalizzate e ripristinerà "
+"i valori predefiniti. <strong>Vuoi procedere?</strong>"
+
+#: ../epanel/custom_functions.php:189
+msgid "&hellip;"
+msgstr ""
+
+#: ../epanel/custom_functions.php:462 ../header.php:58
+#: ../includes/breadcrumbs.php:4
+msgid "Home"
+msgstr "Home"
+
+#: ../epanel/custom_functions.php:703
+msgid "Archives"
+msgstr ""
+
+#: ../epanel/custom_functions.php:705
+#, php-format
+msgid "Search results for \"%s\""
+msgstr ""
+
+#: ../epanel/custom_functions.php:707
+msgid "404 Not Found"
+msgstr ""
+
+#: ../epanel/custom_functions.php:778
+#, php-format
+msgid "Currently viewing archives from %1$s"
+msgstr ""
+
+#: ../epanel/custom_functions.php:1011
+msgid "Image doesn't exist"
+msgstr "L'immagine non esiste"
+
+#: ../epanel/custom_functions.php:1207
+#, php-format
+msgid ""
+"<div class=\"updated\"><p>This is a fresh installation of %1$s theme. Don't "
+"forget to go to <a href=\"%2$s\">ePanel</a> to set it up. This message will "
+"disappear once you have clicked the Save button within the <a href=\"%2$s"
+"\">theme's options page</a>.</p></div>"
+msgstr ""
+"<div class=\"updated\"><p>Nuova installazione del tema %1$s. Vai a <a href="
+"\"%2$s\">ePanel</a> per le impostazioni. Il messaggio scomparirà non appena "
+"premuto il pulsante Salva all'interno della <a href=\"%2$s\">pagina opzioni "
+"del tema</a>.</p></div>"
+
+#: ../epanel/custom_functions.php:1219
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox"
+"\" title=\"%1$s\">View version %3$s details</a>. <em>Before you can update "
+"your Elegant Themes, you must first install the <a href=\"https://www."
+"elegantthemes.com/members-area/documentation.html#updater\" target=\"_blank"
+"\">Elegant Updater Plugin</a> to authenticate your subscription.</em>"
+msgstr ""
+
+#: ../epanel/custom_functions.php:1223
+msgid ""
+"Before you can update your Elegant Themes, you must first install the <a "
+"href=\"https://www.elegantthemes.com/members-area/documentation.html#updater"
+"\" target=\"_blank\">Elegant Updater Plugin</a> to authenticate your "
+"subscription."
+msgstr ""
+
+#: ../epanel/options_fusion.php:38
+msgid "General"
+msgstr "Generali"
+
+#: ../epanel/options_fusion.php:42
+msgid "Homepage"
+msgstr "Homepage"
+
+#: ../epanel/options_fusion.php:46
+msgid "Featured Slider"
+msgstr "Slider dei contenuti in Evidenza"
+
+#: ../epanel/options_fusion.php:53
+msgid "Logo"
+msgstr "Logo"
+
+#: ../epanel/options_fusion.php:57
+msgid ""
+"If you would like to use your own custom logo image click the Upload Image "
+"button."
+msgstr ""
+"Se desideri utilizzare il tuo logo personalizzato, clicca il pulsante "
+"\"Carica immagine\"."
+
+#: ../epanel/options_fusion.php:60
+msgid "Favicon"
+msgstr "Favicon"
+
+#: ../epanel/options_fusion.php:64
+msgid ""
+"If you would like to use your own custom favicon image click the Upload "
+"Image button."
+msgstr ""
+"Se desideri utilizzare la tua immagine favicon personalizzata, clicca il "
+"pulsante Carica immagine."
+
+#: ../epanel/options_fusion.php:67
+msgid "Main Background Image"
+msgstr "Immagine di Sfondo Principale"
+
+#: ../epanel/options_fusion.php:71
+msgid ""
+"Here you can upload the main background image, used for the header and "
+"footer areas."
+msgstr ""
+"Qui puoi caricare l'immagine di sfondo princiale, usato per le aree di "
+"testata e pié di pagina."
+
+#: ../epanel/options_fusion.php:74
+msgid "Blog Style post format"
+msgstr "Formato post Stile Blog"
+
+#: ../epanel/options_fusion.php:78
+msgid ""
+"By default the theme truncates your posts on index/homepages automatically "
+"to create post previews. If you would rather show your posts in full on "
+"index pages like a traditional blog then you can activate this feature."
+msgstr ""
+"Come impostazione predefinita li tema tronca i tuoi post nei tuoi indici/"
+"hompage automaticamente per creare le anteprime dei post. Se vuoi che il "
+"post sia mostrato per intero nelle pagine indice come un blog tradizionale "
+"puoi attivare questa opzione."
+
+#: ../epanel/options_fusion.php:81
+msgid "Grab the first post image"
+msgstr "Cattura la prima immagine del post"
+
+#: ../epanel/options_fusion.php:85
+msgid ""
+"By default thumbnail images are created using custom fields. However, if you "
+"would rather use the images that are already in your post for your thumbnail "
+"(and bypass using custom fields) you can activate this option. Once "
+"activcated thumbnail images will be generated automatically using the first "
+"image in your post. The image must be hosted on your own server."
+msgstr ""
+"Per impostazione predefinita le miniature sono create utilizzando i campi "
+"personalizzati. Se desideri utilizzare per le tue miniature le immagini che "
+"si trovano già nel tuo post (senza utilizzare i campi personalizzati) puoi "
+"attivare questa opzione. Una volta attivata l'opzione, le miniature saranno "
+"generate automaticamente utilizzando la prima immagine del tuo post. "
+"L'immagine deve essere ospitata nel tuo server."
+
+#: ../epanel/options_fusion.php:90
+msgid "Show Twitter Icon"
+msgstr "Mostra l'icona Twitter"
+
+#: ../epanel/options_fusion.php:94
+msgid "Here you can choose to display your Twitter Icon. "
+msgstr "Puoi scegliere qui di visualizzare l'icona Twitter. "
+
+#: ../epanel/options_fusion.php:97
+msgid "Show RSS Icon"
+msgstr "Mostra icona RSS"
+
+#: ../epanel/options_fusion.php:101
+msgid "Here you can choose to display your RSS Icon. "
+msgstr "Puoi scegliere qui di visualizzare l'icona RSS. "
+
+#: ../epanel/options_fusion.php:106
+msgid "Show Facebook Icon"
+msgstr "Mostra icona Facebook"
+
+#: ../epanel/options_fusion.php:110
+msgid "Here you can choose to display your Facebook Icon. "
+msgstr "Puoi scegliere qui di visualizzare l'icona Facebook. "
+
+#: ../epanel/options_fusion.php:115
+msgid "Twitter Profile Url"
+msgstr "URL profilo Twitter"
+
+#: ../epanel/options_fusion.php:119
+msgid "Place your Twitter Profile URL here. "
+msgstr "Inserisci l'URL del tuo profilo Twitter."
+
+#: ../epanel/options_fusion.php:123
+msgid "RSS Icon Url"
+msgstr "URL icona RSS"
+
+#: ../epanel/options_fusion.php:127
+msgid "Place your RSS URL here. "
+msgstr "Inserisci l'URL del feed RSS. "
+
+#: ../epanel/options_fusion.php:131
+msgid "Facebook Profile Url"
+msgstr "URL profilo Facebook"
+
+#: ../epanel/options_fusion.php:135
+msgid "Place your Facebook Profile URL here. "
+msgstr "Inserisci l'URL del tuo profilo Facebook. "
+
+#: ../epanel/options_fusion.php:139
+msgid "Number of Posts displayed on Category page"
+msgstr "Numero di post visualizzati nella pagina Categoria"
+
+#: ../epanel/options_fusion.php:143
+msgid ""
+"Here you can designate how many recent articles are displayed on the "
+"Category page. This option works independently from the Settings > Reading "
+"options in wp-admin."
+msgstr ""
+"Qui puoi indicare quanti articoli recenti vuoi visualizzare nella pagina "
+"Categoria. Questa opzione è indipendente dalle opzioni di Lettura in wp-"
+"admin."
+
+#: ../epanel/options_fusion.php:147
+msgid "Number of Posts displayed on Archive pages"
+msgstr "Numero di post visualizzati nelle pagine Archivio"
+
+#: ../epanel/options_fusion.php:151
+msgid ""
+"Here you can designate how many recent articles are displayed on the Archive "
+"pages. This option works independently from the Settings > Reading options "
+"in wp-admin."
+msgstr ""
+"Qui puoi indicare quanti articoli recenti vuoi visualizzare nelle pagine "
+"Archivio. Questa opzione è indipendente dalle opzioni di Lettura in wp-admin."
+
+#: ../epanel/options_fusion.php:155
+msgid "Number of Posts displayed on Search pages"
+msgstr "Numero di post visualizzati nelle pagine Cerca"
+
+#: ../epanel/options_fusion.php:159
+msgid ""
+"Here you can designate how many recent articles are displayed on the Search "
+"results pages. This option works independently from the Settings > Reading "
+"options in wp-admin."
+msgstr ""
+"Qui puoi indicare quanti articoli recenti vuoi visualizzare nelle pagine dei "
+"risultati Cerca. Questa opzione è indipendente dalle opzioni di Lettura in "
+"wp-admin."
+
+#: ../epanel/options_fusion.php:163
+msgid "Number of Posts displayed on Tag pages"
+msgstr "Numero di post visualizzati nelle pagine Tag"
+
+#: ../epanel/options_fusion.php:167
+msgid ""
+"Here you can designate how many recent articles are displayed on the Tag "
+"pages. This option works independently from the Settings > Reading options "
+"in wp-admin."
+msgstr ""
+"Qui puoi indicare quanti articoli recenti vuoi visualizzare nelle pagine "
+"Tag. Questa opzione è indipendente dalle opzioni di Lettura in wp-admin."
+
+#: ../epanel/options_fusion.php:171
+msgid "Date format"
+msgstr "Formato Data"
+
+#: ../epanel/options_fusion.php:175
+msgid ""
+"This option allows you to change how your dates are displayed. For more "
+"information please refer to the WordPress codex here:<a href='http://codex."
+"wordpress.org/Formatting_Date_and_Time' target='_blank'>Formatting Date and "
+"Time</a>"
+msgstr ""
+"Questa opzione permette di modificare il formato di visualizzazione della "
+"data. Per ulteriori informazioni vedere il codice WordPress qui:<a "
+"href='http://codex.wordpress.org/Formatting_Date_and_Time' "
+"target='_blank'>Impostazione formato ora e data</a>"
+
+#: ../epanel/options_fusion.php:181
+msgid "Use excerpts when defined"
+msgstr "Utilizza estratti quando definito"
+
+#: ../epanel/options_fusion.php:185
+msgid "This will enable the use of excerpts in posts or pages."
+msgstr ""
+"Questa azione abilita l'utilizzazione di estratti nei post o nelle pagine."
+
+#: ../epanel/options_fusion.php:188
+msgid "Responsive shortcodes"
+msgstr "Shortcodes reattivi"
+
+#: ../epanel/options_fusion.php:192
+msgid "Enable this option to make shortcodes respond to various screen sizes"
+msgstr ""
+"Abilitando questa opzione i shortcodes reagiranno alle diverse dimensioni "
+"dello schermo"
+
+#: ../epanel/options_fusion.php:197
+msgid "Google Fonts subsets"
+msgstr "Subset Google Fonts"
+
+#: ../epanel/options_fusion.php:201
+msgid "This will enable Google Fonts for Non-English languages."
+msgstr ""
+"Questa azione abilita i Google Fonts per le lingue differenti dall'inglese."
+
+#: ../epanel/options_fusion.php:206
+msgid "Custom CSS"
+msgstr "CSS Personalizzato"
+
+#: ../epanel/options_fusion.php:210
+msgid "Here you can add custom css to override or extend default styles."
+msgstr ""
+"Puoi aggiungere qui un CSS personalizzato per eseguire l'override o "
+"estendere gli stili predefiniti."
+
+#: ../epanel/options_fusion.php:220
+msgid "Display Content Areas"
+msgstr "Mostra Aree Contenuti"
+
+#: ../epanel/options_fusion.php:224
+msgid "Here you can choose to display the Content Areas on the homepage. "
+msgstr "Qui puoi scegliere se mostrare l'Area Contenuti nella homepage."
+
+#: ../epanel/options_fusion.php:227
+msgid "Display Testimonials"
+msgstr "Mostra Testimonial"
+
+#: ../epanel/options_fusion.php:231
+msgid "Here you can choose to display the Testimonials on the homepage. "
+msgstr "Qui puoi scegliere se mostrare i Testimonial nella homepage."
+
+#: ../epanel/options_fusion.php:236
+msgid "Display Recent News"
+msgstr "Mostra News Recenti"
+
+#: ../epanel/options_fusion.php:240
+msgid ""
+"Here you can choose to display the Recent News section on the homepage. "
+msgstr "Qui puoi scegliere se mostrarele Notizie Recenti nella homepage."
+
+#: ../epanel/options_fusion.php:243
+msgid "Display Clients Logos"
+msgstr "Mostra Loghi dei Clienti"
+
+#: ../epanel/options_fusion.php:247
+msgid "Here you can choose to display Clients logos section on the homepage. "
+msgstr "Qui puoi scegliere se mostrare i Loghi dei Clienti nella homepage."
+
+#: ../epanel/options_fusion.php:252
+msgid "Content Area 1 Page"
+msgstr "Pagina Area Contenuti 1"
+
+#: ../epanel/options_fusion.php:256 ../epanel/options_fusion.php:264
+#: ../epanel/options_fusion.php:272
+msgid "Choose the page you would like to display in the Content Area. "
+msgstr "Scegli la pagina che vuoi mostrare nell'Area Contenuti"
+
+#: ../epanel/options_fusion.php:260
+msgid "Content Area 2 Page"
+msgstr "Pagina Area Contenuti 2"
+
+#: ../epanel/options_fusion.php:268
+msgid "Content Area 3 Page"
+msgstr "Pagina Area Contenuti 2"
+
+#: ../epanel/options_fusion.php:276
+msgid "Recent News more link URL"
+msgstr "URL link addizionale delle Notizie Recenti"
+
+#: ../epanel/options_fusion.php:280
+msgid "Place the Recent News more link URL here. "
+msgstr "Inserisci qui l'URL del link aggiuntivo per le Notizie Recenti."
+
+#: ../epanel/options_fusion.php:284
+msgid "Number of posts in the Testimonials slider"
+msgstr "Numero di post nello slider dei Testimonial"
+
+#: ../epanel/options_fusion.php:288
+msgid "Here you can choose the number of testimonials on the homepage. "
+msgstr "Qui puoi scegliere il numero di testimonial nella homepage."
+
+#: ../epanel/options_fusion.php:292
+msgid "Number of Recent Posts displayed on homepage"
+msgstr "Numero di Post Recenti mostrati nella homepage"
+
+#: ../epanel/options_fusion.php:296
+msgid ""
+"Here you can designate how many recent articles are displayed on the "
+"homepage. This option works independently from the Settings > Reading "
+"options in wp-admin."
+msgstr ""
+"Qui puoi assegnare quanti post recenti sono mostrati nella homepage. Questa "
+"opzione funziona indipendentemente dalle opzioni in Impostazioni > Lettura "
+"in wp-admin."
+
+#: ../epanel/options_fusion.php:300
+msgid "Exclude categories from homepage recent posts"
+msgstr "Escludi categorie dai post recenti della homepage"
+
+#: ../epanel/options_fusion.php:304
+msgid ""
+"By default the homepage displays a list of all of your most recent posts. "
+"However, if you would like to exlcude certain category from the list you can "
+"do so here. "
+msgstr ""
+"Come impostazione predefinita la homepage mostra una lista di tutti i post "
+"più recenti. Comunque, se vuoi escludere alcune categorie dalla lista puoi "
+"farlo qui."
+
+#: ../epanel/options_fusion.php:308
+msgid "1st Logo Image"
+msgstr "Primo Logo Immagine"
+
+#: ../epanel/options_fusion.php:312 ../epanel/options_fusion.php:335
+#: ../epanel/options_fusion.php:358 ../epanel/options_fusion.php:381
+msgid "Here you can upload the client logo image."
+msgstr "Qui è dove puoi caricare l'immagine del logo del cliente."
+
+#: ../epanel/options_fusion.php:315
+msgid "1st Logo Url"
+msgstr "Primo Logo URL"
+
+#: ../epanel/options_fusion.php:319 ../epanel/options_fusion.php:342
+#: ../epanel/options_fusion.php:365 ../epanel/options_fusion.php:388
+msgid "Place the client logo url here. "
+msgstr "Inserisci qui l'URL del logo del cliente."
+
+#: ../epanel/options_fusion.php:323
+msgid "1st Logo Alt"
+msgstr "Primo Logo Testo Alternativo"
+
+#: ../epanel/options_fusion.php:327 ../epanel/options_fusion.php:350
+#: ../epanel/options_fusion.php:373 ../epanel/options_fusion.php:396
+msgid "Place the client logo description here. "
+msgstr "Inserisci qui la descrizione del logo del cliente."
+
+#: ../epanel/options_fusion.php:331
+msgid "2nd Logo Image"
+msgstr "Secondo Logo Immagine"
+
+#: ../epanel/options_fusion.php:338
+msgid "2nd Logo Url"
+msgstr "Secondo Logo URL"
+
+#: ../epanel/options_fusion.php:346
+msgid "2nd Logo Alt"
+msgstr "Secondo Logo Testo Alternativo"
+
+#: ../epanel/options_fusion.php:354
+msgid "3rd Logo Image"
+msgstr "Terzo Logo Immagine"
+
+#: ../epanel/options_fusion.php:361
+msgid "3rd Logo Url"
+msgstr "Terzo Logo URL"
+
+#: ../epanel/options_fusion.php:369
+msgid "3rd Logo Alt"
+msgstr "Terzo Logo Testo Alternativo"
+
+#: ../epanel/options_fusion.php:377
+msgid "4th Logo Image"
+msgstr "Quarto Logo Immagine"
+
+#: ../epanel/options_fusion.php:384
+msgid "4th Logo Url"
+msgstr "Quarto Logo URL"
+
+#: ../epanel/options_fusion.php:392
+msgid "4th Logo Alt"
+msgstr "Quarto Logo Testo Alternativo"
+
+#: ../epanel/options_fusion.php:406
+msgid "Display Featured Slider"
+msgstr "Mostra Slider dei contenuti in Evidenza"
+
+#: ../epanel/options_fusion.php:410
+msgid ""
+"You can choose whether or not to display the Featured Articles section on "
+"the homepge. If you don't want to utilize this feature simply disable this "
+"option."
+msgstr "Puoi scegliere"
+
+#: ../epanel/options_fusion.php:413
+msgid "Duplicate Featured Articles"
+msgstr "Duplica Articoli in Evidenza"
+
+#: ../epanel/options_fusion.php:417
+msgid ""
+"In some cases your Featured Articles will also be one of your most recent "
+"articles, in which case the article will be displayed twice on the homepage. "
+"If you would like to remove duplicate posts enable this option."
+msgstr ""
+"In alcuni casi i tuoi Articoli in Evidenza possono essere anche articoli "
+"recenti, in questi casi l'articolo viene mostrato doppio nella homepage. Se "
+"vuoi rimuovere i post duplicati abilita questa opzione."
+
+#: ../epanel/options_fusion.php:422
+msgid "Number of Featured Slides"
+msgstr "Numero di Slide in Evidenza"
+
+#: ../epanel/options_fusion.php:426
+msgid ""
+"This setting controls how menu tabs are added to the Featured Articles "
+"slider on the homepage."
+msgstr ""
+"Queste impostazioni controllano come le schede del menu sono aggiunte allo "
+"Slider degli Articoli in Evidenza nella homepage."
+
+#: ../epanel/options_fusion.php:430
+msgid "Featured Posts Category"
+msgstr "Categoria Post in Evidenza"
+
+#: ../epanel/options_fusion.php:434
+msgid ""
+"Here you can choose which category to be used to populate the Featured "
+"Slider on the homepage. This only applies if you have disabled the Use Pages "
+"options below."
+msgstr ""
+"Qui puoi scegliere quali categorie utilizzare per popolare lo Slider dei "
+"contenuti in Evidenza nella homepage. Questo funziona solo se hai "
+"disabilitato l'opzione Usa Pagine qui sotto."
+
+#: ../epanel/options_fusion.php:438
+msgid "Use pages"
+msgstr "Usa Pagine"
+
+#: ../epanel/options_fusion.php:442
+msgid ""
+"The homepage Featured Slider can be set up using two methods. You can "
+"populate the slider using Posts, or you can populate it using Pages. If you "
+"would like to use Pages in the Featured Slider then enable this option."
+msgstr ""
+"Lo Slider dei contenuti in Evidenza della homepage può essere settato usando "
+"due metodi. Puoi riempire lo slider usando i Post, o puoi riempirlo usando "
+"le Pagine. Se vuoi usare le Pagine nello Slider dei contenuti in Evidenza "
+"abilita questa opzione."
+
+#: ../epanel/options_fusion.php:447
+msgid "Include pages in the Featured Slider (if Use Pages enabled)"
+msgstr ""
+"Includi pagine nello Slider dei contenuti in Evidenza (se Usa Pagine è "
+"abilitato)"
+
+#: ../epanel/options_fusion.php:451
+msgid ""
+"If you selected Use Pages above, then use the checkboxes below to choose "
+"which pages are displayed in the Featured Slider."
+msgstr ""
+"Se selezioni Usa Pagine qui sopra, poi usa i checkbox qui sotto per "
+"scegliere quali pagine saranno mostrate nello Slider dei contenuti in "
+"Evidenza."
+
+#: ../epanel/options_fusion.php:456
+msgid "Automatic Slider Animation"
+msgstr "Animazione Slider Automatico"
+
+#: ../epanel/options_fusion.php:460
+msgid ""
+"If you would like the Featured Articles slider to slide automatically, "
+"without the visitor having to click the next button, enable this option and "
+"then adjust the rotation speed below if desired."
+msgstr ""
+"Se vuoi che lo slider degli Articoli in Evidenza scorra automaticamente, "
+"senza che il visitatore debba clickare nel pulsate prossima, abilita questa "
+"opzione e imposta la velocità di rotazione qui sotto se desiderato."
+
+#: ../epanel/options_fusion.php:465
+msgid "Automatic Animation Speed (in ms)"
+msgstr "Velocità Animazione Automatica (in ms)"
+
+#: ../epanel/options_fusion.php:469
+msgid ""
+"Here you can designate how fast the slider fades between each article. The "
+"higher the number the longer the pause between each rotation."
+msgstr ""
+"Qui puoi assegnare quanto velocemente le slide svaniscono tra un articolo e "
+"l'altro. Più alto è il numero più lunga è la pausa tra le rotazioni."
+
+#: ../epanel/options_fusion.php:488 ../page-search.php:60
+#: ../page-sitemap.php:54
+msgid "Pages"
+msgstr "Pagine"
+
+#: ../epanel/options_fusion.php:493 ../page-sitemap.php:59
+msgid "Categories"
+msgstr "Categorie"
+
+#: ../epanel/options_fusion.php:506
+msgid "Exclude pages from the navigation bar"
+msgstr "Escludi pagine dalla barra di navigazione"
+
+#: ../epanel/options_fusion.php:510
+msgid ""
+"Here you can choose to remove certain pages from the navigation menu. All "
+"pages marked with an X will not appear in your navigation bar. "
+msgstr ""
+"Puoi scegliere qui di rimuovere alcune pagine dal menu di navigazione. Tutte "
+"le pagine contrassegnate con una X non appariranno nella tua barra di "
+"navigazione. "
+
+#: ../epanel/options_fusion.php:514 ../epanel/options_fusion.php:569
+msgid "Show dropdown menus"
+msgstr "Mostra i menu a discesa"
+
+#: ../epanel/options_fusion.php:518
+msgid ""
+"If you would like to remove the dropdown menus from the pages navigation bar "
+"disable this feature."
+msgstr ""
+"Se desideri rimuovere i menu a discesa dalla barra di navigazione delle "
+"pagine, disabilita questa opzione."
+
+#: ../epanel/options_fusion.php:521
+msgid "Display Home link"
+msgstr "Visualizza collegamento Home"
+
+#: ../epanel/options_fusion.php:525
+msgid ""
+"By default the theme creates a Home link that, when clicked, leads back to "
+"your blog's homepage. If, however, you are using a static homepage and have "
+"already created a page called Home to use, this will result in a duplicate "
+"link. In this case you should disable this feature to remove the link."
+msgstr ""
+"Per impostazione predefinita il tema crea un collegamento Home che "
+"reindirizza alla homepage del tuo blog. Se utilizzi una homepage statica e "
+"hai già creato una pagina Home, otterrai un collegamento doppio. Disabilita "
+"questa opzione per rimuovere il collegamento."
+
+#: ../epanel/options_fusion.php:530
+msgid "Sort Pages Links"
+msgstr "Ordina collegamenti pagine"
+
+#: ../epanel/options_fusion.php:534
+msgid "Here you can choose to sort your pages links."
+msgstr "Puoi scegliere qui come ordinare i collegamenti alle pagine."
+
+#: ../epanel/options_fusion.php:537
+msgid "Order Pages Links by Ascending/Descending"
+msgstr "Ordina collegamenti pagine in ordine crescente/decrescente"
+
+#: ../epanel/options_fusion.php:541
+msgid ""
+"Here you can choose to reverse the order that your pages links are "
+"displayed. You can choose between ascending and descending."
+msgstr ""
+"Puoi scegliere qui di invertire l'ordine con cui visualizzare i collegamenti "
+"alle pagine. Puoi scegliere tra ordine crescente e decrescente."
+
+#: ../epanel/options_fusion.php:544 ../epanel/options_fusion.php:585
+msgid "Number of dropdown tiers shown"
+msgstr "Numero di livelli visualizzati nel menu a discesa"
+
+#: ../epanel/options_fusion.php:548 ../epanel/options_fusion.php:589
+msgid ""
+"This options allows you to control how many teirs your pages dropdown menu "
+"has. Increasing the number allows for additional menu items to be shown."
+msgstr ""
+"Queste opzioni permettono di controllare quanti livelli avrà il menu a "
+"discesa delle tue pagine. Aumentando il numero di livelli saranno "
+"visualizzati elementi aggiuntivi nel menu."
+
+#: ../epanel/options_fusion.php:561
+msgid "Exclude categories from the navigation bar"
+msgstr "Escludi categorie dalla barra di navigazione"
+
+#: ../epanel/options_fusion.php:565
+msgid ""
+"Here you can choose to remove certain categories from the navigation menu. "
+"All categories marked with an X will not appear in your navigation bar. "
+msgstr ""
+"Puoi scegliere qui di rimuovere alcune categorie dal menu di navigazione. "
+"Tutte le categorie contrassegnate con una X non appariranno nella tua barra "
+"di navigazione. "
+
+#: ../epanel/options_fusion.php:573
+msgid ""
+"If you would like to remove the dropdown menus from the categories "
+"navigation bar disable this feature."
+msgstr ""
+"Se desideri rimuovere i menu a discesa dalla barra di navigazione delle "
+"categorie, disabilita questa opzione."
+
+#: ../epanel/options_fusion.php:576
+msgid "Hide empty categories"
+msgstr "Nascondi categorie vuote"
+
+#: ../epanel/options_fusion.php:580
+msgid ""
+"If you would like categories to be displayed in your navigationbar that "
+"don't have any posts in them then disable this option. By default empty "
+"categories are hidden"
+msgstr ""
+"Se desideri visualizzare nella barra di navigazione le categorie vuote, "
+"disabilita questa opzione. Per impostazione predefinita le categorie vuote "
+"sono nascoste."
+
+#: ../epanel/options_fusion.php:595
+msgid "Sort Categories Links by Name/ID/Slug/Count/Term Group"
+msgstr "Ordina i collegamenti categorie per Gruppo Name/ID/Slug/Count/Term"
+
+#: ../epanel/options_fusion.php:599
+msgid ""
+"By default pages are sorted by name. However if you would rather have them "
+"sorted by ID you can adjust this setting."
+msgstr ""
+"Per impostazione predefinita le categorie sono ordinate per nome. Se "
+"preferisci ordinarle per ID, puoi modificare questa impostazione."
+
+#: ../epanel/options_fusion.php:602
+msgid "Order Category Links by Ascending/Descending"
+msgstr "Ordina collegamenti Categoria in ordine crescente/decrescente"
+
+#: ../epanel/options_fusion.php:606
+msgid ""
+"Here you can choose to reverse the order that your categories links are "
+"displayed. You can choose between ascending and descending."
+msgstr ""
+"Puoi scegliere qui di invertire l'ordine con cui visualizzare i collegamenti "
+"alle categorie. Puoi scegliere tra ordine crescente e decrescente."
+
+#: ../epanel/options_fusion.php:615
+msgid "Disable top tier dropdown menu links"
+msgstr "Disabilita livello superiore collegamenti menu a discesa"
+
+#: ../epanel/options_fusion.php:619
+msgid ""
+"In some cases users will want to create parent categories or links as "
+"placeholders to hold a list of child links or categories. In this case it is "
+"not desirable to have the parent links lead anywhere, but instead merely "
+"serve an organizational function. Enabling this options will remove the "
+"links from all parent pages/categories so that they don't lead anywhere when "
+"clicked."
+msgstr ""
+"In alcuni casi gli utenti desiderano creare categorie padre o collegamenti "
+"come placeholder per identificare un elenco di collegamenti figlio o di "
+"categorie. È auspicabile in questi casi che i collegamenti padre servano "
+"solo come funzione organizzativa. Abilitando questa opzione i collegamenti "
+"sono rimossi dalle categorie/pagine padre e non reindirizzano a nessuna "
+"pagina se cliccati."
+
+#: ../epanel/options_fusion.php:639
+msgid "Single Post Layout"
+msgstr "Layout post singolo"
+
+#: ../epanel/options_fusion.php:644
+msgid "Single Page Layout"
+msgstr "Layout pagina singola"
+
+#: ../epanel/options_fusion.php:657
+msgid "Choose which items to display in the postinfo section"
+msgstr "Scegli quale elemento visualizzare nella sezione informazioni del post"
+
+#: ../epanel/options_fusion.php:661
+msgid ""
+"Here you can choose which items appear in the postinfo section on single "
+"post pages. This is the area, usually below the post title, which displays "
+"basic information about your post. The highlighted itmes shown below will "
+"appear. "
+msgstr ""
+"Puoi scegliere qui quali elementi possono apparire nella sezione "
+"informazioni del post nelle pagine dei singoli post. In quest'area, "
+"solitamente sotto il titolo del post, vengono visualizzate le informazioni "
+"di base del post. Saranno visualizzati gli elementi evidenziati di seguito. "
+
+#: ../epanel/options_fusion.php:664
+msgid "Place Thumbs on Posts"
+msgstr "Inserisci le immagini miniatura nei Post."
+
+#: ../epanel/options_fusion.php:668
+msgid ""
+"By default thumbnails are placed at the beginning of your post on single "
+"post pages. If you would like to remove this initial thumbnail image to "
+"avoid repetition simply disable this option. "
+msgstr ""
+"Per impostazione predefinita le immagini miniatura sono inserite all'inizio "
+"del post nelle pagine dei singoli post. Disabilita questa opzione se vuoi "
+"rimuovere l'immagine miniatura iniziale per evitare ripetizioni. "
+
+#: ../epanel/options_fusion.php:671
+msgid "Show comments on posts"
+msgstr "Mostra commenti ai post"
+
+#: ../epanel/options_fusion.php:675
+msgid ""
+"You can disable this option if you want to remove the comments and comment "
+"form from single post pages. "
+msgstr ""
+"Disabilita questa opzione se vuoi rimuovere i commenti e il riquadro "
+"commenti dai post. "
+
+#: ../epanel/options_fusion.php:686
+msgid "Place Thumbs on Pages"
+msgstr "Inserisci le immagini miniatura nelle Pagine"
+
+#: ../epanel/options_fusion.php:690
+msgid ""
+"By default thumbnails are not placed on pages (they are only used on posts). "
+"However, if you want to use thumbnails on posts you can! Just enable this "
+"option. "
+msgstr ""
+"Come impostazione predefinita, la anteprime non sono collocate sulle pagine "
+"(sono usate solo con gli articoli). Tuttavia, se vuoi puoi utillizare le "
+"anteprime sulle pagina attivando questa opzione. "
+
+#: ../epanel/options_fusion.php:693
+msgid "Show comments on pages"
+msgstr "Mostra commenti nelle pagine"
+
+#: ../epanel/options_fusion.php:697
+msgid ""
+"By default comments are not placed on pages, however, if you would like to "
+"allow people to comment on your pages simply enable this option. "
+msgstr ""
+"Per impostazione predefinita i commenti non sono inserite nelle pagine. "
+"Abilita questa opzione se vuoi permettere i commenti alle pagine. "
+
+#: ../epanel/options_fusion.php:708
+msgid "Post info section"
+msgstr "Sezione informazioni del post"
+
+#: ../epanel/options_fusion.php:712
+msgid ""
+"Here you can choose which items appear in the postinfo section on pages. "
+"This is the area, usually below the post title, which displays basic "
+"information about your post. The highlighted itmes shown below will appear. "
+msgstr ""
+"Puoi scegliere qui quali elementi possono apparire nella sezione "
+"informazioni dell'articolo nelle pagine. In quest'area, solitamente sotto il "
+"titolo del post, vengono visualizzate le informazioni di base del post. "
+"Saranno visualizzati gli elementi evidenziati di seguito. "
+
+#: ../epanel/options_fusion.php:717
+msgid "Show Thumbs on Index pages"
+msgstr "Mostra le Immagini miniatura nelle pagine iniziali."
+
+#: ../epanel/options_fusion.php:721
+msgid "Enable this option to show thumbnails on Index Pages."
+msgstr ""
+"Abilita questa opzione per mostrare le miniature nelle Pagine iniziali."
+
+#: ../epanel/options_fusion.php:740
+msgid "Homepage SEO"
+msgstr "Homepage SEO"
+
+#: ../epanel/options_fusion.php:745
+msgid "Single Post Page SEO"
+msgstr "SEO Pagina post singolo"
+
+#: ../epanel/options_fusion.php:750
+msgid "Index Page SEO"
+msgstr "SEO Pagina iniziale"
+
+#: ../epanel/options_fusion.php:758
+msgid " Enable custom title "
+msgstr " Abilita titolo personalizzato "
+
+#: ../epanel/options_fusion.php:762
+msgid ""
+"By default the theme uses a combination of your blog name and your blog "
+"description, as defined when you created your blog, to create your homepage "
+"titles. However if you want to create a custom title then simply enable this "
+"option and fill in the custom title field below. "
+msgstr ""
+"Per impostazione predefinita il tema utilizza una combinazione del nome del "
+"tuo blog e della sua descrizione, indicata da te al momento della creazione "
+"del blog, per creare i titoli delle homepage.  Abilita questa opzione se "
+"vuoi creare un titolo personalizzato e completa il campo titolo "
+"personalizzato qui di seguito. "
+
+#: ../epanel/options_fusion.php:765
+msgid " Enable meta description"
+msgstr " Abilita descrizione metatag"
+
+#: ../epanel/options_fusion.php:769
+msgid ""
+"By default the theme uses your blog description, as defined when you created "
+"your blog, to fill in the meta description field. If you would like to use a "
+"different description then enable this option and fill in the custom "
+"description field below. "
+msgstr ""
+"Per impostazione predefinita il tema utilizza la descrizione del tuo blog, "
+"indicata da te al momento della creazione del blog, per completare il campo "
+"metadescrizione. Abilita questa opzione se vuoi utilizzare una descrizione "
+"differente e completa il campo descrizione personalizzata qui di seguito. "
+
+#: ../epanel/options_fusion.php:772
+msgid " Enable meta keywords"
+msgstr " Abilita metadato parole chiave"
+
+#: ../epanel/options_fusion.php:776
+msgid ""
+"By default the theme does not add keywords to your header. Most search "
+"engines don't use keywords to rank your site anymore, but some people define "
+"them anyway just in case. If you want to add meta keywords to your header "
+"then enable this option and fill in the custom keywords field below. "
+msgstr ""
+"Per impostazione predefinita il tema non aggiunge parole chiave alla tua "
+"intestazione. La maggior parte dei motori di ricerca non utilizzano più le "
+"parole chiave per classificare i siti web. Se desideri, puoi comunque "
+"abilitare questa opzione. Abilita questa opzione se vuoi aggiungere il "
+"metadato parole chiave e completa il campo parole chiave personalizzate qui "
+"di seguito. "
+
+#: ../epanel/options_fusion.php:779 ../epanel/options_fusion.php:912
+msgid " Enable canonical URL's"
+msgstr " Abilita URL's canonici"
+
+#: ../epanel/options_fusion.php:783
+msgid ""
+"Canonicalization helps to prevent the indexing of duplicate content by "
+"search engines, and as a result, may help avoid duplicate content penalties "
+"and pagerank degradation. Some pages may have different URLs all leading to "
+"the same place. For example domain.com, domain.com/index.html, and www."
+"domain.com are all different URLs leading to your homepage. From a search "
+"engine's perspective these duplicate URLs, which also occur often due to "
+"custom permalinks, may be treaded individually instead of as a single "
+"destination. Defining a canonical URL tells the search engine which URL you "
+"would like to use officially. The theme bases its canonical URLs off your "
+"permalinks and the domain name defined in the settings tab of wp-admin."
+msgstr ""
+"La canonicalizzazione aiuta a evitare l'indicizzazione di contenuto "
+"dublicato da parte dei motori di riceca, e come risultato, può aiutare a "
+"evitare penalità e un peggioramento del pagerank. Alcuni pagine possono "
+"avere più di un URL che indirizza alla stessa pagina. Per esempio domain."
+"com, domain.com/index.html, e www.domain.com sono tutti diversi URL che "
+"conducono alla tua homepage. Dal punto di vista dei motori di ricerca, "
+"queste duplicazioni URLs, dovute spesso a link personalizzati, possono "
+"essere considerati individualmente invece di singola destinazione. L'URL "
+"canonicallizzato Defining indica al motore di ricerca quale URL desideri "
+"utilizzare in modo ufficiale. Il tema scollega i suoi URL canonicallizzati "
+"dai tuoi link e dal nome di dominio definito nella scheda impostazione di wp-"
+"admin."
+
+#: ../epanel/options_fusion.php:788
+msgid "Homepage custom title (if enabled)"
+msgstr "Titolo personalizzato Homepage (se abilitato)"
+
+#: ../epanel/options_fusion.php:792
+msgid ""
+"If you have enabled custom titles you can add your custom title here. "
+"Whatever you type here will be placed between the < title >< /title > tags "
+"in header.php"
+msgstr ""
+"Se hai abilitato la personalizzazione di titoli, aggiungi qui il titolo "
+"personalizzato. Quello che scriverai sarà posto tra le tag < title >< /title "
+"> in header.php"
+
+#: ../epanel/options_fusion.php:796
+msgid "Homepage meta description (if enabled)"
+msgstr "Metadescrizione Homepage (se abilitata)"
+
+#: ../epanel/options_fusion.php:800
+msgid ""
+"If you have enabled meta descriptions you can add your custom description "
+"here."
+msgstr ""
+"Se hai abilitato la metadescrizione, aggiungi qui la tua descrizione "
+"personalizzata."
+
+#: ../epanel/options_fusion.php:804
+msgid "Homepage meta keywords (if enabled)"
+msgstr "Metadato parole chiave Homepage (se abilitato)"
+
+#: ../epanel/options_fusion.php:808
+msgid ""
+"If you have enabled meta keywords you can add your custom keywords here. "
+"Keywords should be separated by comas. For example: wordpress,themes,"
+"templates,elegant"
+msgstr ""
+"Se hai abilitato il metadato parole chiave, aggiungi qui le tue parole "
+"chiave personalizzate. Le parole chiave devono essere separate da virgole. "
+"Ad esempio: wordpress,themes,templates,elegant"
+
+#: ../epanel/options_fusion.php:812 ../epanel/options_fusion.php:890
+msgid "If custom titles are disabled, choose autogeneration method"
+msgstr ""
+"Se i titoli personalizzati sono disabilitati, scegli il metodo della "
+"generazione automatica."
+
+#: ../epanel/options_fusion.php:817
+msgid ""
+"If you are not using cutsom post titles you can still have control over how "
+"your titles are generated. Here you can choose which order you would like "
+"your post title and blog name to be displayed, or you can remove the blog "
+"name from the title completely."
+msgstr ""
+"Se i titoli personalizzati per i post non sono abilitati, puoi comunque "
+"controllare come questi vengono generati. Puoi scegliere qui in quale ordine "
+"visualizzare il titolo del post e il nome del blog, oppure puoi rimuovere "
+"completamente il nome del blog dal titolo."
+
+#: ../epanel/options_fusion.php:820 ../epanel/options_fusion.php:898
+#: ../epanel/options_fusion.php:936
+msgid "Define a character to separate BlogName and Post title"
+msgstr ""
+"Definisci un carattere per separare il Nome del sito web dal Titolo del post"
+
+#: ../epanel/options_fusion.php:824 ../epanel/options_fusion.php:902
+msgid ""
+"Here you can change which character separates your blog title and post name "
+"when using autogenerated post titles. Common values are | or -"
+msgstr ""
+"Puoi cambiare qui quale carattere separerà il titolo del blog dal nome del "
+"post in caso di titoli di post generati automaticamente. Valori comuni sono "
+"| o -"
+
+#: ../epanel/options_fusion.php:834
+msgid "Enable custom titles"
+msgstr "Abilita titoli personalizzati"
+
+#: ../epanel/options_fusion.php:838
+msgid ""
+"By default the theme creates post titles based on the title of your post and "
+"your blog name. If you would like to make your meta title different than "
+"your actual post title you can define a custom title for each post using "
+"custom fields. This option must be enabled for custom titles to work, and "
+"you must choose a custom field name for your title below."
+msgstr ""
+"Per impostazione predefinita il tema crea i titoli dei post sul titolo del "
+"tuo post e il nome del blog. Se desideri creare un metatitolo differente "
+"rispetto all'attuale titolo del post, puoi definire un titolo personalizzato "
+"per ogni post utilizzando i campi personalizzati. Abilita questa opzione se "
+"vuoi i titoli personalizzati, e scegli un campo personalizzato nome per il "
+"tuo titolo qui di seguito."
+
+#: ../epanel/options_fusion.php:841
+msgid "Enable custom description"
+msgstr "Abilita descrizione personalizzata"
+
+#: ../epanel/options_fusion.php:845
+msgid ""
+"If you would like to add a meta description to your post you can do so using "
+"custom fields. This option must be enabled for descriptions to be displayed "
+"on post pages. You can add your meta description using custom fields based "
+"off the custom field name you define below."
+msgstr ""
+"Se desideri aggiungere una metadescrizione personalizzata ai tuoi post, "
+"utilizza i campi personalizzati. Abilita questa opzione per visualizzare le "
+"descrizioni nelle pagine dei post. Puoi aggiungere una metadescrizione "
+"utilizzando i campi personalizzati al di fuori del campo personalizzato nome "
+"che definisci qui di seguito."
+
+#: ../epanel/options_fusion.php:850
+msgid "Enable custom keywords"
+msgstr "Abilita parole chiave personalizzate"
+
+#: ../epanel/options_fusion.php:854
+msgid ""
+"If you would like to add meta keywords to your post you can do so using "
+"custom fields. This option must be enabled for keywords to be displayed on "
+"post pages. You can add your meta keywords using custom fields based off the "
+"custom field name you define below."
+msgstr ""
+"Se desideri aggiungere meta parole chiave al tuo post, utilizza i campi "
+"personalizzati. Abilita questa opzione per visualizzare le parole chiave "
+"nelle pagine dei post. Puoi aggiungere le tue meta parole chiave utilizzando "
+"i campi personalizzati al di fuori del campo personalizzato nome che "
+"definisci qui di seguito."
+
+#: ../epanel/options_fusion.php:857
+msgid "Enable canonical URL's"
+msgstr "Abilita URL's canonici"
+
+#: ../epanel/options_fusion.php:861 ../epanel/options_fusion.php:916
+msgid ""
+"Canonicalization helps to prevent the indexing of duplicate content by "
+"search engines, and as a result, may help avoid duplicate content penalties "
+"and pagerank degradation. Some pages may have different URL's all leading to "
+"the same place. For example domain.com, domain.com/index.html, and www."
+"domain.com are all different URLs leading to your homepage. From a search "
+"engine's perspective these duplicate URLs, which also occur often due to "
+"custom permalinks, may be treaded individually instead of as a single "
+"destination. Defining a canonical URL tells the search engine which URL you "
+"would like to use officially. The theme bases its canonical URLs off your "
+"permalinks and the domain name defined in the settings tab of wp-admin."
+msgstr ""
+"La canonicalizzazione aiuta a evitare l'indicizzazione di contenuto "
+"dublicato da parte dei motori di riceca, e come risultato, può aiutare a "
+"evitare penalità e un peggioramento del pagerank. Alcuni pagine possono "
+"avere più di un URL che indirizza alla stessa pagina. Per esempio domain."
+"com, domain.com/index.html, e www.domain.com sono tutti diversi URL che "
+"conducono alla tua homepage. Dal punto di vista dei motori di ricerca, "
+"queste duplicazioni URLs, dovute spesso a link personalizzati, possono "
+"essere considerati individualmente invece di singola destinazione. L'URL "
+"canonicallizzato Defining indica al motore di ricerca quale URL desideri "
+"utilizzare in modo ufficiale. Il tema scollega i suoi URL canonicallizzati "
+"dai tuoi link e dal nome di dominio definito nella scheda impostazione di wp-"
+"admin."
+
+#: ../epanel/options_fusion.php:866
+msgid "Custom field Name to be used for title"
+msgstr "Campo personalizzato Nome utilizzato per il titolo"
+
+#: ../epanel/options_fusion.php:870
+msgid ""
+"When you define your title using custom fields you should use this value for "
+"the custom field Name. The Value of your custom field should be the custom "
+"title you would like to use."
+msgstr ""
+"Quando definisci il titolo utilizzando i campi personalizzati, devi poi "
+"utilizzare questo valore per il campo personalizzato Nome. Il Valore del tuo "
+"campo personalizzato deve essere il titolo che desideri utilizzare."
+
+#: ../epanel/options_fusion.php:874
+msgid "Custom field Name to be used for description"
+msgstr "Campo personalizzato Nome utilizzato per la descrizione"
+
+#: ../epanel/options_fusion.php:878
+msgid ""
+"When you define your meta description using custom fields you should use "
+"this value for the custom field Name. The Value of your custom field should "
+"be the custom description you would like to use."
+msgstr ""
+"Quando definisci la tua metadescrizione utilizzando i campi personalizzati, "
+"devi poi utilizzare questo valore per il campo personalizzato Nome. Il "
+"Valore del tuo campo personalizzato deve essere la descrizione "
+"personalizzata che desideri utilizzare."
+
+#: ../epanel/options_fusion.php:882
+msgid "Custom field Name to be used for keywords"
+msgstr "Campo personalizzato Nome utilizzato per le parole chiave"
+
+#: ../epanel/options_fusion.php:886
+msgid ""
+"When you define your keywords using custom fields you should use this value "
+"for the custom field Name. The Value of your custom field should be the meta "
+"keywords you would like to use, separated by comas."
+msgstr ""
+"Quando definisci le tue parole chiave utilizzando i campi personalizzati, "
+"devi poi utilizzare questo valore per il campo personalizzato Nome. Il "
+"Valore del tuo campo personalizzato devono essere le meta parole chiave che "
+"desideri utilizzare, separate da virgole."
+
+#: ../epanel/options_fusion.php:895
+msgid ""
+"If you are not using cutsom post titles you can still have control over hw "
+"your titles are generated. Here you can choose which order you would like "
+"your post title and blog name to be displayed, or you can remove the blog "
+"name from the title completely."
+msgstr ""
+"Se i titoli personalizzati per i post non sono abilitati, puoi comunque "
+"controllare come questi vengono generati. Puoi scegliere qui in quale ordine "
+"visualizzare il titolo del post e il nome del blog, oppure puoi rimuovere "
+"completamente il nome del blog dal titolo."
+
+#: ../epanel/options_fusion.php:919
+msgid "Enable meta descriptions"
+msgstr "Abilita metadescrizioni"
+
+#: ../epanel/options_fusion.php:923
+msgid ""
+"Check this box if you want to display meta descriptions on category/archive "
+"pages. The description is based off the category description you choose when "
+"creating/edit your category in wp-admin."
+msgstr ""
+"Spunta questo riquadro se vuoi visualizzare le metadescrizioni nelle pagine "
+"categoria/archivio. La descrizione è basata al di fuori della descrizione "
+"categoria che scegli al momento della creazione/modifica della tua categoria "
+"in wp-admin."
+
+#: ../epanel/options_fusion.php:928
+msgid "Choose title autogeneration method"
+msgstr "Scegli il metodo della generazione automatica"
+
+#: ../epanel/options_fusion.php:933
+msgid ""
+"Here you can choose how your titles on index pages are generated. You can "
+"change which order your blog name and index title are displayed, or you can "
+"remove the blog name from the title completely."
+msgstr ""
+"Puoi scegliere qui come saranno generati i tuoi titoli nelle pagine "
+"iniziali. Puoi modificare qui in quale ordine visualizzare il nome del blog "
+"e il titolo della pagina iniziale, oppure puoi rimuovere completamente il "
+"nome del blog dal titolo."
+
+#: ../epanel/options_fusion.php:940
+msgid ""
+"Here you can change which character separates your blog title and index page "
+"name when using autogenerated post titles. Common values are | or -"
+msgstr ""
+"Puoi cambiare qui quale carattere separerà il titolo del blog e il nome "
+"della pagina iniziale in caso di titoli di post generati automaticamente. "
+"Valori comuni sono | o -"
+
+#: ../epanel/options_fusion.php:961
+msgid "Code Integration"
+msgstr "Integrazione Codice"
+
+#: ../epanel/options_fusion.php:969
+msgid "Enable header code"
+msgstr "Abilita codice intestazione"
+
+#: ../epanel/options_fusion.php:973
+msgid ""
+"Disabling this option will remove the header code below from your blog. This "
+"allows you to remove the code while saving it for later use."
+msgstr ""
+"Disabilitando questa opzione rimuoverai il codice intestazione dal tuo blog. "
+"Se rimuovi il codice puoi comunque salvarlo e utilizzarlo più tardi."
+
+#: ../epanel/options_fusion.php:976
+msgid "Enable body code"
+msgstr "Abilita codice < body >"
+
+#: ../epanel/options_fusion.php:980
+msgid ""
+"Disabling this option will remove the body code below from your blog. This "
+"allows you to remove the code while saving it for later use."
+msgstr ""
+"Disabilitando questa opzione rimuoverai il codice corpo sottostante dal tuo "
+"blog. Se rimuovi il codice puoi comunque salvarlo e utilizzarlo più tardi."
+
+#: ../epanel/options_fusion.php:985
+msgid "Enable single top code"
+msgstr "Abilita codice superiore singolo"
+
+#: ../epanel/options_fusion.php:989
+msgid ""
+"Disabling this option will remove the single top code below from your blog. "
+"This allows you to remove the code while saving it for later use."
+msgstr ""
+"Disabilitando questa opzione rimuoverai il codice superiore singolo qui di "
+"seguito dal tuo blog. Se rimuovi il codice puoi comunque salvarlo e "
+"utilizzarlo più tardi."
+
+#: ../epanel/options_fusion.php:992
+msgid "Enable single bottom code"
+msgstr "Abilita codice inferiore singolo"
+
+#: ../epanel/options_fusion.php:996
+msgid ""
+"Disabling this option will remove the single bottom code below from your "
+"blog. This allows you to remove the code while saving it for later use."
+msgstr ""
+"Disabilitando questa opzione rimuoverai il codice inferiore singolo qui di "
+"seguito dal tuo blog. Se rimuovi il codice puoi comunque salvarlo e "
+"utilizzarlo più tardi."
+
+#: ../epanel/options_fusion.php:1001
+msgid "Add code to the < head > of your blog"
+msgstr "Aggiungi codice a < head > del tuo blog"
+
+#: ../epanel/options_fusion.php:1005
+msgid ""
+"Any code you place here will appear in the head section of every page of "
+"your blog. This is useful when you need to add javascript or css to all "
+"pages."
+msgstr ""
+"Il codice che indicherai qui apparirà nella sezione intestazione di ogni "
+"pagina del tuo blog. Questo è utile se è necessario aggiungere Javascript o "
+"CSS a tutte le pagine."
+
+#: ../epanel/options_fusion.php:1008
+msgid ""
+"Add code to the < body > (good for tracking codes such as google analytics)"
+msgstr ""
+"Aggiungi codice al < body > (ottimo per codici di monitoraggio come Google "
+"Analytics)"
+
+#: ../epanel/options_fusion.php:1012
+msgid ""
+"Any code you place here will appear in body section of all pages of your "
+"blog. This is usefull if you need to input a tracking pixel for a state "
+"counter such as Google Analytics."
+msgstr ""
+"Il codice che indicherai qui apparirà nella sezione corpo di ogni pagina del "
+"tuo blog. Questo è utile se è necessario inserire pixel di monitoraggio per "
+"i servizi di statistica come Google Analytics."
+
+#: ../epanel/options_fusion.php:1015
+msgid "Add code to the top of your posts"
+msgstr "Aggiungi codice nella parte superiore dei tuoi post"
+
+#: ../epanel/options_fusion.php:1019 ../epanel/options_fusion.php:1026
+msgid ""
+"Any code you place here will be placed at the top of all single posts. This "
+"is useful if you are looking to integrating things such as social "
+"bookmarking links."
+msgstr ""
+"Il codice che indichi qui sarà inserito nella parte superiore di ogni post. "
+"Utile se desideri integrare ad esempio i collegamenti ai social bookmarking."
+
+#: ../epanel/options_fusion.php:1022
+msgid "Add code to the bottom of your posts, before the comments"
+msgstr "Aggiungi codice alla parte inferiore dei tuoi post, prima dei commenti"
+
+#: ../epanel/options_fusion.php:1044
+msgid "Documentation"
+msgstr "Documentazione"
+
+#: ../epanel/options_fusion.php:1070
+msgid "Manage Un-widgetized Advertisements"
+msgstr "Gestisci annunci"
+
+#: ../epanel/options_fusion.php:1078
+msgid "Enable Single Post 468x60 banner"
+msgstr "Abilita banner 468x60 post singolo"
+
+#: ../epanel/options_fusion.php:1082
+msgid ""
+"Enabling this option will display a 468x60 banner ad on the bottom of your "
+"post pages below the single post content. If enabled you must fill in the "
+"banner image and destination url below."
+msgstr ""
+"Abilitando questa opzione visualizzi un banner 468x60 nella parte inferiore "
+"delle pagine dei post, sotto il contenuto dei singoli post.  Se abilitato "
+"devi completare l'immagine banner e l'URL di destinazione qui di seguito."
+
+#: ../epanel/options_fusion.php:1087
+msgid "Input 468x60 advertisement banner image"
+msgstr "Inserisci immagine banner annuncio 468x60"
+
+#: ../epanel/options_fusion.php:1091
+msgid "Here you can provide 468x60 banner image url"
+msgstr "Qui puoi inserire l'URL dell'immagine banner 468x60"
+
+#: ../epanel/options_fusion.php:1095
+msgid "Input 468x60 advertisement destination url"
+msgstr "Inserisci URL destinazione annuncio 468x60"
+
+#: ../epanel/options_fusion.php:1099
+msgid "Here you can provide 468x60 banner destination url"
+msgstr "Qui puoi inserire l'URL di destinazione del banner 468x60"
+
+#: ../epanel/options_fusion.php:1103
+msgid "Input 468x60 adsense code"
+msgstr "Inserisci codice 468x60 Google Adsense"
+
+#: ../epanel/options_fusion.php:1107
+msgid "Place your adsense code here."
+msgstr "Inserisci il tuo codice Google Adsense qui."
+
+#: ../epanel/page_templates/page_templates.php:22
+msgid "Captcha"
+msgstr "Captcha"
+
+#: ../epanel/page_templates/page_templates.php:22
+msgid "Fill"
+msgstr "Riempi"
+
+#: ../epanel/page_templates/page_templates.php:22
+msgid "field"
+msgstr "campo"
+
+#: ../epanel/page_templates/page_templates.php:22
+msgid "Invalid email"
+msgstr "Email non valida"
+
+#: ../epanel/page_templates/page_templates.php:37
+msgid "ET Page Template Settings"
+msgstr "Impostazioni Template Pagine ET"
+
+#: ../epanel/page_templates/page_templates.php:64
+msgid ""
+"Additional settings appear here, when one of ET page templates is selected "
+"( Page Attributes -> Template )"
+msgstr ""
+"Le impostazioni aggiuntive appaiono qui, quando uno o più template ET delle "
+"pagine sono selezionati ( Attributi Pagina -> Template )"
+
+#: ../epanel/page_templates/page_templates.php:69
+msgid "Full Width Page"
+msgstr "Pagina a Larghezza Estesa"
+
+#: ../epanel/page_templates/page_templates.php:74
+msgid "Regenerate captcha numbers"
+msgstr "Rigenera numeri captcha"
+
+#: ../epanel/page_templates/page_templates.php:78
+msgid "Email To:"
+msgstr "Email A:"
+
+#: ../epanel/page_templates/page_templates.php:84
+msgid "Blog Style mode"
+msgstr "Modalità stile blog"
+
+#: ../epanel/page_templates/page_templates.php:89
+msgid "Hide Auto Thumbnail"
+msgstr "Nascondi Miniature Automatiche"
+
+#: ../epanel/page_templates/page_templates.php:94
+msgid "Show Titles"
+msgstr "Mostra Titoli"
+
+#: ../epanel/page_templates/page_templates.php:99
+msgid "Show Descriptions"
+msgstr "Mostra Descrizioni"
+
+#: ../epanel/page_templates/page_templates.php:104
+msgid "Detect Portrait Images"
+msgstr "Riconosci Immagini Ritratto"
+
+#: ../epanel/page_templates/page_templates.php:108
+msgid "Thumbnail Size:"
+msgstr "Dimensioni Miniatura:"
+
+#: ../epanel/page_templates/page_templates.php:109
+msgid "Small"
+msgstr "Piccolo"
+
+#: ../epanel/page_templates/page_templates.php:110
+msgid "Medium"
+msgstr "Medio"
+
+#: ../epanel/page_templates/page_templates.php:111
+msgid "Large"
+msgstr "Grande"
+
+#: ../epanel/page_templates/page_templates.php:115
+#: ../epanel/page_templates/page_templates.php:120
+msgid "Number of posts per page:"
+msgstr "Numero di post per pagina:"
+
+#: ../epanel/page_templates/page_templates.php:125
+msgid "Select blog categories:"
+msgstr "Scegli categorie del blog:"
+
+#: ../epanel/page_templates/page_templates.php:144
+msgid "Select gallery categories:"
+msgstr "Scegli categorie della galleria:"
+
+#: ../epanel/shortcodes/shortcodes.php:15
+msgid "Previous"
+msgstr "Precedente"
+
+#: ../epanel/shortcodes/shortcodes.php:15
+msgid "Next"
+msgstr "Prossimo"
+
+#: ../epanel/shortcodes/shortcodes.php:287
+msgid "Member Login"
+msgstr "Accesso membro"
+
+#: ../epanel/shortcodes/shortcodes.php:290
+msgid "Username: "
+msgstr "Nome utente: "
+
+#: ../epanel/shortcodes/shortcodes.php:291
+msgid "Password: "
+msgstr "Password: "
+
+#: ../epanel/shortcodes/shortcodes.php:292
+msgid "Login"
+msgstr "Login"
+
+#: ../epanel/shortcodes/shortcodes.php:328
+msgid "Add a Tooltip Text"
+msgstr "Aggiungi testo descrizione comando"
+
+#: ../epanel/shortcodes/shortcodes.php:350
+msgid "Click here to learn more"
+msgstr "Clicca qui per maggiori informazioni"
+
+#: ../epanel/shortcodes/shortcodes.php:960
+msgid "Caption"
+msgstr "Didascalia"
+
+#: ../epanel/shortcodes/shortcodes.php:961
+msgid "Caption goes here"
+msgstr "La didascalia va inserita qui"
+
+#: ../epanel/shortcodes/shortcodes.php:962
+msgid "Caption title goes here"
+msgstr "Il titolo della didascalia va inserito qui"
+
+#: ../epanel/shortcodes/shortcodes.php:966
+msgid "State"
+msgstr "Stato"
+
+#: ../epanel/shortcodes/shortcodes.php:968
+msgid "Select between expanded and closed state"
+msgstr "Seleziona tra stato aperto e chiuso"
+
+#: ../epanel/shortcodes/shortcodes.php:973
+#: ../epanel/shortcodes/shortcodes.php:989
+#: ../epanel/shortcodes/shortcodes.php:1018
+#: ../epanel/shortcodes/shortcodes.php:1098
+msgid "Content"
+msgstr "Contenuto"
+
+#: ../epanel/shortcodes/shortcodes.php:974
+#: ../epanel/shortcodes/shortcodes.php:990
+#: ../epanel/shortcodes/shortcodes.php:1076
+#: ../epanel/shortcodes/shortcodes.php:1099
+msgid "Content goes here"
+msgstr "Il contenuto va inserito qui"
+
+#: ../epanel/shortcodes/shortcodes.php:975
+#: ../epanel/shortcodes/shortcodes.php:991
+#: ../epanel/shortcodes/shortcodes.php:1020
+msgid "Content text or html"
+msgstr "Contenuto del testo o HTML"
+
+#: ../epanel/shortcodes/shortcodes.php:982
+#: ../epanel/shortcodes/shortcodes.php:1004
+msgid "Type"
+msgstr "Tipo"
+
+#: ../epanel/shortcodes/shortcodes.php:984
+msgid "Type of the box"
+msgstr "Tipologia del riquadro"
+
+#: ../epanel/shortcodes/shortcodes.php:998
+msgid "Link"
+msgstr "Link"
+
+#: ../epanel/shortcodes/shortcodes.php:1000
+msgid "URL"
+msgstr "URL"
+
+#: ../epanel/shortcodes/shortcodes.php:1006
+msgid "Choose button type"
+msgstr "Scegli tipologia pulsante"
+
+#: ../epanel/shortcodes/shortcodes.php:1011
+msgid "Color"
+msgstr "Colore"
+
+#: ../epanel/shortcodes/shortcodes.php:1013
+msgid "Choose button color"
+msgstr "Scegli colore pulsante"
+
+#: ../epanel/shortcodes/shortcodes.php:1019
+msgid "Link text"
+msgstr "Testo del link"
+
+#: ../epanel/shortcodes/shortcodes.php:1024
+msgid "Icon"
+msgstr "Icona"
+
+#: ../epanel/shortcodes/shortcodes.php:1026
+msgid "Used for icon button type"
+msgstr "Utilizzato per la tipologia del pulsante icona"
+
+#: ../epanel/shortcodes/shortcodes.php:1031
+msgid "Open link in new window"
+msgstr "Apri collegamento in una nuova finestra"
+
+#: ../epanel/shortcodes/shortcodes.php:1033
+msgid "Select yes if the link should be opened in a new window"
+msgstr ""
+"Seleziona \"sì\" se vuoi che i collegamenti si aprano in una nuova finestra"
+
+#: ../epanel/shortcodes/shortcodes.php:1041
+msgid "Slider Type"
+msgstr "Tipologia di indicatori scorrevoli"
+
+#: ../epanel/shortcodes/shortcodes.php:1043
+msgid "Select Slider Type here"
+msgstr "Seleziona qui la tipologia di indicatori scorrevoli"
+
+#: ../epanel/shortcodes/shortcodes.php:1048
+msgid "Effect"
+msgstr "Effetto"
+
+#: ../epanel/shortcodes/shortcodes.php:1050
+msgid "Select Animation Effect"
+msgstr "Seleziona effetto animazione"
+
+#: ../epanel/shortcodes/shortcodes.php:1055
+msgid "Auto"
+msgstr "Automatico"
+
+#: ../epanel/shortcodes/shortcodes.php:1057
+msgid "Choose yes if you want for automatic slider animation"
+msgstr ""
+"Scegli \"sì\" se vuoi abilitare l'animazione automatica dello scorrimento"
+
+#: ../epanel/shortcodes/shortcodes.php:1062
+msgid "Auto Speed"
+msgstr "Velocità automatica"
+
+#: ../epanel/shortcodes/shortcodes.php:1064
+msgid "Automattic slider speed (works only if Auto is set to yes)"
+msgstr ""
+"Velocità di scorrimento automatica (solo se hai selezionato \"sì\" su "
+"Automatico)"
+
+#: ../epanel/shortcodes/shortcodes.php:1068
+msgid "Tab Text"
+msgstr "Testo scheda"
+
+#: ../epanel/shortcodes/shortcodes.php:1075
+msgid "Tab Content"
+msgstr "Contenuto scheda"
+
+#: ../epanel/shortcodes/shortcodes.php:1077
+msgid "Paste image url here, if you chose \"images\" slider type"
+msgstr ""
+"Incolla l'URL dell'immagine qui se scegli \"images\" come tipologia di "
+"indicatori di scorrimento"
+
+#: ../epanel/shortcodes/shortcodes.php:1085
+msgid "Image Url"
+msgstr "URL immagine"
+
+#: ../epanel/shortcodes/shortcodes.php:1087
+msgid "Author Image URL"
+msgstr "URL immagine autore"
+
+#: ../epanel/shortcodes/shortcodes.php:1091
+msgid "Use resizing"
+msgstr "Utilizza ridimensionamento"
+
+#: ../epanel/shortcodes/shortcodes.php:1168
+msgid "+ Add One More Tab"
+msgstr "+ Aggiunge una scheda"
+
+#: ../epanel/shortcodes/shortcodes.php:1318
+msgid "Image Height"
+msgstr "Altezza immagine"
+
+#: ../epanel/shortcodes/shortcodes.php:1319
+msgid "Image Width"
+msgstr "Larghezza immagine"
+
+#: ../footer.php:14
+#, php-format
+msgid "Designed by %1$s | Powered by %2$s"
+msgstr "Progettato da %1$s | Sviluppato da %2$s"
+
+#: ../functions.php:32
+msgid "Primary Menu"
+msgstr "Menu Primario"
+
+#: ../functions.php:33
+msgid "Footer Menu"
+msgstr "Menu Piè di Pagina"
+
+#: ../functions.php:76 ../functions.php:242 ../page-blog.php:72
+msgid "on"
+msgstr "su"
+
+#: ../functions.php:79
+msgid "no-subset"
+msgstr "nessun subset"
+
+#: ../functions.php:99 ../functions.php:139
+msgid "Navigation Menu"
+msgstr "Menu di Navigazione"
+
+#: ../functions.php:204
+#, php-format
+msgid "Posts by %s"
+msgstr "Post di %s"
+
+#: ../functions.php:221
+msgid "% Comments"
+msgstr "% Commenti"
+
+#: ../functions.php:223
+msgid "No Comments"
+msgstr "Nessun Commento"
+
+#: ../functions.php:238 ../page-blog.php:72
+msgid "by"
+msgstr "di"
+
+#: ../functions.php:245 ../page-blog.php:72
+msgid "in"
+msgstr "in"
+
+#: ../functions.php:250 ../page-blog.php:72
+msgid "Posted"
+msgstr "Postato"
+
+#: ../functions.php:258
+msgid "Testimonials"
+msgstr "Testimonial"
+
+#: ../functions.php:259
+msgid "Testimonial"
+msgstr "Testimonial"
+
+#: ../functions.php:260
+msgid "Add New"
+msgstr "Aggiungi Nuovo"
+
+#: ../functions.php:261
+msgid "Add New Testimonial"
+msgstr "Aggiungi Nuovo Testimonial"
+
+#: ../functions.php:262
+msgid "Edit Testimonial"
+msgstr "Modifica Testimonial"
+
+#: ../functions.php:263
+msgid "New Testimonial"
+msgstr "Nuovo Testimonial"
+
+#: ../functions.php:264
+msgid "All Testimonials"
+msgstr "Tutti i Testimonial"
+
+#: ../functions.php:265
+msgid "View Testimonial"
+msgstr "Vedi Testimonial"
+
+#: ../functions.php:266
+msgid "Search Testimonials"
+msgstr "Cerca Testimonial"
+
+#: ../functions.php:267
+msgid "Nothing found"
+msgstr "Nessun risultato"
+
+#: ../functions.php:268
+msgid "Nothing found in Trash"
+msgstr "Il Cestino è vuoto"
+
+#: ../functions.php:298
+#, php-format
+msgid "Testimonial updated. <a href=\"%s\">View testimonial</a>"
+msgstr "Testimonial aggiornato. <a href=\"%s\">Mostra testimonial</a>"
+
+#: ../functions.php:299
+msgid "Custom field updated."
+msgstr "Campo personalizzato aggiornato."
+
+#: ../functions.php:300
+msgid "Custom field deleted."
+msgstr "Campo personalizzato eliminato."
+
+#: ../functions.php:301
+msgid "Testimonial updated."
+msgstr "Testimonial aggiornato."
+
+#. translators: %s: date and time of the revision
+#: ../functions.php:303
+#, php-format
+msgid "Testimonial restored to revision from %s"
+msgstr "Testimonial riportato alla revisione da %s"
+
+#: ../functions.php:304
+#, php-format
+msgid "Testimonial published. <a href=\"%s\">View testimonial</a>"
+msgstr "Testimonial pubblicato. <a href=\"%s\">Vedi testimonial</a>"
+
+#: ../functions.php:305
+msgid "Testimonial saved."
+msgstr "Testimonial salvato."
+
+#: ../functions.php:306
+#, php-format
+msgid ""
+"Testimonial submitted. <a target=\"_blank\" href=\"%s\">Preview testimonial</"
+"a>"
+msgstr ""
+"Testimonial inviato. <a target=\"_blank\" href=\"%s\">Anteprima testimonial</"
+"a>"
+
+#: ../functions.php:307
+#, php-format
+msgid ""
+"Testimonial scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
+"\"%2$s\">Preview testimonial</a>"
+msgstr ""
+"Testimonial programmato per: <strong>%1$s</strong>. <a target=\"_blank\" "
+"href=\"%2$s\">Anteprima testimonial</a>"
+
+#. translators: Publish box date format, see http://php.net/date
+#: ../functions.php:309
+msgid "M j, Y @ G:i"
+msgstr "M j, Y @ G:i"
+
+#: ../functions.php:310
+#, php-format
+msgid ""
+"Testimonial draft updated. <a target=\"_blank\" href=\"%s\">Preview "
+"testimonial</a>"
+msgstr ""
+"Bozza testimonial aggiornata. <a target=\"_blank\" href=\"%s\">Anteprima "
+"testimonial</a>"
+
+#: ../functions.php:318
+msgid "ET Testimonial Settings"
+msgstr "Impostazioni Testimonial ET"
+
+#: ../functions.php:319 ../functions.php:320
+msgid "ET Settings"
+msgstr "Impostazioni ET"
+
+#: ../functions.php:329
+msgid "Slide Background Image"
+msgstr "Immagine di Sfondo della Slide"
+
+#: ../functions.php:332
+msgid "enter URL or upload an image for the 1st Product Image"
+msgstr ""
+"inserisci l'URL o carica una immagine per la prima Immagine del Prodotto"
+
+#: ../functions.php:336
+msgid "Slide Subtitle"
+msgstr "Sottotitoli Slide"
+
+#: ../functions.php:341
+msgid "Read More Button Text"
+msgstr "Testo del Pulsante Leggi Ancora"
+
+#: ../functions.php:346
+msgid "Read More Custom Link"
+msgstr "Collegamento del Pulsante Leggi Ancora"
+
+#: ../functions.php:350
+msgid "here you can provide a custom url, that will be used for the slide"
+msgstr "qui puoi fornire un URL personalizzato, verrà usato per la slide"
+
+#: ../functions.php:361
+msgid "Company Name"
+msgstr "Nome Azienda"
+
+#: ../functions.php:448
+msgid "Fonts"
+msgstr "Caratteri"
+
+#: ../functions.php:453
+msgid "Schemes"
+msgstr ""
+
+#: ../functions.php:455
+msgid ""
+"Note: Color settings set above should be applied to the Default color scheme."
+msgstr ""
+
+#: ../functions.php:466
+msgid "Highlight Color"
+msgstr "Colore In Evidenza"
+
+#: ../functions.php:479
+msgid "Link Color"
+msgstr "Colore Collegamento"
+
+#: ../functions.php:492
+msgid "Main Font Color"
+msgstr "Colore Carattere Principale"
+
+#: ../functions.php:505
+msgid "Headings Color"
+msgstr "Colore Intestazioni"
+
+#: ../functions.php:517
+msgid "Header Font"
+msgstr "Carattere Testata"
+
+#: ../functions.php:531
+msgid "Body Font"
+msgstr "Carattere Corpo"
+
+#: ../functions.php:546
+msgid "Color Schemes"
+msgstr ""
+
+#: ../functions.php:551
+msgid "Default"
+msgstr ""
+
+#: ../functions.php:552
+msgid "Blue"
+msgstr ""
+
+#: ../functions.php:553
+msgid "Green"
+msgstr ""
+
+#: ../functions.php:554
+msgid "Purple"
+msgstr ""
+
+#: ../functions.php:555
+msgid "Red"
+msgstr ""
+
+#: ../header.php:72
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../header.php:73
+msgid "Rss"
+msgstr "RSS"
+
+#: ../header.php:74
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../header.php:98
+msgid "Search This Site..."
+msgstr "Cerca In Questo Sito..."
+
+#: ../home.php:34 ../includes/entry.php:33 ../includes/featured.php:59
+msgid "Read More"
+msgstr "Leggi Tutto"
+
+#: ../home.php:94
+msgid "Recent News"
+msgstr "Notizie Recenti"
+
+#: ../home.php:118
+#, php-format
+msgid ""
+"<p class=\"meta-info\">Posted by <a href=\"%1$s\">%2$s</a> on %3$s in %4$s</"
+"p>"
+msgstr ""
+"<p class=\"meta-info\">Postato da <a href=\"%1$s\">%2$s</a> su %3$s in %4$s</"
+"p>"
+
+#: ../home.php:130
+msgid "More Blog Posts "
+msgstr "Altri Post del Blog "
+
+#: ../image.php:53
+msgid "&larr; Previous"
+msgstr "&larr; Indietro"
+
+#: ../image.php:54
+msgid "Next &rarr;"
+msgstr "Avanti &rarr;"
+
+#: ../includes/breadcrumbs.php:7
+msgid "Posts Tagged "
+msgstr "Post Taggati"
+
+#: ../includes/breadcrumbs.php:9 ../includes/breadcrumbs.php:11
+#: ../includes/breadcrumbs.php:13 ../includes/top_info.php:6
+#: ../includes/top_info.php:8 ../includes/top_info.php:10
+msgid "Posts made in"
+msgstr "Post creati in"
+
+#: ../includes/breadcrumbs.php:15 ../includes/top_info.php:12
+msgid "Search results for"
+msgstr "Risultati ricerca per"
+
+#: ../includes/breadcrumbs.php:47 ../includes/top_info.php:19
+msgid "Posts by "
+msgstr "Post di "
+
+#. translators: 1: date, 2: time
+#: ../includes/functions/comments.php:15
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+#: ../includes/functions/comments.php:18
+msgid "(Edit)"
+msgstr "(Modifica)"
+
+#: ../includes/functions/comments.php:23
+msgid "Your comment is awaiting moderation."
+msgstr "Il tuo commento è in moderazione."
+
+#: ../includes/functions/comments.php:31
+msgid "Reply"
+msgstr "Rispondi"
+
+#: ../includes/functions/installation.php:1
+msgid "Read Fusion Documentation"
+msgstr "Leggi la documentazione Fusion"
+
+#: ../includes/navigation.php:2
+msgid "&laquo; Older Entries"
+msgstr "&laquo; Post precedenti"
+
+#: ../includes/navigation.php:3
+msgid "Next Entries &raquo;"
+msgstr "Post successivi &raquo;"
+
+#: ../includes/no-results.php:3
+msgid "No Results Found"
+msgstr "Nessun risultato"
+
+#: ../includes/no-results.php:4
+msgid ""
+"The page you requested could not be found. Try refining your search, or use "
+"the navigation above to locate the post."
+msgstr ""
+"La pagina richiesta non è stata trovata. Affina la tua ricerca, o utilizza "
+"la barra di navigazione qui sopra per trovare il post."
+
+#: ../includes/top_info.php:4
+msgid "Posts Tagged &quot;"
+msgstr "Post Taggati &quot;"
+
+#: ../page-blog.php:92
+msgid "read more"
+msgstr "leggi tutto"
+
+#: ../page-contact.php:19
+msgid "Make sure you entered the captcha. "
+msgstr "Assicurati di aver inserito il captcha."
+
+#: ../page-contact.php:22
+msgid "Numbers regenerated."
+msgstr "Numeri rigenerati."
+
+#: ../page-contact.php:23
+msgid "You entered the wrong number in captcha. "
+msgstr "Hai inserito un numero sbagliato nel captcha."
+
+#: ../page-contact.php:32
+msgid "Make sure you fill all fields. "
+msgstr "Assicurati di aver riempito tutti i campi."
+
+#: ../page-contact.php:37
+msgid "Invalid Email. "
+msgstr "Email non valida."
+
+#: ../page-contact.php:65
+msgid "Thanks for contacting us"
+msgstr "Grazie per averci contattato"
+
+#: ../page-contact.php:116 ../page-contact.php:117
+msgid "Name"
+msgstr "Nome"
+
+#: ../page-contact.php:121 ../page-contact.php:122
+msgid "Email Address"
+msgstr "Indirizzo Email"
+
+#: ../page-contact.php:126 ../page-contact.php:127
+msgid "Subject"
+msgstr "Soggetto"
+
+#: ../page-contact.php:134
+msgid "Captcha: "
+msgstr "Captcha: "
+
+#: ../page-contact.php:145 ../page-contact.php:146
+msgid "Message"
+msgstr "Messaggio"
+
+#: ../page-contact.php:152 ../page-search.php:88
+msgid "Submit"
+msgstr "Invia"
+
+#: ../page-gallery.php:77 ../page-template-portfolio.php:136
+msgid "Zoom in"
+msgstr "Ingrandisci"
+
+#: ../page-gallery.php:78 ../page-template-portfolio.php:137
+msgid "Read more"
+msgstr "Leggi tutto"
+
+#: ../page-login.php:58
+msgid "Username"
+msgstr "Nome Utente"
+
+#: ../page-login.php:59
+msgid "Password"
+msgstr "Password"
+
+#: ../page-search.php:54
+msgid "search this website"
+msgstr "cerca in questo sito"
+
+#: ../page-search.php:57
+msgid "search this site..."
+msgstr "cerca in questo sito..."
+
+#: ../page-search.php:59
+msgid "Posts"
+msgstr "Post"
+
+#: ../page-search.php:63
+msgid "Select a month"
+msgstr "Scegli un mese"
+
+#: ../page-sitemap.php:64
+msgid "Tags"
+msgstr "Tag"
+
+#: ../page-sitemap.php:80
+msgid "Authors"
+msgstr "Autori"
+
+#~ msgid ""
+#~ "This will return all of the settings throughout the options page to their "
+#~ "default values. <strong>Are you sure you want to do this?"
+#~ msgstr ""
+#~ "Questa azione cancellerà tutte le impostazioni personalizzate e "
+#~ "ripristinerà i valori predefiniti. <strong>Vuoi procedere?"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a href=\"%2$s\" class="
+#~ "\"thickbox\" title=\"%1$s\">View version %3$s details</a>. <em>Auto-"
+#~ "updates are not available for this theme. If this is an Elegant Themes "
+#~ "theme, then you must re-download the theme from the member's area and <a "
+#~ "href=\"http://www.elegantthemes.com/members-area/documentation.html#update"
+#~ "\" target=\"_blank\">re-install it</a> in order to update it to the "
+#~ "latest version.</em>"
+#~ msgstr ""
+#~ "È disponibile una nuova versione di %1$s. <a href=\"%2$s\" class="
+#~ "\"thickbox\" title=\"%1$s\">Visualizza dettagli versione %3$s</a>. "
+#~ "<em>Gli aggiornamenti automatici non sono disponibili per questo tema. Se "
+#~ "questo è un tema di Elegant Themes, devi riscaricare il tema dall'area "
+#~ "utenti e <a href=\"http://www.elegantthemes.com/members-area/"
+#~ "documentation.html#update\" target=\"_blank\">reinstallarlo</a> in modo "
+#~ "da aggiornarlo all'ultima versione.</em>"
+
+#~ msgid ""
+#~ "Auto-updates are not available for this theme. If this is an Elegant "
+#~ "Themes theme, then you must re-download the theme from the member's area "
+#~ "and <a href=\"http://www.elegantthemes.com/members-area/documentation."
+#~ "html#update\" target=\"_blank\">re-install it</a> in order to update it "
+#~ "to the latest version."
+#~ msgstr ""
+#~ "Gli aggiornamenti automatici non sono disponibili per questo tema. Se "
+#~ "questo è un tema di Elegant Themes, devi riscaricare il tema dall'area "
+#~ "utenti e <a href=\"http://www.elegantthemes.com/members-area/"
+#~ "documentation.html#update\" target=\"_blank\">reinstallarlo</a> in modo "
+#~ "da aggiornarlo all'ultima versione."

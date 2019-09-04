@@ -1,0 +1,23 @@
+#top { background: url(images/red/top-bg.png) repeat-x; }
+	#top-wrapper { background: url(images/red/top-wrapper-bg.jpg) no-repeat top center; }
+		#menu { background: url(images/red/left-menu-bg.png) no-repeat top left; }
+			#menu-right { background: url(images/red/right-menu-bg.png) no-repeat top right; }
+				#menu-content { background: url(images/red/content-menu-bg.png) repeat-x; }
+					ul#top-menu > li.current_page_item > a, ul#top-menu a:hover { color: #9d908b !important; }
+					ul.nav li ul { background: #E7E7E7 url(images/red/dropdown-bg.png) repeat-y; }
+
+a.additional-info { background: url(images/red/additional-info.png) no-repeat right bottom; }
+	a.additional-info span { background: url(images/red/additional-info.png) no-repeat; }
+.post a.readmore, .reply-container { background: url(images/red/readmore-black.png) no-repeat right bottom; }
+	.post a.readmore span, .reply-container a { background: url(images/red/readmore-black.png) no-repeat; }
+
+#footer { background: #1c1711 url(images/red/top-bg.png) repeat-x; }
+	#footer-top { background: url(images/red/top-wrapper-bg.jpg) no-repeat top center; }
+		.footer-widget, .footer-widget a, p#copyright { color: #9d908b; }
+		ul.bottom-nav li.current_page_item a, ul.bottom-nav li a:hover { color: #9d908b !important; }
+
+#slider-left-overlay { background: url(images/red/slider-left-overlay.png) no-repeat; }
+#slider-right-overlay { background: url(images/red/slider-right-overlay.png) no-repeat; }
+#bottom-light { background: url(images/red/bottom-light-bg.png) no-repeat bottom center; }
+.footer-widget ul li { background: url(images/red/footer-bullet.png) no-repeat 0 8px; }
+.wp-pagenavi span.current, .wp-pagenavi span.extend, .wp-pagenavi a:active, .wp-pagenavi a:hover { background: url(images/red/pagenavi-bg-active.png) no-repeat; }

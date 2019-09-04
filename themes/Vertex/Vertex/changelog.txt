@@ -1,0 +1,222 @@
+version 1.8.15 ( updated 3-11-2019 )
+- Updated core and epanel frameworks to the latest versions.
+	* core/*
+	* epanel/*
+
+version 1.8.14 ( updated 2-6-2019 )
+- Fixed broken ET Page Template Settings on WordPress 5.0+.
+- Updated core and epanel frameworks to the latest versions.
+	* core/*
+	* epanel/*
+
+version 1.8.13 ( updated 1-9-2019 )
+- Fix compatability with WordPress 5.0+.
+- Updated core and epanel frameworks to the latest versions.
+	* core/*
+	* epanel/*
+
+version 1.8.12 ( updated 12-27-2018 )
+- Updated core framework. 
+- Updated theme options framework.
+	* core/*
+	* epanel/*
+
+version 1.8.11 ( updated 12-26-2018 )
+- Updated waypoints scrit to work with the latest waypoints version.
+- Updated core framework. 
+- Updated theme options framework. 
+	* core/*
+	* epanel/*
+	js/custom.js
+
+version 1.8.10 ( updated 6-1-2018 )
+- Added an option to disable Google Fonts in the Vertex Theme Options.
+- Updated core framework to the latest version.
+	* core/*
+	* options_vertex.php
+
+version 1.8.9 ( updated 1-20-2018 )
+- Fixed bug that was introduced in the last update causing shortcode styles not to be output on the frontend.
+	* epanel/shortcodes/shortcodes.php
+	* epanel/shortcodes/shortcodes-legacy.css
+
+version 1.8.8 ( updated 1-17-2018 )
+- Fixed an information exposure bug that mistakenly displayed some small amount of content from password protected posts inside of post feeds as part of the automatically generated post excerpt. If you are using password protected posts, it's important that you update your theme to prevent parts of your password protected content from being seen by your visitors. As part of this disclosure, we have emailed all Elegant Themes customers with detailed information about the problem and how to fix it: https://mailchi.mp/elegantthemes/elegant-themes-security-update
+- Updated core framework to the latest version
+- Updated theme options framework to the latest version
+	* core/*
+	* epanel/*
+	
+version 1.8.7 ( updated 12-06-2016 )
+- Fixed ePanel font issues in WordPress 4.6
+    * core/admin/css/core.css
+    * core/functions.php
+    * epanel/core_functions.php
+    * epanel/css/panel.css
+- Added support for WordPress 4.7's new Custom CSS setting in the Theme Customizer. This will now be synced with the Custom CSS area in the Theme Options and can be edited using either interface.
+    * epanel/core_functions.php
+    * epanel/custom_functions.php
+- Fixed the bug with lowercase theme name, preventing a theme to update correctly, when an update is being performed via Themes page
+    * epanel/custom_functions.php
+- Fixed updates issues on some sites
+    * core/admin/includes/class-updates.php
+- Theme Options: Fixed the issue with Reset button, not working properly
+    * epanel/core_functions.php
+- Theme Options: Added RTL support
+    * epanel/css/panel.css
+- Bumped version number
+    * style.css
+
+version 1.8.6 ( updated 06-20-2016 )
+- Fixed some inconsistencies with ePanel integration
+	* epanel/core_functions.php
+	* epanel/custom_functions.php
+- Bumped version number
+	* style.css
+
+version 1.8.5 ( updated 05-06-2016 )
+- Updated ePanel styles
+	* epanel/
+	* core/
+- Replaced outdated Fancybox with Magnific Popup plugin
+	* includes/page_templates/js/magnific_popup/
+	* includes/page_templates/js/magnific_popup/et-ptemplates-frontend.js
+	* page-template-portfolio.php
+- Fixed the issue with preview of Link color option in Customizer
+	* js/theme-customizer.js
+- Upgraded Superfish plugin to the latest version
+	* includes/scripts.php
+	* js/superfish.js
+	* js/superfish.min.js
+	* style.css
+- Project categories display in post meta information now
+	* functions.php
+- Fixed the issue when Admin Bar displays over Header Menu
+- Bumped version number
+	* style.css
+
+version 1.8.4 ( updated 12-12-2015 )
+- Fixed the issue with SEO titles, not working in ePanel
+	* epanel/custom_functions.php
+- Bumped version number
+	* style.css
+
+version 1.8.3 ( updated 10-23-2015 )
+- Fixed the issue with deprecated wp_title function in WordPress 4.4
+	* header.php
+	* functions.php
+	* epanel/custom_functions.php
+- Bumped version number
+	* style.css
+
+version 1.8.2 ( updated 10-21-2015 )
+- Added sanitization to Customizer settings
+	* functions.php
+	* includes/functions/sanitization.php
+- Bumped version number
+	* style.css
+
+version 1.8.1 ( updated 08-18-2015 )
+- Fixed issue with WordPress 4.3 that caused shortened post titles and excerpts to not be truncated correctly
+	* epanel/custom_functions.php
+- Fixed WP_Widget class constructor warning message
+	* includes/widgets/widget-about.php
+	* includes/widgets/widget-ads.php
+	* includes/widgets/widget-adsense.php
+	* includes/widgets/widget-customlogo.php
+- Bumped version number
+	* style.css
+
+version 1.8 ( updated 04-23-2015 )
+- Added minor security hardening
+	* epanel/custom_functions.php
+- Bumped version number
+	* style.css
+
+version 1.7 ( updated 04-17-2014 )
+- Fixed the issue with ET Settings Upload button, breaking WYSIWYG editor in WordPress 3.9
+	* functions.php
+	* js/admin_custom_uploader.js
+- Bumped version number
+	* style.css
+
+version 1.6 ( updated 02-25-2014 )
+- Fixed the issue with slashes added to Name, Subject and Message fields in the contact form
+	* page-contact.php
+- Fixed the issue with resizing of images that have the x symbol between width and height values in the filename
+- Fixed the issue with .jpeg images and uppercase extensions in cached files
+- The theme doesn't strip slashes from custom css now, when saving the option to the database
+- Removed buzz shortcode ( Google retired Buzz )
+- Fixed ePanel SEO home options not appearing on static front page
+- Better compatibility with WordPress SEO and All In One SEO Pack plugins. ePanel SEO is disabled if these plugins are active now.
+	* epanel/core_functions.php
+	* epanel/custom_functions.php
+	* epanel/shortcodes/shortcodes.php
+- Fixed blurry background images on iOS devices
+	* functions.php
+- Fixed the issue with menu causing page to jump
+- Top menu is no longer fixed on mobile devices
+- Fixed the issue with the menu bar visibility, when you resize the browser window
+- Added the code to show the top menu, when the user resizes the window
+- Fixed the issue with the wrong size of the menu bar
+	* js/custom.js
+- Fixed the issue with bottom integration code used in 2 places on single posts pages
+	* single.php
+- Fixed fonts rendering in Safari
+- Corrected the fix for IE8 images
+- Bumped version number
+	* style.css
+
+version 1.5 ( updated 12-23-2013 )
+- Now you can update Elegant Themes in the Dashboard: https://www.elegantthemes.com/members-area/documentation.html#updater
+	* epanel/custom_functions.php
+- Bumped version number
+	* style.css
+
+version 1.4 ( updated 09-13-2013 )
+- Fixed translation issue
+	* functions.php
+- Fixed Tabs shortcode layout issues with the slide effect
+	* epanel/shortcodes/css/shortcodes.css
+	* epanel/shortcodes/shortcodes.php
+- Bumped version number
+	* style.css
+
+version 1.3 ( updated 08-02-2013 )
+- Fixed separate_comments function notice
+	* epanel/custom_functions.php
+- Bumped version number
+	* style.css
+
+version 1.2 ( updated 06-26-2013 )
+- Fixed issue with static homepage
+	* front-page.php
+- Fixed Post/Page Editor Word Count Problem
+- Fixed issue with left tabs shortcode
+- Fixed tooltip glitch
+- Fixed issue with span in pricing table
+- Fixed get_current_theme warning message.
+- Fixed the issue with Fancybox videos not working on second launch in WordPress 3.6
+- Added shortcodes names to shortcode_atts() to enable filtering
+
+List of modified files:
+* epanel/custom_functions.php
+* epanel/page_templates/js/et-ptemplates-frontend.js
+* epanel/page_templates/js/fancybox/jquery.fancybox-1.3.4.pack.js
+* epanel/shortcodes/css/shortcodes.css
+* epanel/shortcodes/js/et_shortcodes_frontend.js
+* epanel/shortcodes/js/et_shortcodes_frontend.dev.js
+* epanel/shortcodes/shortcodes.php
+
+version 1.1 ( updated 06-13-2013 )
+- Added 'Callout Button Text' option to ePanel
+	* functions.php
+	* epanel/options_vertex.php
+- Fixed small issue in the fixed menu bar
+	* js/custom.js
+- Bumped version number
+	* style.css
+
+version 1.0
+
+- initial release

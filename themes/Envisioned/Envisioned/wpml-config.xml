@@ -1,0 +1,10 @@
+<wpml-config>
+	<admin-texts>
+		<key name="envisioned_date_format"/>
+		<key name="envisioned_comment_date_format"/>
+		<key name="envisioned_quote_text"/>
+		<key name="envisioned_seo_home_titletext"/>
+		<key name="envisioned_seo_home_descriptiontext"/>
+		<key name="envisioned_seo_home_keywordstext"/>
+	</admin-texts>
+</wpml-config>
