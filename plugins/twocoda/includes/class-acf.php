@@ -53,8 +53,8 @@ class TC_Acf {
 		if( function_exists('acf_add_options_page') ) {
 	
 			acf_add_options_page(array(
-				'page_title' 	=> 'Policy Customizer',
-				'menu_title'	=> 'Policies',
+				'page_title' 	=> 'Business & Policies',
+				'menu_title'	=> 'Business & Policies',
 				'menu_slug' 	=> 'twocoda-policies',
 				'capability'	=> 'edit_posts',
 				'redirect'		=> false
@@ -70,6 +70,10 @@ class TC_Acf {
 	 */
 	public function create_acf_policy_fields() {
 		require_once 'acf-config/policies.inc.php';
+	}
+
+	public function create_acf_lesson_fields() {
+		require_once 'acf-config/lessons.inc.php';
 	}
 
 	/**

@@ -131,6 +131,14 @@ final class TwoCoda {
 	protected $lesson;
 
 	/**
+	 * Instance of TC_Schedule
+	 *
+	 * @since0.0.1
+	 * @var TC_Schedule
+	 */
+	protected $schedule;
+
+	/**
 	 * Creates or returns an instance of this class.
 	 *
 	 * @since   0.0.1
@@ -164,6 +172,7 @@ final class TwoCoda {
 
 		$this->acf = new TC_Acf( $this );
 		$this->lesson = new TC_Lesson( $this );
+		$this->schedule = new TC_Schedule( $this );
 	} // END OF PLUGIN CLASSES FUNCTION
 
 	/**
@@ -321,6 +330,7 @@ final class TwoCoda {
 			case 'path':
 			case 'acf':
 			case 'lesson':
+			case 'schedule':
 				return $this->$field;
 			default:
 				throw new Exception( 'Invalid ' . __CLASS__ . ' property: ' . $field );
