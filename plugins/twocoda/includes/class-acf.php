@@ -1,6 +1,6 @@
 <?php
 /**
- * TwoCoda Core Acf.
+ * TwoCoda Core Acf. Hooks and helpers for custom ACF stuff.
  *
  * @since   0.0.1
  * @package TwoCoda_Core
@@ -42,6 +42,8 @@ class TC_Acf {
 	 */
 	public function hooks() {
 		add_filter('acf/load_field/name=select_user', [$this, 'populate_users_in_field']);
+		add_filter('acf/load_field/name=lesson_page_location', [$this, 'acf_load_locations']);
+		add_filter('acf/load_field/name=type_of_lesson', [$this, 'acf_load_types']);
 	}
 
 	/**
@@ -92,6 +94,35 @@ class TC_Acf {
 		
 		foreach ($users as $user) {
 			$field['choices'][ $user->ID ] = $user->display_name;
+		}
+
+		return $field;
+	}
+
+	public function acf_load_locations( $field ) {
+
+		$field['choices'] = array();
+
+		if (have_rows('locations', 'option')) {
+			while( have_rows('locations', 'option')) {
+				the_row();
+				$name = get_sub_field('location_name');
+				$field['choices'][$name] = $name;
+			}
+		}
+
+		return $field;
+	}
+
+	public function acf_load_types( $field ) {
+		$field['choices'] = array();
+
+		if (have_rows('lesson_types', 'option')) {
+			while( have_rows('lesson_types', 'option')) {
+				the_row();
+				$name = get_sub_field('lesson_name');
+				$field['choices'][$name] = $name;
+			}
 		}
 
 		return $field;

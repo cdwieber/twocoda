@@ -1,6 +1,6 @@
 <?php
 /**
- * TwoCoda Core Schedule.
+ * TwoCoda Core Schedule. All display functionality related to schedule.
  *
  * @since   0.0.1
  * @package TwoCoda_Core
