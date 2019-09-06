@@ -151,6 +151,8 @@ class TC_Schedule {
 		wp_enqueue_script('fullcalendar-interaction');
 		wp_enqueue_script('schedule-script');
 
+		wp_localize_script( 'schedule-script', 'tcajax', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+
 		wp_register_style('fullcalendar-core-style', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar/packages/core/main.min.css');
 		wp_register_style('fullcalendar-daygrid-style', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar/packages/daygrid/main.min.css', 'fullcalendar-core-style');
 		wp_register_style('fullcalendar-timegrid-style', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar/packages/timegrid/main.min.css', 'fullcalendar-core-style');
