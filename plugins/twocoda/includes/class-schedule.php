@@ -130,43 +130,23 @@ class TC_Schedule {
 	public function schedule_scripts_styles() {
 		//TODO: Get these to load on the specific view
 
-		wp_register_script('fullcalendar-core', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar/packages/core/main.min.js', 'jquery', null, true);
-		wp_register_script('fullcalendar-daygrid', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar/packages/daygrid/main.min.js', 'fullcalendar-core', '', true);
-		wp_register_script('fullcalendar-timegrid', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar/packages/timegrid/main.min.js', 'fullcalendar-core', '', true);
-		wp_register_script('fullcalendar-list', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar/packages/list/main.min.js', 'fullcalendar-core', '', '',);
-		wp_register_script('fullcalendar-interaction', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar/packages/interaction/main.min.js', 'fullcalendar-core','',true);
-		wp_register_script('schedule-script', site_url() .'/wp-content/plugins/twocoda/assets/js/schedule.js', 
-		['fullcalendar-core', 
-		'fullcalendar-daygrid', 
-		'fullcalendar-timegrid', 
-		'fullcalendar-list',
-		'fullcalendar-interaction'], '');
-		//These dependencies are VERY DELICATE. Do not taunt.
-
-
-		wp_enqueue_script('fullcalendar-core');
-		wp_enqueue_script('fullcalendar-daygrid');
-		wp_enqueue_script('fullcalendar-timegrid');
-		wp_enqueue_script('fullcalendar-list');
-		wp_enqueue_script('fullcalendar-interaction');
+		wp_register_script('moment', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar-3.9.0/fullcalendar.min.js');
+		wp_register_script('fullcalendar', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar-3.9.0/fullcalendar.min.js', ['jquery', 'moment']);
+		wp_register_script('swal', 'https://cdn.jsdelivr.net/npm/sweetalert2@8', null, null, false);
+		wp_register_script('schedule-script', site_url() .'/wp-content/plugins/twocoda/assets/js/schedule.js', ['jquery', 'swal']);
+		
+		
+		wp_enqueue_script('swal');
+		wp_enqueue_script('moment');
+		wp_enqueue_script('fullcalendar');
 		wp_enqueue_script('schedule-script');
 
 		wp_localize_script( 'schedule-script', 'tcajax', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
-		wp_register_style('fullcalendar-core-style', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar/packages/core/main.min.css');
-		wp_register_style('fullcalendar-daygrid-style', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar/packages/daygrid/main.min.css', 'fullcalendar-core-style');
-		wp_register_style('fullcalendar-timegrid-style', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar/packages/timegrid/main.min.css', 'fullcalendar-core-style');
-		wp_register_style('fullcalendar-list-style', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar/packages/list/main.min.css', 'fullcalendar-core-style');
+		wp_register_style('fullcalendar-style', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar-3.9.0/fullcalendar.min.css');
+		wp_enqueue_style('fullcalendar-style');
 
-		wp_enqueue_style('fullcalendar-core-style');
-		wp_enqueue_style('fullcalendar-daygrid-style');
-		wp_enqueue_style('fullcalendar-timegrid-style');
-		wp_enqueue_style('fullcalendar-list-style');
-
-
-		//Fucking christ, am I really gonna add another script?
-		wp_register_script('swal', 'https://cdn.jsdelivr.net/npm/sweetalert2@8', null, null, false);
-		wp_enqueue_script('swal');
+		
 
 	}
 }
