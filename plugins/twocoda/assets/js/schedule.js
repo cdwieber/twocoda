@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
     header: {
       left: 'prev,next today',
       center: 'title',
-      right: 'month,agendaWeek,agendaDay'
+      right: 'month,agendaWeek,agendaDay,listWeek'
     },
     defaultView: 'agendaWeek',
     nowIndicator: true,
@@ -16,6 +16,9 @@ jQuery(document).ready(function ($) {
           'error'
         )
       }
+    },
+    loading: function (bool) {
+      $('#loading').toggle(bool);
     }
   })
 });

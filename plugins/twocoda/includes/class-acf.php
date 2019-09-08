@@ -5,12 +5,6 @@
  * @since   0.0.1
  * @package TwoCoda_Core
  */
-
-/**
- * TwoCoda Core Acf.
- *
- * @since 0.0.1
- */
 class TC_Acf {
 	/**
 	 * Parent plugin class.
@@ -41,9 +35,21 @@ class TC_Acf {
 	 * @since  0.0.1
 	 */
 	public function hooks() {
-		add_filter('acf/load_field/name=select_user', [$this, 'populate_users_in_field']);
 		add_filter('acf/load_field/name=lesson_page_location', [$this, 'acf_load_locations']);
 		add_filter('acf/load_field/name=type_of_lesson', [$this, 'acf_load_types']);
+
+		add_action('admin_head-post.php', [$this, 'hide_publishing_actions']);
+		add_action('admin_head-post-new.php', [$this, 'hide_publishing_actions']);
+
+		//Change publish buttons on selected CPTs
+		$Toscho_Retrans = new TC_Retranslate(
+			array (
+				'replacements' => array (
+					'Publish' => 'Save'
+				)
+			,   'post_type'    => array ( 'tc-lesson' )
+			)
+		);
 	}
 
 	/**
@@ -65,8 +71,7 @@ class TC_Acf {
 	}
 
 	/**
-	 * Define all ADF policy fields.
-	 *
+	 * Define all ACF policy fields.
 	 *
 	 * @return void
 	 */
@@ -74,6 +79,9 @@ class TC_Acf {
 		require_once 'acf-config/policies.inc.php';
 	}
 
+	/**
+	 * Define all ACF lesson fields.
+	 */
 	public function create_acf_lesson_fields() {
 		require_once 'acf-config/lessons.inc.php';
 	}
@@ -99,6 +107,12 @@ class TC_Acf {
 		return $field;
 	}
 
+	/**
+	 * Load lesson locations to the hooked ACF select field.
+	 *
+	 * @param $field
+	 * @return mixed
+	 */
 	public function acf_load_locations( $field ) {
 
 		$field['choices'] = array();
@@ -114,6 +128,11 @@ class TC_Acf {
 		return $field;
 	}
 
+	/**
+	 * Load lesson types into hooked ACF select field.
+	 * @param $field
+	 * @return mixed
+	 */
 	public function acf_load_types( $field ) {
 		$field['choices'] = array();
 
@@ -126,5 +145,23 @@ class TC_Acf {
 		}
 
 		return $field;
+	}
+
+	/**
+	 * Remove unneeded publishing actions from lessons.
+	 */
+	public function hide_publishing_actions(){
+		$my_post_type = 'tc-lesson';
+		global $post;
+		if($post->post_type == $my_post_type){
+			echo '
+                <style type="text/css">
+                    #misc-publishing-actions,
+                    #minor-publishing-actions{
+                        display:none;
+                    }
+                </style>
+            ';
+		}
 	}
 }

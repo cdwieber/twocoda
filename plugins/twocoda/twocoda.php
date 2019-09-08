@@ -147,6 +147,14 @@ final class TwoCoda {
 	protected $booking;
 
 	/**
+	 * Instance of TC_Retranslate
+	 *
+	 * @since0.0.1
+	 * @var TC_Retranslate
+	 */
+	protected $retranslate;
+
+	/**
 	 * Creates or returns an instance of this class.
 	 *
 	 * @since   0.0.1
@@ -341,6 +349,7 @@ final class TwoCoda {
 			case 'lesson':
 			case 'schedule':
 			case 'booking':
+			case 'retranslate':
 				return $this->$field;
 			default:
 				throw new Exception( 'Invalid ' . __CLASS__ . ' property: ' . $field );

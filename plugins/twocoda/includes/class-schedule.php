@@ -144,7 +144,9 @@ class TC_Schedule {
 		wp_localize_script( 'schedule-script', 'tcajax', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
 		wp_register_style('fullcalendar-style', site_url() .'/wp-content/plugins/twocoda/assets/js/fullcalendar-3.9.0/fullcalendar.min.css');
+		wp_register_style('main', TwoCoda::url() . 'assets/css/styles.css');
 		wp_enqueue_style('fullcalendar-style');
+		wp_enqueue_style('main');
 
 		
 
