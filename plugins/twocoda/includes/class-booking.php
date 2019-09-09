@@ -7,7 +7,7 @@
  */
 
 /**
- * TwoCoda Core Booking.
+ * TwoCoda Core Scheduling Admin Module.
  *
  * @since 0.0.1
  */

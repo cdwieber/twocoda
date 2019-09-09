@@ -190,6 +190,7 @@ final class TwoCoda {
 		$this->lesson = new TC_Lesson( $this );
 		$this->schedule = new TC_Schedule( $this );
 		$this->booking = new TC_Booking( $this );
+		$this->appointment = new TC_Appointment( $this );
 	} // END OF PLUGIN CLASSES FUNCTION
 
 	/**
@@ -350,6 +351,7 @@ final class TwoCoda {
 			case 'schedule':
 			case 'booking':
 			case 'retranslate':
+			case 'appointment':
 				return $this->$field;
 			default:
 				throw new Exception( 'Invalid ' . __CLASS__ . ' property: ' . $field );
