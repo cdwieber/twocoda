@@ -1,0 +1,20 @@
+{
+  "generator-plugin-wp": {
+    "name": "Errigal Booking Module",
+    "homepage": "http://www.errigal.media",
+    "description": "A booking module for Errigal Media projects.",
+    "version": "0.0.0",
+    "author": "Chris Wieber",
+    "authoremail": "chris@errigal.media",
+    "authorurl": "https://www.chriswieber.com",
+    "license": "GPL v2",
+    "slug": "errigal-booking-module",
+    "classname": "EM_Booking",
+    "mainclassname": "EM_Booking",
+    "classprefix": "EMB_",
+    "prefix": "errigal_booking_module",
+    "year": 2019,
+    "currentVersionWP": "4.8.1",
+    "plugingenversion": "0.20.2"
+  }
+}
