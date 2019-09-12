@@ -44,55 +44,36 @@ CREATE TABLE $appointment_table (
   user_id mediumint(9) NOT NULL,
   student_id mediumint(9),
   appointment_type tinyint NOT NULL,
-  timestamp datetime TIMESTAMP NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   title varchar(255) NOT NULL,
   notes text NOT NULL,
   start_time bigint NOT NULL,
   end_time bigint NOT NULL,
   length_in_min int NOT NULL,
   cost int NOT NULL,
-  recur_hash varchar(10) unique, /*this is a unique hash that ties all instances of recurring events together so they can be bulk edited */
-  rrule varchar(255), /* RRULE for recurring events as described in RFC 5545 */ 
-  PRIMARY KEY  (id)
-) $charset_collate;
+  recur_hash varchar(10) unique,
+  rrule varchar(255),
+  PRIMARY KEY (ID)
+);
 
 CREATE TABLE $appointment_type_table (
-	id tinyint NOT NULL,
-	type varchar(255) NOT NULL, 
-)
+  ID tinyint NOT NULL,
+  type varchar(255) NOT NULL,
+  PRIMARY KEY (ID)
+);
+
+INSERT INTO $appointment_type_table (ID, type)
+VALUES (0, 'regular'),(1, 'block_time')
 SQL;
 
 
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 		dbDelta( $sql );
 
-		//Populate the types table
-		$wpdb->insert(
-			$appointment_type_table,
-			array(
-				array(
-					'id' => 0,
-					'type' => 'regular_appointment', // A general lesson.
-				),
-				array(
-					'id' => 1,
-					'type' => 'block_time' // Time blocked off by teacher.
-				),
-				array(
-					'id' => 2,
-					'type' => 'business_hours', // Business hours. Schedule inverse.
-				),
-				array(
-					'id' => 3,
-					'type' => 'cancelled'
-				)
-			)
-		);
-
 		add_option('em_booking_db_version', "0.1");
 	}
 
 	public function init() {
-		$this->create_tables();
+		 $this->create_tables();
 	}
 }

@@ -169,7 +169,7 @@ final class EM_Booking {
 	 */
 	public function plugin_classes() {
 
-		$this->db_init = new EMB_Db_init( $this );
+
 		$this->appointment_model = new EMB_Appt_model();
 		$this->appt_controller = new EMB_Appt_controller( $this );
 		$this->appointment_type_model = new EMB_Appointment_type_model();
@@ -199,6 +199,10 @@ final class EM_Booking {
 		if ( ! $this->check_requirements() ) {
 			return;
 		}
+
+		//Initialize the database tables.
+		$this->db_init = new EMB_Db_init( $this );
+		$this->db_init->init();
 
 		// Make sure any rewrite functionality has been loaded.
 		flush_rewrite_rules();

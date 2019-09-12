@@ -163,7 +163,6 @@ final class TwoCoda {
 	public function plugin_classes() {
 
 		$this->acf = new TC_Acf( $this );
-		$this->lesson = new TC_Lesson( $this );
 	} // END OF PLUGIN CLASSES FUNCTION
 
 	/**
