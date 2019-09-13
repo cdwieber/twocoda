@@ -69,7 +69,7 @@ class EMB_Appt_model extends Model {
 	public function getTable()
 	{
 		if( isset( $this->table ) ){
-			$prefix =  $this->getConnection()->db->prefix;
+			$prefix =  $this->getConnection()->db->base_prefix;
 			return $prefix . $this->table;
 
 		}
