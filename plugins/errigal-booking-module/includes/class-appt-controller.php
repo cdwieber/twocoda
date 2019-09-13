@@ -7,6 +7,7 @@
  */
 
 use Illuminate\Support\Facades\Request;
+use Recurr\Transformer\ArrayTransformer;
 use WeDevs\ORM\Eloquent\Facades\DB;
 use \WeDevs\ORM\Eloquent\Database as Database;
 
@@ -16,7 +17,7 @@ class EMB_Appt_controller {
 	 *
 	 * @since 0.0.0
 	 *
-	 * @var   Errigal_Booking_Module
+	 * @var   EM_Booking
 	 */
 	protected $plugin = null;
 
@@ -53,6 +54,7 @@ class EMB_Appt_controller {
 	 * @return bool
 	 */
 	private function is_conflict( EMB_Appt_model $appt ) {
+
 		//Get appointments within a +/- 6-hour vicinity.
 		$existing_appts = $this->get_by_period( ( $appt->start_time - ( HOUR_IN_SECONDS * 6 ) ),
 			( $appt->end_time + ( HOUR_IN_SECONDS * 6 ) ) );
@@ -76,7 +78,7 @@ class EMB_Appt_controller {
 				&& $appt->end_time >= $existing_appt['end_time'] )
 					return true;
 		}
-
+		// TODO: Write tests for everything but especially this...
 		// None of those triggered for any nearby appointment? Appointment does not conflict.
 		return false;
 	}
@@ -93,7 +95,7 @@ class EMB_Appt_controller {
 	private function is_bookable( EMB_Appt_model $appt ) {
 		if ( true == $this->is_conflict( $appt ) ) {
 			throw new EMB_Double_Booked_Exception();
-		} elseif ( $appt->start_time < time() ) {
+		} elseif ( strtotime($appt->start_time) < time() ) {
 			throw new EMB_Past_Appointment_Exception();
 		} else {
 			return true;
@@ -106,9 +108,16 @@ class EMB_Appt_controller {
 
 		$appt->title = $args['title'];
 		$appt->start_time = $args['start_time'];
-		$appt->end_time = $args['end_time'];
 		$appt->lesson_type = $args['lesson_type'];
-		$appt->appointment_type = '';
+		$appt->appointment_type = $args['appointment_type'];
+		$appt->length_in_min = $args['length_in_min'];
+		$appt->cost = $args['cost'];
+		$appt->end_time = $this->calculate_end_time();
+		$appt->rrule = $args['rrule'];
+
+		if ( null != $appt->rrule ) {
+			$this->handle_recurring_appointment( $appt );
+		}
 
 		try {
 			$this->is_bookable( $appt );
@@ -118,6 +127,48 @@ class EMB_Appt_controller {
 
 		$appt->save();
 		return true;
+	}
+
+	private function calculate_end_time() {
+		return 1577836800;
+	}
+
+	/**
+	 * Take the appointment object, examine the RRULE, and the
+	 * resulting appointments.
+	 *
+	 * @param EMB_Appt_model $appt
+	 * @throws \Recurr\Exception\InvalidWeekday
+	 */
+	private function handle_recurring_appointment( EMB_Appt_model $appt ) {
+		$transformer = new ArrayTransformer();
+			//TODO: Find some way to track the booking exceptions and send a warning to the
+			// front end.
+		$recur = $transformer->transform($appt->rrule);
+
+		// Save the existing model w/ atts, but update the datetimes.
+		foreach ($recur as $r) {
+			$appt->start_time = $r->getStart();
+			$appt->end_time = $r->getEnd();
+
+			$appt->save();
+		}
+	}
+
+	/**
+	 * Generate a unique hash that identifies all related appointments.
+	 * In this way, we can work out "google-like" multiple appointment
+	 * editing: do you want to change all appointments? Or just this one?
+	 *
+	 * @return string
+	 */
+	private function recur_hash_generate() {
+		try {
+			$hash = bin2hex(random_bytes(32));
+		} catch (Exception $e) {
+			wp_die('Caught recur hash exception: ' . $e);
+		}
+		return $hash;
 	}
 
 	/**

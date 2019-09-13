@@ -37,6 +37,7 @@ class EMB_Appt_model extends Model {
 		'length_in_min',
 		'cost',
 		'recur_hash',
+		'rrule',
 	];
 
 	/**

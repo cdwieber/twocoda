@@ -138,6 +138,14 @@ final class EM_Booking {
 	protected $admin_schedule;
 
 	/**
+	 * Instance of EMB_Scheduleajax
+	 *
+	 * @since0.0.0
+	 * @var EMB_Scheduleajax
+	 */
+	protected $scheduleajax;
+
+	/**
 	 * Creates or returns an instance of this class.
 	 *
 	 * @since   0.0.0
@@ -174,6 +182,7 @@ final class EM_Booking {
 		$this->appt_controller = new EMB_Appt_controller( $this );
 		$this->appointment_type_model = new EMB_Appointment_type_model();
 		$this->admin_schedule = new EMB_Admin_Schedule( $this );
+		$this->scheduleajax = new EMB_Scheduleajax( $this );
 	} // END OF PLUGIN CLASSES FUNCTION
 
 	/**
@@ -337,6 +346,7 @@ final class EM_Booking {
 			case 'appointmentmodel':
 			case 'appt_controller':
 			case 'appointment_type_model':
+			case 'scheduleajax':
 				return $this->$field;
 			default:
 				throw new Exception( 'Invalid ' . __CLASS__ . ' property: ' . $field );

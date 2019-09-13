@@ -23,13 +23,30 @@ jQuery(document).ready(function ($) {
 	// Kick off the save request.
 	saveButton.on('click', function (e) {
 		e.preventDefault();
-		//ajax stuff here.
-		lessonModal.modal('hide');
-		Swal.fire(
-			'Success',
-			'Lesson scheduled successfully.',
-			'success'
-		);
+		console.log("serial" + $('#lesson-form').serialize());
+		$.ajax({
+			type: 'POST',
+			url: ajaxurl + "?action=save_appointment",
+			datatype: 'json',
+			data: $('#lesson-form').serialize(),
+			success: function (response) {
+				lessonModal.modal('hide');
+				Swal.fire(
+					'Success',
+					'Lesson scheduled successfully.',
+					'success'
+				);
+			},
+			error: function () {
+				Swal.fire(
+					'Uh-oh!',
+					'Something went wrong. Please go to twocoda.com/bugs and help us fix it.',
+					'error'
+				)
+			}
+		});
+
+
 	});
 
 	$('#calendar').fullCalendar({

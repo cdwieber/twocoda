@@ -46,6 +46,7 @@ CREATE TABLE $appointment_table (
   appointment_type tinyint NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   title varchar(255) NOT NULL,
+  lesson_type varchar(255) NOT NULL,
   notes text NOT NULL,
   start_time bigint NOT NULL,
   end_time bigint NOT NULL,
@@ -62,7 +63,7 @@ CREATE TABLE $appointment_type_table (
   PRIMARY KEY (ID)
 );
 
-INSERT INTO $appointment_type_table (ID, type)
+REPLACE INTO $appointment_type_table (ID, type)
 VALUES (0, 'regular'),(1, 'block_time')
 SQL;
 
