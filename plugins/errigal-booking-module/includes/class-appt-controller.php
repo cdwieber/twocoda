@@ -6,6 +6,7 @@
  * @package Errigal_Booking_Module
  */
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Request;
 use Recurr\Transformer\ArrayTransformer;
 use WeDevs\ORM\Eloquent\Facades\DB;
@@ -66,16 +67,16 @@ class EMB_Appt_controller {
 		// Loop and compare. (No need for binary search trees here! Huzzah!)
 		foreach ( $existing_appts as $existing_appt )  {
 			// Is appointment start time within the existing appointment? Bzzzt.
-			if ( $appt->start_time >= $existing_appt['start_time']
-				&& $appt->start_time <= $existing_appt['end_time'] )
+			if ( $appt->start_time >= $existing_appt->start_time
+				&& $appt->start_time <= $existing_appt->start_time )
 					return true;
 			// Is appointment end time within existing appointment? Bzzzt.
-			if ( $appt->end_time >= $existing_appt['start_time']
-				&& $appt->end_time <= $existing_appt['end_time'] )
+			if ( $appt->end_time >= $existing_appt->start_time
+				&& $appt->end_time <= $existing_appt->start_time )
 					return true;
 			// Does appointment completely overlap existing appointment? Bzzzt.
-			if ( $appt->start_time <= $existing_appt['start_time']
-				&& $appt->end_time >= $existing_appt['end_time'] )
+			if ( $appt->start_time <= $existing_appt->start_time
+				&& $appt->end_time >= $existing_appt->start_time )
 					return true;
 		}
 		// TODO: Write tests for everything but especially this...
@@ -95,24 +96,26 @@ class EMB_Appt_controller {
 	private function is_bookable( EMB_Appt_model $appt ) {
 		if ( true == $this->is_conflict( $appt ) ) {
 			throw new EMB_Double_Booked_Exception();
-		} elseif ( strtotime($appt->start_time) < time() ) {
+		} elseif ( $appt->start_time < time() ) {
 			throw new EMB_Past_Appointment_Exception();
 		} else {
 			return true;
 		}
 	}
 
-	public function store( $args ) {
+	public function store( array $args ) {
 
 		$appt = new EMB_Appt_model();
 
+		$appt->user_id = $args['user_id'];
+		$appt->student_id = $args['student_id'];
 		$appt->title = $args['title'];
-		$appt->start_time = $args['start_time'];
+		$appt->start_time = strtotime( $args['start_time'] );
+		$appt->length_in_min = $args['length_in_min'];
+		$appt->end_time = $this->calculate_end_time($args['start_time'], $args['length_in_min']);
 		$appt->lesson_type = $args['lesson_type'];
 		$appt->appointment_type = $args['appointment_type'];
-		$appt->length_in_min = $args['length_in_min'];
 		$appt->cost = $args['cost'];
-		$appt->end_time = $this->calculate_end_time();
 		$appt->rrule = $args['rrule'];
 
 		if ( null != $appt->rrule ) {
@@ -122,15 +125,28 @@ class EMB_Appt_controller {
 		try {
 			$this->is_bookable( $appt );
 		} catch ( EMB_Double_Booked_Exception | EMB_Past_Appointment_Exception $e ) {
-			return $e;
+			// Throw it to third base for a double play
+			throw $e;
 		}
 
-		$appt->save();
-		return true;
+		return $appt->save();
 	}
 
-	private function calculate_end_time() {
-		return 1577836800;
+	/**
+	 * Take the appointment's length and start time and calculate an end time.
+	 *
+	 * Our front-end lib specifically wants to know the end time, length isn't enough.
+	 *
+	 * @param int|string $s Start time in either epoch or parsable string.
+	 * @param int $l length in minutes.
+	 * @return int
+	 */
+	private function calculate_end_time( $s, int $l ) {
+		// If start time is not a unix date, make it one
+		if ( ! is_int( $s ) ) {
+			$s = strtotime( $s );
+		}
+		return $s + ( $l * 60 );
 	}
 
 	/**
@@ -177,12 +193,18 @@ class EMB_Appt_controller {
 	 *
 	 * @param int $period_start
 	 * @param int $period_end
-	 * @return EMB_Appt_model
+	 * @return null|\Illuminate\Support\Collection
 	 */
 	public function get_by_period( int $period_start, int $period_end ) {
-		return EMB_Appt_model::whereBetween('start_time', [$period_start, $period_end])
+		$db = Errigal_Database::instance();
+		$appts = $db->table('appointments')
 			->where('user_id', get_current_user_id())
 			->orWhere('student_id', get_current_user_id())
-			->get();
+			->whereBetween( 'start_time', [$period_start, $period_end] )->get();
+
+		if($appts->isEmpty()) {
+			return null;
+		}
+		return $appts;
 	}
 }
