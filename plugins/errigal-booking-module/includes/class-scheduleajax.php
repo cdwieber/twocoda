@@ -81,6 +81,7 @@ class EMB_Scheduleajax {
 			$lesson->start = (gmdate("Y-m-d\TH:i:s",$lesson->start_time));
 			$lesson->end = (gmdate("Y-m-d\TH:i:s",$lesson->end_time));
 
+			$event['id'] = $lesson->ID;
 			$event['title'] = $lesson->title;
 			$event['start'] = $lesson->start;
 			$event['end'] = $lesson->end;

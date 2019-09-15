@@ -107,6 +107,7 @@ jQuery(document).ready(function ($) {
 		defaultView: 'agendaWeek',
 		nowIndicator: true,
 		allDaySlot: false,
+
 		events: {
 			url: ajaxurl,
 			type: 'GET',
@@ -121,6 +122,34 @@ jQuery(document).ready(function ($) {
 				)
 			}
 		},
+
+
+		eventStartEditable: true,
+		eventOverlap: false,
+		eventDrop: function(event, delta, revertFunc) {
+
+			Swal.fire({
+				title: "Reschedule?",
+				text: "You're about to reschedule "
+					+ event.title + " to "
+					+  event.start.format('D MMMM YYYY h:mm A')
+					+ ". The student will be notified.",
+				type: "warning",
+				showCancelButton: true,
+				confirmButtonText: "Reschedule",
+				allowOutsideClick: false,
+			}).then((res) => {
+				if(res.value){
+					console.log(event.id);
+				}else if(res.dismiss === 'cancel'){
+					revertFunc();
+				}
+				else if(res.dismiss === 'esc'){
+					revertFunc();
+				}
+			});
+		},
+
 		dayClick: function(date, jsEvent, view) {
 			lessonModal.on('show.bs.modal', function (event) {
 				var modal = $(this)
