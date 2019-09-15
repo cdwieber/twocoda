@@ -1,0 +1,22 @@
+{
+	"name": "errigal-booking-module",
+	"description": "A booking module for Errigal Media projects.",
+	"keywords": ["wordpress", "plugin", "generator-plugin-wp"],
+	"homepage": "http://www.errigal.media",
+	"license": "GPL v2",
+	"authors": [
+	{
+		"name": "Chris Wieber",
+		"homepage": "https://www.chriswieber.com"
+	}
+	],
+	"minimum-stability": "dev",
+	"type": "wordpress-plugin",
+	"autoload": {
+		"classmap": ["errigal-booking-module.php", "includes/"]
+	},
+	"require": {
+		"tareq1988/wp-eloquent": "dev-master",
+		"simshaun/recurr": "^4.0"
+	}
+}

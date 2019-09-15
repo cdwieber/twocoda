@@ -1,20 +1,20 @@
 <?php
 /**
- * Plugin Name: TwoCoda Core
- * Plugin URI:  http://twocoda.com
- * Description: TwoCoda Core functionality
- * Version:     0.0.1
+ * Plugin Name: Errigal Booking Module
+ * Plugin URI:  http://www.errigal.media
+ * Description: A booking module for Errigal Media projects.
+ * Version:     0.0.0
  * Author:      Chris Wieber
  * Author URI:  https://www.chriswieber.com
- * Donate link: http://twocoda.com
- * License:     MIT
- * Text Domain: twocoda
+ * Donate link: http://www.errigal.media
+ * License:     GPL v2
+ * Text Domain: errigal-booking-module
  * Domain Path: /languages
  *
- * @link    http://twocoda.com
+ * @link    http://www.errigal.media
  *
- * @package TwoCoda
- * @version 0.0.1
+ * @package EM_Booking
+ * @version 0.0.0
  *
  * Built using generator-plugin-wp (https://github.com/WebDevStudios/generator-plugin-wp)
  */
@@ -38,47 +38,30 @@
  */
 
 
-/**
- * Autoloads files with classes when needed.
- *
- * @since  0.0.1
- * @param  string $class_name Name of the class being requested.
- */
-function twocoda_autoload_classes( $class_name ) {
-
-	// If our class doesn't have our prefix, don't load it.
-	if ( 0 !== strpos( $class_name, 'TC_' ) ) {
-		return;
-	}
-
-	// Set up our filename.
-	$filename = strtolower( str_replace( '_', '-', substr( $class_name, strlen( 'TC_' ) ) ) );
-
-	// Include our file.
-	TwoCoda::include_file( 'includes/class-' . $filename );
-}
-spl_autoload_register( 'twocoda_autoload_classes' );
+// Use composer autoload.
+require 'vendor/autoload.php';
 
 /**
  * Main initiation class.
  *
- * @since  0.0.1
+ * @since  0.0.0
+ * @property string url
  */
-final class TwoCoda {
+final class EM_Booking {
 
 	/**
 	 * Current version.
 	 *
 	 * @var    string
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 */
-	const VERSION = '0.0.1';
+	const VERSION = '0.0.0';
 
 	/**
 	 * URL of plugin directory.
 	 *
 	 * @var    string
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 */
 	protected $url = '';
 
@@ -86,7 +69,7 @@ final class TwoCoda {
 	 * Path of plugin directory.
 	 *
 	 * @var    string
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 */
 	protected $path = '';
 
@@ -94,7 +77,7 @@ final class TwoCoda {
 	 * Plugin basename.
 	 *
 	 * @var    string
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 */
 	protected $basename = '';
 
@@ -102,39 +85,71 @@ final class TwoCoda {
 	 * Detailed activation error messages.
 	 *
 	 * @var    array
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 */
 	protected $activation_errors = array();
 
 	/**
 	 * Singleton instance of plugin.
 	 *
-	 * @var    TwoCoda
-	 * @since  0.0.1
+	 * @var    EM_Booking
+	 * @since  0.0.0
 	 */
 	protected static $single_instance = null;
 
 	/**
-	 * Instance of TC_Acf
+	 * Instance of EMB_Db_init
 	 *
-	 * @since0.0.1
-	 * @var TC_Acf
+	 * @since0.0.0
+	 * @var EMB_Db_init
 	 */
-	protected $acf;
+	protected $db_init;
 
 	/**
-	 * Instance of TC_Lesson
+	 * Instance of EMB_Appt_Model
 	 *
-	 * @since0.0.1
-	 * @var TC_Lesson
+	 * @since0.0.0
+	 * @var EMB_Appt_model
 	 */
-	protected $lesson;
+	protected $appointment_model;
+
+	/**
+	 * Instance of EMB_Appt_controller
+	 *
+	 * @since0.0.0
+	 * @var EMB_Appt_controller
+	 */
+	protected $appt_controller;
+
+	/**
+	 * Instance of EMB_Appointment_type_model
+	 *
+	 * @since0.0.0
+	 * @var EMB_Appointment_type_model
+	 */
+	protected $appointment_type_model;
+
+	/**
+	 * Instance of EMB_Appointment_type_model
+	 *
+	 * @since0.0.0
+	 * @var EMB_Admin_Schedule
+	 */
+	protected $admin_schedule;
+
+	/**
+	 * Instance of EMB_Scheduleajax
+	 *
+	 * @since0.0.0
+	 * @var EMB_Scheduleajax
+	 */
+	protected $scheduleajax;
 
 	/**
 	 * Creates or returns an instance of this class.
 	 *
-	 * @since   0.0.1
-	 * @return  TwoCoda A single instance of this class.
+	 * @since   0.0.0
+	 * @return  EM_Booking A single instance of this class.
 	 */
 	public static function get_instance() {
 		if ( null === self::$single_instance ) {
@@ -147,7 +162,7 @@ final class TwoCoda {
 	/**
 	 * Sets up our plugin.
 	 *
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 */
 	protected function __construct() {
 		$this->basename = plugin_basename( __FILE__ );
@@ -158,11 +173,16 @@ final class TwoCoda {
 	/**
 	 * Attach other plugin classes to the base plugin class.
 	 *
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 */
 	public function plugin_classes() {
 
-		$this->acf = new TC_Acf( $this );
+
+		$this->appointment_model = new EMB_Appt_model();
+		$this->appt_controller = new EMB_Appt_controller( $this );
+		$this->appointment_type_model = new EMB_Appointment_type_model();
+		$this->admin_schedule = new EMB_Admin_Schedule( $this );
+		$this->scheduleajax = new EMB_Scheduleajax( $this );
 	} // END OF PLUGIN CLASSES FUNCTION
 
 	/**
@@ -172,7 +192,7 @@ final class TwoCoda {
 	 * < 5 for Taxonomy_Core,
 	 * and 0 for Widgets because widgets_init runs at init priority 1.
 	 *
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 */
 	public function hooks() {
 		add_action( 'init', array( $this, 'init' ), 0 );
@@ -181,13 +201,17 @@ final class TwoCoda {
 	/**
 	 * Activate the plugin.
 	 *
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 */
 	public function _activate() {
 		// Bail early if requirements aren't met.
 		if ( ! $this->check_requirements() ) {
 			return;
 		}
+
+		//Initialize the database tables.
+		$this->db_init = new EMB_Db_init( $this );
+		$this->db_init->init();
 
 		// Make sure any rewrite functionality has been loaded.
 		flush_rewrite_rules();
@@ -197,7 +221,7 @@ final class TwoCoda {
 	 * Deactivate the plugin.
 	 * Uninstall routines should be in uninstall.php.
 	 *
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 */
 	public function _deactivate() {
 		// Add deactivation cleanup functionality here.
@@ -206,7 +230,7 @@ final class TwoCoda {
 	/**
 	 * Init hooks
 	 *
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 */
 	public function init() {
 
@@ -216,7 +240,7 @@ final class TwoCoda {
 		}
 
 		// Load translated strings for plugin.
-		load_plugin_textdomain( 'twocoda', false, dirname( $this->basename ) . '/languages/' );
+		load_plugin_textdomain( 'errigal-booking-module', false, dirname( $this->basename ) . '/languages/' );
 
 		// Initialize plugin classes.
 		$this->plugin_classes();
@@ -226,7 +250,7 @@ final class TwoCoda {
 	 * Check if the plugin meets requirements and
 	 * disable it if they are not present.
 	 *
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 *
 	 * @return boolean True if requirements met, false if not.
 	 */
@@ -250,7 +274,7 @@ final class TwoCoda {
 	/**
 	 * Deactivates this plugin, hook this function on admin_init.
 	 *
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 */
 	public function deactivate_me() {
 
@@ -264,7 +288,7 @@ final class TwoCoda {
 	/**
 	 * Check that all plugin requirements are met.
 	 *
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 *
 	 * @return boolean True if requirements are met.
 	 */
@@ -278,12 +302,12 @@ final class TwoCoda {
 	/**
 	 * Adds a notice to the dashboard if the plugin requirements are not met.
 	 *
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 */
 	public function requirements_not_met_notice() {
 
 		// Compile default message.
-		$default_message = sprintf( __( 'TwoCoda Core is missing requirements and has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'twocoda' ), admin_url( 'plugins.php' ) );
+		$default_message = sprintf( __( 'Errigal Booking Module is missing requirements and has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'errigal-booking-module' ), admin_url( 'plugins.php' ) );
 
 		// Default details to null.
 		$details = null;
@@ -305,7 +329,7 @@ final class TwoCoda {
 	/**
 	 * Magic getter for our object.
 	 *
-	 * @since  0.0.1
+	 * @since  0.0.0
 	 *
 	 * @param  string $field Field to get.
 	 * @throws Exception     Throws an exception if the field is invalid.
@@ -318,73 +342,32 @@ final class TwoCoda {
 			case 'basename':
 			case 'url':
 			case 'path':
-			case 'acf':
-			case 'lesson':
+			case 'db_init':
+			case 'appointmentmodel':
+			case 'appt_controller':
+			case 'appointment_type_model':
+			case 'scheduleajax':
 				return $this->$field;
 			default:
 				throw new Exception( 'Invalid ' . __CLASS__ . ' property: ' . $field );
 		}
 	}
-
-	/**
-	 * Include a file from the includes directory.
-	 *
-	 * @since  0.0.1
-	 *
-	 * @param  string $filename Name of the file to be included.
-	 * @return boolean          Result of include call.
-	 */
-	public static function include_file( $filename ) {
-		$file = self::dir( $filename . '.php' );
-		if ( file_exists( $file ) ) {
-			return include_once( $file );
-		}
-		return false;
-	}
-
-	/**
-	 * This plugin's directory.
-	 *
-	 * @since  0.0.1
-	 *
-	 * @param  string $path (optional) appended path.
-	 * @return string       Directory and path.
-	 */
-	public static function dir( $path = '' ) {
-		static $dir;
-		$dir = $dir ? $dir : trailingslashit( dirname( __FILE__ ) );
-		return $dir . $path;
-	}
-
-	/**
-	 * This plugin's url.
-	 *
-	 * @since  0.0.1
-	 *
-	 * @param  string $path (optional) appended path.
-	 * @return string       URL and path.
-	 */
-	public static function url( $path = '' ) {
-		static $url;
-		$url = $url ? $url : trailingslashit( plugin_dir_url( __FILE__ ) );
-		return $url . $path;
-	}
 }
 
 /**
- * Grab the TwoCoda object and return it.
- * Wrapper for TwoCoda::get_instance().
+ * Grab the EM_Booking object and return it.
+ * Wrapper for EM_Booking::get_instance().
  *
- * @since  0.0.1
- * @return TwoCoda  Singleton instance of plugin class.
+ * @since  0.0.0
+ * @return EM_Booking  Singleton instance of plugin class.
  */
-function twocoda() {
-	return TwoCoda::get_instance();
+function errigal_booking_module() {
+	return EM_Booking::get_instance();
 }
 
 // Kick it off.
-add_action( 'plugins_loaded', array( twocoda(), 'hooks' ) );
+add_action( 'plugins_loaded', array( errigal_booking_module(), 'hooks' ) );
 
 // Activation and deactivation.
-register_activation_hook( __FILE__, array( twocoda(), '_activate' ) );
-register_deactivation_hook( __FILE__, array( twocoda(), '_deactivate' ) );
+register_activation_hook( __FILE__, array( errigal_booking_module(), '_activate' ) );
+register_deactivation_hook( __FILE__, array( errigal_booking_module(), '_deactivate' ) );
