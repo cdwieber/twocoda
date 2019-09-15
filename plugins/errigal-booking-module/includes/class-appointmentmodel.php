@@ -48,7 +48,7 @@ class EMB_Appt_model extends Model {
 	public $timestamps = false;
 
 	/**
-	 * Set primary key as ID ("because wordpress" according to tareq)
+	 * Set primary key as ID ("because WordPress" according to tareq)
 	 *
 	 * @var string
 	 */
@@ -66,10 +66,9 @@ class EMB_Appt_model extends Model {
 	 *
 	 * @return string
 	 */
-	public function getTable()
-	{
-		if( isset( $this->table ) ){
-			$prefix =  $this->getConnection()->db->base_prefix;
+	public function getTable() {
+		if ( isset( $this->table ) ) {
+			$prefix = $this->getConnection()->db->base_prefix;
 			return $prefix . $this->table;
 
 		}
@@ -83,7 +82,7 @@ class EMB_Appt_model extends Model {
 	 * @return \Illuminate\Database\Eloquent\Relations\HasOne
 	 */
 	public function user() {
-		return $this->hasOne('User', 'user_id');
+		return $this->hasOne( 'User', 'user_id' );
 	}
 
 	/**
@@ -92,7 +91,7 @@ class EMB_Appt_model extends Model {
 	 * @return \Illuminate\Database\Eloquent\Relations\HasOne
 	 */
 	public function student() {
-		return $this->hasOne('User', 'student_id');
+		return $this->hasOne( 'User', 'student_id' );
 	}
 
 	/**
@@ -101,6 +100,6 @@ class EMB_Appt_model extends Model {
 	 * @return \Illuminate\Database\Eloquent\Relations\HasOne
 	 */
 	public function appt_type() {
-		return $this->has_one('EMB_Appointment_type_model');
+		return $this->has_one( 'EMB_Appointment_type_model' );
 	}
 }

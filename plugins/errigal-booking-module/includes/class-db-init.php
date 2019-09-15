@@ -34,9 +34,9 @@ class EMB_Db_init {
 
 	private function create_tables() {
 		global $wpdb;
-		$charset_collate = $wpdb->get_charset_collate();
-		$appointment_table = $wpdb->prefix . "appointments";
-		$appointment_type_table = $wpdb->prefix . "appointment_types";
+		$charset_collate        = $wpdb->get_charset_collate();
+		$appointment_table      = $wpdb->prefix . 'appointments';
+		$appointment_type_table = $wpdb->prefix . 'appointment_types';
 
 		$sql = <<<SQL
 CREATE TABLE $appointment_table (
@@ -67,11 +67,10 @@ REPLACE INTO $appointment_type_table (ID, type)
 VALUES (0, 'regular'),(1, 'block_time')
 SQL;
 
-
-		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 		dbDelta( $sql );
 
-		add_option('em_booking_db_version', "0.1");
+		add_option( 'em_booking_db_version', '0.1' );
 	}
 
 	public function init() {

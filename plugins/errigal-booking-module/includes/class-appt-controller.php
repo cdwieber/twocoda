@@ -33,7 +33,7 @@ class EMB_Appt_controller {
 		$this->plugin = $plugin;
 	}
 
-	public function get( int $id = null) {
+	public function get( int $id = null ) {
 
 	}
 
@@ -43,7 +43,7 @@ class EMB_Appt_controller {
 	 * The basic idea is to find all appointments within a reasonable temporal
 	 * vicinity of the passed appointment, then compare start and end times to
 	 * ensure separation. The vicinity is +/- 6 hours from the start or end.
-     * Most teachers scheduling 30-60 minute lessons will have a
+	 * Most teachers scheduling 30-60 minute lessons will have a
 	 * 12.5-13 hour vicinity scanned. This is probably more than necessary, but
 	 * I want to get ahead of edge cases where a user, for example, tries to schedule
 	 * within another appointment that for some reason is 12 hours.
@@ -56,28 +56,34 @@ class EMB_Appt_controller {
 	 */
 	private function is_conflict( EMB_Appt_model $appt ) {
 
-		//Get appointments within a +/- 6-hour vicinity.
-		$existing_appts = $this->get_by_period( ( $appt->start_time - ( HOUR_IN_SECONDS * 6 ) ),
-			( $appt->end_time + ( HOUR_IN_SECONDS * 6 ) ) );
+		// Get appointments within a +/- 6-hour vicinity.
+		$existing_appts = $this->get_by_period(
+			( $appt->start_time - ( HOUR_IN_SECONDS * 6 ) ),
+			( $appt->end_time + ( HOUR_IN_SECONDS * 6 ) )
+		);
 
 		// If that turns up nothing, we're all good here.
-		if ( ! $existing_appts )
+		if ( ! $existing_appts ) {
 			return false;
+		}
 
 		// Loop and compare. (No need for binary search trees here! Huzzah!)
-		foreach ( $existing_appts as $existing_appt )  {
+		foreach ( $existing_appts as $existing_appt ) {
 			// Is appointment start time within the existing appointment? Bzzzt.
 			if ( $appt->start_time >= $existing_appt->start_time
-				&& $appt->start_time <= $existing_appt->start_time )
+				&& $appt->start_time <= $existing_appt->start_time ) {
 					return true;
+			}
 			// Is appointment end time within existing appointment? Bzzzt.
 			if ( $appt->end_time >= $existing_appt->start_time
-				&& $appt->end_time <= $existing_appt->start_time )
+				&& $appt->end_time <= $existing_appt->start_time ) {
 					return true;
+			}
 			// Does appointment completely overlap existing appointment? Bzzzt.
 			if ( $appt->start_time <= $existing_appt->start_time
-				&& $appt->end_time >= $existing_appt->start_time )
+				&& $appt->end_time >= $existing_appt->start_time ) {
 					return true;
+			}
 		}
 		// TODO: Write tests for everything but especially this...
 		// None of those triggered for any nearby appointment? Appointment does not conflict.
@@ -107,16 +113,16 @@ class EMB_Appt_controller {
 
 		$appt = new EMB_Appt_model();
 
-		$appt->user_id = $args['user_id'];
-		$appt->student_id = $args['student_id'];
-		$appt->title = $args['title'];
-		$appt->start_time = strtotime( $args['start_time'] );
-		$appt->length_in_min = $args['length_in_min'];
-		$appt->end_time = $this->calculate_end_time($args['start_time'], $args['length_in_min']);
-		$appt->lesson_type = $args['lesson_type'];
+		$appt->user_id          = $args['user_id'];
+		$appt->student_id       = $args['student_id'];
+		$appt->title            = $args['title'];
+		$appt->start_time       = strtotime( $args['start_time'] );
+		$appt->length_in_min    = $args['length_in_min'];
+		$appt->end_time         = $this->calculate_end_time( $args['start_time'], $args['length_in_min'] );
+		$appt->lesson_type      = $args['lesson_type'];
 		$appt->appointment_type = $args['appointment_type'];
-		$appt->cost = $args['cost'];
-		$appt->rrule = $args['rrule'];
+		$appt->cost             = $args['cost'];
+		$appt->rrule            = $args['rrule'];
 
 		if ( null != $appt->rrule ) {
 			$this->handle_recurring_appointment( $appt );
@@ -138,7 +144,7 @@ class EMB_Appt_controller {
 	 * Our front-end lib specifically wants to know the end time, length isn't enough.
 	 *
 	 * @param int|string $s Start time in either epoch or parsable string.
-	 * @param int $l length in minutes.
+	 * @param int        $l length in minutes.
 	 * @return int
 	 */
 	private function calculate_end_time( $s, int $l ) {
@@ -158,14 +164,14 @@ class EMB_Appt_controller {
 	 */
 	private function handle_recurring_appointment( EMB_Appt_model $appt ) {
 		$transformer = new ArrayTransformer();
-			//TODO: Find some way to track the booking exceptions and send a warning to the
+			// TODO: Find some way to track the booking exceptions and send a warning to the
 			// front end.
-		$recur = $transformer->transform($appt->rrule);
+		$recur = $transformer->transform( $appt->rrule );
 
 		// Save the existing model w/ atts, but update the datetimes.
-		foreach ($recur as $r) {
+		foreach ( $recur as $r ) {
 			$appt->start_time = $r->getStart();
-			$appt->end_time = $r->getEnd();
+			$appt->end_time   = $r->getEnd();
 
 			$appt->save();
 		}
@@ -180,9 +186,9 @@ class EMB_Appt_controller {
 	 */
 	private function recur_hash_generate() {
 		try {
-			$hash = bin2hex(random_bytes(32));
-		} catch (Exception $e) {
-			wp_die('Caught recur hash exception: ' . $e);
+			$hash = bin2hex( random_bytes( 32 ) );
+		} catch ( Exception $e ) {
+			wp_die( 'Caught recur hash exception: ' . $e );
 		}
 		return $hash;
 	}
@@ -196,13 +202,13 @@ class EMB_Appt_controller {
 	 * @return null|\Illuminate\Support\Collection
 	 */
 	public function get_by_period( int $period_start, int $period_end ) {
-		$db = Errigal_Database::instance();
-		$appts = $db->table('appointments')
-			->where('user_id', get_current_user_id())
-			->orWhere('student_id', get_current_user_id())
-			->whereBetween( 'start_time', [$period_start, $period_end] )->get();
+		$db    = Errigal_Database::instance();
+		$appts = $db->table( 'appointments' )
+			->where( 'user_id', get_current_user_id() )
+			->orWhere( 'student_id', get_current_user_id() )
+			->whereBetween( 'start_time', [ $period_start, $period_end ] )->get();
 
-		if($appts->isEmpty()) {
+		if ( $appts->isEmpty() ) {
 			return null;
 		}
 		return $appts;

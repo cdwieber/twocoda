@@ -1,12 +1,12 @@
 <?php
-$students = get_users(['role' => 'student']);
+$students = get_users( [ 'role' => 'student' ] );
 ?>
 
 <div id="calendar">
 </div>
 
 <div id="loading">
-	<img src="<?php echo errigal_booking_module()->url ?>/assets/img/ajax-loader.gif" />
+	<img src="<?php echo errigal_booking_module()->url; ?>/assets/img/ajax-loader.gif" />
 </div>
 
 
@@ -30,7 +30,7 @@ $students = get_users(['role' => 'student']);
 					<select class="form-control" id="student" name="student">
 						<?php
 						if ( $students ) {
-							foreach ($students as $student) {
+							foreach ( $students as $student ) {
 								echo '<option value="' . $student->ID . '"">' . $student->display_name . '</option>';
 							}
 						} else {
@@ -43,18 +43,18 @@ $students = get_users(['role' => 'student']);
 						<label for="lesson_type">Lesson Type</label>
 						<select class="form-control" id="lesson_type" name="lesson_type">
 							<?php
-							if( have_rows( 'lesson_types', 'option' ) ) {
-								while( have_rows( 'lesson_types', 'option' ) ) {
+							if ( have_rows( 'lesson_types', 'option' ) ) {
+								while ( have_rows( 'lesson_types', 'option' ) ) {
 									the_row();
 
-									$value  = get_sub_field('lesson_name');
-									$length = get_sub_field('length_in_minutes');
-									$cost   = get_sub_field('cost');
+									$value  = get_sub_field( 'lesson_name' );
+									$length = get_sub_field( 'length_in_minutes' );
+									$cost   = get_sub_field( 'cost' );
 
 									echo "<option value='{$value}' data-length='{$length}' data-cost='{$cost}'>$value</option>";
 								}
 							} else {
-								echo "<option disabled>See policies page to add at least one lesson type.</option>";
+								echo '<option disabled>See policies page to add at least one lesson type.</option>';
 							}
 							?>
 						<select>
@@ -65,16 +65,16 @@ $students = get_users(['role' => 'student']);
 							<option value="online">Online</option>
 							<option value="student_home">Student's Home</option>
 							<?php
-							if( have_rows( 'locations', 'option' ) ) {
-								while( have_rows( 'locations', 'option' ) ) {
+							if ( have_rows( 'locations', 'option' ) ) {
+								while ( have_rows( 'locations', 'option' ) ) {
 									the_row();
 
-									$value  = get_sub_field('location_name');
+									$value = get_sub_field( 'location_name' );
 
 									echo "<option value='{$value}'>$value</option>";
 								}
 							} else {
-								echo "<option disabled>See your policies page to add more.</option>";
+								echo '<option disabled>See your policies page to add more.</option>';
 							}
 							?>
 						</select>

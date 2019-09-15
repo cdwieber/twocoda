@@ -15,26 +15,24 @@ class Errigal_Database extends Database {
 	 *
 	 * @return \Illuminate\Database\Query\Builder
 	 */
-	public function table($table)
-	{
+	public function table( $table ) {
 		$processor = $this->getPostProcessor();
 
 		$table = $this->db->base_prefix . $table;
 
-		$query = new Builder($this, $this->getQueryGrammar(), $processor);
+		$query = new Builder( $this, $this->getQueryGrammar(), $processor );
 
-		return $query->from($table);
+		return $query->from( $table );
 	}
 	/**
 	 * Initializes the Database class
 	 *
 	 * @return \WeDevs\ORM\Eloquent\Database
 	 */
-	public static function instance()
-	{
+	public static function instance() {
 		static $instance = false;
 
-		if (!$instance) {
+		if ( ! $instance ) {
 			$instance = new self();
 		}
 

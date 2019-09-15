@@ -22,7 +22,7 @@ class EMB_Appointment_type_model extends Model {
 	public $timestamps = false;
 
 	/**
-	 * Set primary key as ID ("because wordpress" according to tareq)
+	 * Set primary key as ID ("because WordPress" according to tareq)
 	 *
 	 * @var string
 	 */
@@ -40,10 +40,9 @@ class EMB_Appointment_type_model extends Model {
 	 *
 	 * @return string
 	 */
-	public function getTable()
-	{
-		if( isset( $this->table ) ){
-			$prefix =  $this->getConnection()->db->prefix;
+	public function getTable() {
+		if ( isset( $this->table ) ) {
+			$prefix = $this->getConnection()->db->prefix;
 			return $prefix . $this->table;
 
 		}

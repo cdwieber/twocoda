@@ -54,11 +54,10 @@ class EMB_Admin_Schedule {
 	 */
 	public function hooks() {
 		// Hook in our actions to the admin.
-		add_action( 'admin_enqueue_scripts', [$this, 'schedule_scripts_styles'], 999 );
+		add_action( 'admin_enqueue_scripts', [ $this, 'schedule_scripts_styles' ], 999 );
 
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
 		add_action( 'admin_menu', array( $this, 'add_options_page' ) );
-
 
 	}
 	/**
@@ -95,39 +94,38 @@ class EMB_Admin_Schedule {
 	}
 
 	public function schedule_scripts_styles() {
-		wp_register_script('moment', $this->plugin->url . '/assets/js/fullcalendar-3.9.0/lib/moment.min.js');
-		wp_register_script('fullcalendar', $this->plugin->url . '/assets/js/fullcalendar-3.9.0/fullcalendar.min.js', ['jquery', 'moment']);
-		wp_register_script('swal', 'https://cdn.jsdelivr.net/npm/sweetalert2@8', null, null, false);
-		wp_register_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js');
-		wp_register_script('bootstrap4-script', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', ['jquery', 'popper']);
-		wp_register_script('datetimepicker', 'https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js', ['jquery'], null);
-		wp_register_script('schedule-script', $this->plugin->url . '/assets/js/schedule.js', ['jquery', 'swal', 'datetimepicker'], null, true);
+		wp_register_script( 'moment', $this->plugin->url . '/assets/js/fullcalendar-3.9.0/lib/moment.min.js' );
+		wp_register_script( 'fullcalendar', $this->plugin->url . '/assets/js/fullcalendar-3.9.0/fullcalendar.min.js', [ 'jquery', 'moment' ] );
+		wp_register_script( 'swal', 'https://cdn.jsdelivr.net/npm/sweetalert2@8', null, null, false );
+		wp_register_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' );
+		wp_register_script( 'bootstrap4-script', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', [ 'jquery', 'popper' ] );
+		wp_register_script( 'datetimepicker', 'https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js', [ 'jquery' ], null );
+		wp_register_script( 'schedule-script', $this->plugin->url . '/assets/js/schedule.js', [ 'jquery', 'swal', 'datetimepicker' ], null, true );
 
-
-		wp_register_style('fullcalendar-style', $this->plugin->url . '/assets/js/fullcalendar-3.9.0/fullcalendar.min.css');
-		wp_register_style('bootstrap4-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
-		wp_register_style('datetimepicker-style', 'https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css');
+		wp_register_style( 'fullcalendar-style', $this->plugin->url . '/assets/js/fullcalendar-3.9.0/fullcalendar.min.css' );
+		wp_register_style( 'bootstrap4-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
+		wp_register_style( 'datetimepicker-style', 'https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css' );
 
 		// Load these assets specifically on the scheduler page.
-		if ( $_GET['page'] ==  'em_booking_schedule') {
-			wp_enqueue_script('swal');
-			wp_enqueue_script('moment');
-			wp_enqueue_script('fullcalendar');
-			wp_enqueue_script('schedule-script');
-			wp_enqueue_script('popper');
-			wp_enqueue_script('bootstrap4-script');
-			wp_enqueue_script('datetimepicker');
+		if ( $_GET['page'] == 'em_booking_schedule' ) {
+			wp_enqueue_script( 'swal' );
+			wp_enqueue_script( 'moment' );
+			wp_enqueue_script( 'fullcalendar' );
+			wp_enqueue_script( 'schedule-script' );
+			wp_enqueue_script( 'popper' );
+			wp_enqueue_script( 'bootstrap4-script' );
+			wp_enqueue_script( 'datetimepicker' );
 
-			wp_localize_script('schedule-script', 'tcajax', array('ajax_url' => admin_url('admin-ajax.php')));
+			wp_localize_script( 'schedule-script', 'tcajax', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
-			wp_enqueue_style('fullcalendar-style');
-			wp_enqueue_style('bootstrap4-style');
-			wp_enqueue_style('datetimepicker-style');
+			wp_enqueue_style( 'fullcalendar-style' );
+			wp_enqueue_style( 'bootstrap4-style' );
+			wp_enqueue_style( 'datetimepicker-style' );
 
 			// Swap WP's super-outdated jquery with the one we need from the CDN.
 			// TODO: Upgrade the rest of the modules to stop them complaining in console.
-			wp_deregister_script('jquery');
-			wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
+			wp_deregister_script( 'jquery' );
+			wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true );
 		}
 
 	}
