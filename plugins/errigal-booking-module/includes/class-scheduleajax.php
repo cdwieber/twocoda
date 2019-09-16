@@ -71,7 +71,11 @@ class EMB_Scheduleajax {
 
 		$lessons = $appt->get_by_period( $from, $to );
 
-		$lessons = $lessons->toArray();
+		if ( ! $lessons ) {
+			return;
+		}
+			$lessons = $lessons->toArray();
+
 
 		// TODO: ACF Options field for timezone
 
