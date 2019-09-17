@@ -86,7 +86,7 @@ $students = get_users( [ 'role' => 'student' ] );
 				</form>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" id="saveButton">Save</button>
+				<button type="submit" class="btn btn-primary" id="saveButton">Save</button>
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 			</div>
 		</div>
