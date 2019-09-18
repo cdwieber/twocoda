@@ -109,35 +109,6 @@ class EMB_Appt_controller {
 		}
 	}
 
-	public function store( array $args ) {
-
-		$appt = new EMB_Appt_model();
-
-		$appt->user_id          = $args['user_id'];
-		$appt->student_id       = $args['student_id'];
-		$appt->title            = $args['title'];
-		$appt->start_time       = strtotime( $args['start_time'] );
-		$appt->length_in_min    = $args['length_in_min'];
-		$appt->end_time         = $this->calculate_end_time( $args['start_time'], $args['length_in_min'] );
-		$appt->lesson_type      = $args['lesson_type'];
-		$appt->appointment_type = $args['appointment_type'];
-		$appt->cost             = $args['cost'];
-		$appt->rrule            = $args['rrule'];
-
-		if ( null != $appt->rrule ) {
-			$this->handle_recurring_appointment( $appt );
-		}
-
-		try {
-			$this->is_bookable( $appt );
-		} catch ( EMB_Double_Booked_Exception | EMB_Past_Appointment_Exception $e ) {
-			// Throw it to third base for a double play
-			throw $e;
-		}
-
-		return $appt->save();
-	}
-
 	/**
 	 * Take the appointment's length and start time and calculate an end time.
 	 *
@@ -156,8 +127,11 @@ class EMB_Appt_controller {
 	}
 
 	/**
-	 * Take the appointment object, examine the RRULE, and the
-	 * resulting appointments.
+	 * Take the appointment object, examine the RRULE, and save the
+	 * resulting appointments. Limit the recurrences to 50 to avoid infinite loops.
+	 *
+	 * BIG TODO: To complete this feature, we must implement some logic to keep "scheduling forward"
+	 * infinitely recurring appointments.
 	 *
 	 * @param EMB_Appt_model $appt
 	 * @throws \Recurr\Exception\InvalidWeekday
@@ -165,15 +139,21 @@ class EMB_Appt_controller {
 	private function handle_recurring_appointment( EMB_Appt_model $appt ) {
 		$transformer = new ArrayTransformer();
 			// TODO: Find some way to track the booking exceptions and send a warning to the
-			// front end.
+			// front end, i.e "The following appointments could not be scheduled:"
 		$recur = $transformer->transform( $appt->rrule );
 
+		$limiter = 1;
 		// Save the existing model w/ atts, but update the datetimes.
 		foreach ( $recur as $r ) {
+			if ($limiter >= 50)
+				break;
+
 			$appt->start_time = $r->getStart();
 			$appt->end_time   = $r->getEnd();
 
 			$appt->save();
+
+			$limiter++;
 		}
 	}
 
@@ -212,5 +192,51 @@ class EMB_Appt_controller {
 			return null;
 		}
 		return $appts;
+	}
+
+	/**
+	 * Produce a friendly title for the lesson, i.e. "30 Min Cello with Jan Smith".
+	 *
+	 * @param string $lesson_type
+	 * @param int $student_id
+	 * @return string
+	 */
+	private function lesson_title(string $lesson_type, int $student_id) {
+
+		$student = get_userdata( $student_id );
+
+		$title = $lesson_type . " with " . $student->display_name;
+
+		return $title;
+	}
+
+
+	public function store( array $args ) {
+
+		$appt = new EMB_Appt_model();
+
+		$appt->user_id          = $args['user_id'];
+		$appt->student_id       = $args['student_id'];
+		$appt->lesson_type      = $args['lesson_type'];
+		$appt->title            = $this->lesson_title($args['lesson_type'], $args['student_id']);
+		$appt->start_time       = strtotime( $args['start_time'] );
+		$appt->length_in_min    = $args['length_in_min'];
+		$appt->end_time         = $this->calculate_end_time( $args['start_time'], $args['length_in_min'] );
+		$appt->appointment_type = $args['appointment_type'];
+		$appt->cost             = $args['cost'];
+		$appt->rrule            = $args['rrule'];
+
+		if ( null != $appt->rrule ) {
+			$this->handle_recurring_appointment( $appt );
+		}
+
+		try {
+			$this->is_bookable( $appt );
+		} catch ( EMB_Double_Booked_Exception | EMB_Past_Appointment_Exception $e ) {
+			// Throw it to third base for a double play
+			throw $e;
+		}
+
+		return $appt->save();
 	}
 }
