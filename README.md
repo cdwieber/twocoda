@@ -54,9 +54,14 @@ This plugin adds two tables to the WordPress database: `appointments` and `appoi
 holds all of the information about appointments themselves, and `appointment_types` is a reference table
 that holds an appointment type ("regular", "blocked_time", "business_hours", etc) and ties it to a unique ID.
 
+
 Not wanting to lean too heavily on the $wpdb global, and wanting additional functionality for complex queries
 and CRUD actions, I decided to try out Tareq88's great implementation of the Eloquent ORM for WordPress. I'm
 a fan of the Laravel framework, so this has been an absolutely pleasure to work with.
+
+### UI/UX
+I wanted an effortless front-end for scheduling, etc. I integrated jQuery FullCalendar v3 for the front-end,
+which gave me easy access to an easily-navigable calendar, event displays, and drag-and-drop functionality.
 
 
 ## Task and Issue Tracker
@@ -73,3 +78,15 @@ There is a live demo that's on the upstream `master` branch.
 **User** - demo 
 
 **Password:** 2CodaD3m0
+
+### What Works
+Currently, adding lesson types and customizing business rules is possible under the "Policies" menu.
+
+As of this writing (9/17/19), the Scheduling module is nearing completion. Events can be scheduled and moved
+based on students added and lesson types specified under Policies, and will go through a series of back-end
+validation for double-booking, etc. Still to come are the AJAX functions for cancellation, cancellation 
+policy violation detection, and the mailer service for notifications.
+
+Everything else is, so-to-speak, a glimpse at how the sausage is made. Currently a lot of the functions
+(like "students", theme customizer, etc) still look very "WordPressy", and I want to make these as
+accessible as possible in the months to come.
