@@ -57,7 +57,7 @@ that holds an appointment type ("regular", "blocked_time", "business_hours", etc
 
 Not wanting to lean too heavily on the $wpdb global, and wanting additional functionality for complex queries
 and CRUD actions, I decided to try out Tareq88's great implementation of the Eloquent ORM for WordPress. I'm
-a fan of the Laravel framework, so this has been an absolutely pleasure to work with.
+a fan of the Laravel framework, so this has been an absolute pleasure to work with.
 
 ### UI/UX
 I wanted an effortless front-end for scheduling, etc. I integrated jQuery FullCalendar v3 for the front-end,
