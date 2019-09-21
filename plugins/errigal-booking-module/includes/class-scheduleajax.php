@@ -33,8 +33,12 @@ class EMB_Scheduleajax {
 	 * @since  0.0.0
 	 */
 	public function hooks() {
+		// Save endpoint
 		add_action( 'wp_ajax_save_appointment', [ $this, 'save_appointment_ajax' ] );
+		// Load endpoint
 		add_action( 'wp_ajax_load_appointments', [ $this, 'load_appointments_ajax' ] );
+		// Reschedule endpoint
+		add_action( 'wp_ajax_reschedule', [$this, 'reschedule'] );
 	}
 
 	public function save_appointment_ajax() {
@@ -63,6 +67,9 @@ class EMB_Scheduleajax {
 		wp_die();
 	}
 
+	/**
+	 * Get apppointments for requested period and send to frontend.
+	 */
 	public function load_appointments_ajax() {
 		$appt = new EMB_Appt_controller( $this->plugin );
 
@@ -95,6 +102,24 @@ class EMB_Scheduleajax {
 
 		$lesson_events = json_encode( $lesson_events );
 		echo $lesson_events;
+		wp_die();
+	}
+
+	/**
+	 * Handle drag n' drop rescheduling on the front end.
+	 *
+	 * Also, for the moment, clear recurrent status.
+	 */
+	public function reschedule() {
+		$db = Errigal_Database::instance();
+		$db->table( 'appointments' )
+			->where( 'ID', $_POST[ 'id' ] )
+			->update([
+				'start_time'=> strtotime( $_POST[ 'start' ] ),
+				'end_time'  => strtotime( $_POST[ 'end' ] ),
+				'rrule'     => '',
+				'recur_hash'=> '',
+			]);
 		wp_die();
 	}
 }

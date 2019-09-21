@@ -81,6 +81,34 @@ jQuery(document).ready(function ($) {
 
 	});
 
+	/**
+	 * Handle drag n' drop rescheduling
+	 * @param id
+	 * @param start
+	 * @param end
+	 */
+	let handleDrop = function(id, start, end) {
+		var start_time = moment(start).format('Y-MM-DD HH:mm:ss');
+		var end_time = moment(end).format('Y-MM-DD HH:mm:ss');
+
+		$.ajax({
+			url: ajaxurl + '?action=reschedule',
+			type: 'post',
+			data: {
+				id: id,
+				start: start_time,
+				end: end_time
+			},
+			success: function() {
+				Swal.fire(
+					'Success',
+					'Lesson successfully rescheduled',
+					'success',
+				);
+			}
+		});
+	};
+
 	//Init the calendar
 	let calendar = $('#calendar').fullCalendar({
 		customButtons: {
@@ -140,7 +168,8 @@ jQuery(document).ready(function ($) {
 				allowOutsideClick: false,
 			}).then((res) => {
 				if(res.value){
-					console.log(event.id);
+					console.log(event);
+					handleDrop(event.id, event.start, event.end);
 				}else if(res.dismiss === 'cancel'){
 					revertFunc();
 				}

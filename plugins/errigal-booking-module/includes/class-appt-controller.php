@@ -239,4 +239,8 @@ class EMB_Appt_controller {
 
 		return $appt->save();
 	}
+
+	public function update( $id, $args ) {
+
+	}
 }
