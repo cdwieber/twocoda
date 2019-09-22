@@ -213,7 +213,12 @@ class EMB_Appt_controller {
 
 	public function store( array $args ) {
 
-		$appt = new EMB_Appt_model();
+		// If an ID is not passed, we're saving a new record
+		if ( ! $args['ID'] ) {
+			$appt = new EMB_Appt_model();
+		} else {
+			$appt = EMB_Appt_model::find( $args['ID'] );
+		}
 
 		$appt->user_id          = $args['user_id'];
 		$appt->student_id       = $args['student_id'];
@@ -224,6 +229,7 @@ class EMB_Appt_controller {
 		$appt->end_time         = $this->calculate_end_time( $args['start_time'], $args['length_in_min'] );
 		$appt->appointment_type = $args['appointment_type'];
 		$appt->cost             = $args['cost'];
+		$appt->notes			= $args['notes'];
 		$appt->rrule            = $args['rrule'];
 
 		if ( null != $appt->rrule ) {
@@ -238,9 +244,5 @@ class EMB_Appt_controller {
 		}
 
 		return $appt->save();
-	}
-
-	public function update( $id, $args ) {
-
 	}
 }

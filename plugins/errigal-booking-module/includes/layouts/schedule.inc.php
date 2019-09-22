@@ -22,12 +22,14 @@ $students = get_users( [ 'role' => 'student' ] );
 			</div>
 			<div class="modal-body">
 				<form id="lesson-form">
+					<input type="hidden" name="id" id="id" value="">
 				<div class="form-group">
 					<input id="datetimepicker" name="start_time"/>
 				</div>
 				<div class="form-group">
 					<label for="student">Student</label>
 					<select class="form-control" id="student" name="student">
+						<option></option>
 						<?php
 						if ( $students ) {
 							foreach ( $students as $student ) {
@@ -42,6 +44,7 @@ $students = get_users( [ 'role' => 'student' ] );
 					<div class="form-group">
 						<label for="lesson_type">Lesson Type</label>
 						<select class="form-control" id="lesson_type" name="lesson_type">
+							<option></option>
 							<?php
 							if ( have_rows( 'lesson_types', 'option' ) ) {
 								while ( have_rows( 'lesson_types', 'option' ) ) {
@@ -62,6 +65,7 @@ $students = get_users( [ 'role' => 'student' ] );
 					<div class="form-group">
 						<label for="location">Lesson Location</label>
 						<select class="form-control" id="lesson_location" name="lesson_location">
+							<option></option>
 							<option value="online">Online</option>
 							<option value="student_home">Student's Home</option>
 							<?php

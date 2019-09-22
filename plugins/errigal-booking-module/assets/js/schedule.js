@@ -1,5 +1,5 @@
 /**
- * Display js for scheduler view
+ * JS for scheduler view
  */
 
 jQuery(document).ready(function ($) {
@@ -15,13 +15,14 @@ jQuery(document).ready(function ($) {
 	// Get cost and length of lessons when selected
 	var getCostAndLength = function(){
 		cost = lessonType.find(':selected').data('cost');
-		length = lessonType.find(':selected').data('cost');
+		length = lessonType.find(':selected').data('length');
 	};
 	getCostAndLength();
 	// Ensure we update every time it changes.
 	$(document).on('change',"#lesson_type", getCostAndLength);
 
 	var clearForm = function() {
+		lessonModal.find('#lesson-modal-title').html("New Lesson");
 		$(':input',lessonForm)
 			.not(':button, :submit, :reset, :hidden')
 			.val('')
@@ -48,7 +49,29 @@ jQuery(document).ready(function ($) {
 	// Kick off the save request.
 	saveButton.on('click', function (e) {
 		e.preventDefault();
+		// If the hidden field contains an ID, then we know we're editing existing
+		if ("" !== lessonModal.find("#id").val()) {
+			Swal.fire({
+				title: "Save Changes?",
+				text: "You're about to alter an existing lesson. Continue?",
+				confirmButtonText: "Save Changes",
+				showCancelButton: true,
+				allowOutsideClick: false
+				}).then((res) => {
+				if(res.value) {
+					saveLesson();
+				} else if(res.dismiss === 'cancel') {
+					return 0;
+				} else if(res.dismiss === 'esc') {
+					return 0;
+				}
+			});
+		} else {
+			saveLesson();
+		}
+	});
 
+	let saveLesson = function() {
 		var data = lessonForm.serialize();
 
 		data = data + "&cost=" + cost + "&length=" + length;
@@ -69,17 +92,15 @@ jQuery(document).ready(function ($) {
 			},
 			error: function (response) {
 				console.log(response);
-				let message = response.responseJSON.data.message
+				let message = response.responseJSON.data.message;
 				Swal.fire(
-				'Uh-oh!',
-				"There was an error: " + message,
-				'error'
-			)
-		}
+					'Uh-oh!',
+					"There was an error: " + message,
+					'error'
+				)
+			}
 		});
-
-
-	});
+	};
 
 	/**
 	 * Handle drag n' drop rescheduling
@@ -154,6 +175,32 @@ jQuery(document).ready(function ($) {
 
 		eventStartEditable: true,
 		eventOverlap: false,
+
+		eventClick: function(event) {
+			lessonModal.find('#lesson-modal-title').html("Edit " + event.title);
+			lessonModal.find('#datetimepicker').val(event.start.format('D MMMM YYYY h:mm A'));
+			lessonModal.find("#id").val(event.id);
+
+			$.ajax({
+				url: ajaxurl + '?action=get_by_id',
+				type: 'get',
+				data: {
+					id: event.id
+				},
+				success: function (response) {
+					console.log(response);
+					lessonModal.find("#student").val(response.student_id);
+					lessonModal.find("#lesson_type").val(response.lesson_type);
+					lessonModal.find("#lesson_location").val(response.lesson_location);
+					lessonModal.find('#notes').text(response.notes);
+					getCostAndLength();
+			}
+			});
+
+			console.log(event);
+			lessonModal.modal('show');
+		},
+
 		eventDrop: function(event, delta, revertFunc) {
 
 			Swal.fire({
@@ -181,7 +228,7 @@ jQuery(document).ready(function ($) {
 
 		dayClick: function(date, jsEvent, view) {
 			lessonModal.on('show.bs.modal', function (event) {
-				var modal = $(this)
+				var modal = $(this);
 				modal.find('#datetimepicker').val(date.format('D MMMM YYYY h:mm A'))
 			});
 			lessonModal.modal('show');

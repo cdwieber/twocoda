@@ -38,22 +38,23 @@ class EMB_Scheduleajax {
 		// Load endpoint
 		add_action( 'wp_ajax_load_appointments', [ $this, 'load_appointments_ajax' ] );
 		// Reschedule endpoint
-		add_action( 'wp_ajax_reschedule', [$this, 'reschedule'] );
+		add_action( 'wp_ajax_reschedule', [ $this, 'reschedule' ] );
+		// Get by ID
+		add_action( 'wp_ajax_get_by_id', [ $this, 'get_by_id' ] );
 	}
 
 	public function save_appointment_ajax() {
 		$appt = new EMB_Appt_controller( $this->plugin );
 
 		$args = [
-			// TODO: title generator
-			'title'            => 'Temp Title',
+			'ID'			   => $_POST['id'],
 			'user_id'          => get_current_user_id(),
 			'student_id'       => $_POST['student'],
 			'start_time'       => $_POST['start_time'],
 			'notes'            => $_POST['notes'],
 			'lesson_type'      => $_POST['lesson_type'],
-			'cost'             => $_POST['cost'], // ph
-			'length_in_min'    => $_POST['length'], // ph
+			'cost'             => $_POST['cost'],
+			'length_in_min'    => $_POST['length'],
 			'appointment_type' => 1,
 		];
 
@@ -108,7 +109,8 @@ class EMB_Scheduleajax {
 	/**
 	 * Handle drag n' drop rescheduling on the front end.
 	 *
-	 * Also, for the moment, clear recurrent status.
+	 * Also, for the moment, clear recurrent status so as to break it away from
+	 * the rest of the set.
 	 */
 	public function reschedule() {
 		$db = Errigal_Database::instance();
@@ -118,8 +120,20 @@ class EMB_Scheduleajax {
 				'start_time'=> strtotime( $_POST[ 'start' ] ),
 				'end_time'  => strtotime( $_POST[ 'end' ] ),
 				'rrule'     => '',
-				'recur_hash'=> '',
 			]);
+		wp_die();
+	}
+
+	/**
+	 * Get event object by ID via AJAX request.
+	 */
+	public function get_by_id() {
+		$db = Errigal_Database::instance();
+		$lesson = $db->table( 'appointments' )
+			->find( $_REQUEST['id'] );
+
+		wp_send_json($lesson, 200);
+
 		wp_die();
 	}
 }

@@ -47,6 +47,7 @@ CREATE TABLE $appointment_table (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   title varchar(255) NOT NULL,
   lesson_type varchar(255) NOT NULL,
+  location varchar(255),
   notes text NOT NULL,
   start_time bigint NOT NULL,
   end_time bigint NOT NULL,
