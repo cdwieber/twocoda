@@ -103,7 +103,7 @@ class EMB_Admin_Schedule {
 		wp_register_script( 'schedule-script', $this->plugin->url . '/assets/js/schedule.js', [ 'jquery', 'swal', 'datetimepicker' ], null, true );
 
 		wp_register_style( 'fullcalendar-style', $this->plugin->url . '/assets/js/fullcalendar-3.9.0/fullcalendar.min.css' );
-		wp_register_style( 'bootstrap4-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
+		wp_register_style( 'bootstrap4-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' );
 		wp_register_style( 'datetimepicker-style', 'https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css' );
 
 		// Load these assets specifically on the scheduler page.
