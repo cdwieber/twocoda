@@ -23,6 +23,7 @@ jQuery(document).ready(function ($) {
 
 	var clearForm = function() {
 		lessonModal.find('#lesson-modal-title').html("New Lesson");
+		lessonModal.find('#datetimepicker').val('');
 		$(':input',lessonForm)
 			.not(':button, :submit, :reset, :hidden')
 			.val('')
@@ -179,6 +180,8 @@ jQuery(document).ready(function ($) {
 		eventClick: function(event) {
 			lessonModal.find('#lesson-modal-title').html("Edit " + event.title);
 			lessonModal.find('#datetimepicker').val(event.start.format('D MMMM YYYY h:mm A'));
+			console.log(event.start.format('D MMMM YYYY h:mm A'));
+
 			lessonModal.find("#id").val(event.id);
 			lessonModal.find("#saveButton").html(
 				"<span class=\"spinner-grow spinner-grow-sm\" role=\"status\" aria-hidden=\"true\"></span>\n" +
@@ -233,10 +236,7 @@ jQuery(document).ready(function ($) {
 		},
 
 		dayClick: function(date, jsEvent, view) {
-			lessonModal.on('show.bs.modal', function (event) {
-				var modal = $(this);
-				modal.find('#datetimepicker').val(date.format('D MMMM YYYY h:mm A'))
-			});
+			lessonModal.find('#datetimepicker').val(date.format('D MMMM YYYY h:mm A'))
 			lessonModal.modal('show');
 		},
 		loading: function (bool) {
