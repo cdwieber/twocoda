@@ -3,11 +3,14 @@ $students = get_users( [ 'role' => 'student' ] );
 ?>
 
 <div id="calendar">
+	<div id="loading">
+		<div class="spinner-grow text-success" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+	</div>
 </div>
 
-<div id="loading">
-	<img src="<?php echo errigal_booking_module()->url; ?>/assets/img/ajax-loader.gif" />
-</div>
+
 
 
 

@@ -180,6 +180,11 @@ jQuery(document).ready(function ($) {
 			lessonModal.find('#lesson-modal-title').html("Edit " + event.title);
 			lessonModal.find('#datetimepicker').val(event.start.format('D MMMM YYYY h:mm A'));
 			lessonModal.find("#id").val(event.id);
+			lessonModal.find("#saveButton").html(
+				"<span class=\"spinner-grow spinner-grow-sm\" role=\"status\" aria-hidden=\"true\"></span>\n" +
+				"  <span class=\"sr-only\">Loading...</span>" +
+				"Loading..."
+			).prop('disabled', true);
 
 			$.ajax({
 				url: ajaxurl + '?action=get_by_id',
@@ -193,6 +198,7 @@ jQuery(document).ready(function ($) {
 					lessonModal.find("#lesson_type").val(response.lesson_type);
 					lessonModal.find("#lesson_location").val(response.lesson_location);
 					lessonModal.find('#notes').text(response.notes);
+					lessonModal.find("#saveButton").html("Save").prop('disabled', false);
 					getCostAndLength();
 			}
 			});

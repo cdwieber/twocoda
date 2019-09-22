@@ -105,6 +105,7 @@ class EMB_Admin_Schedule {
 		wp_register_style( 'fullcalendar-style', $this->plugin->url . '/assets/js/fullcalendar-3.9.0/fullcalendar.min.css' );
 		wp_register_style( 'bootstrap4-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' );
 		wp_register_style( 'datetimepicker-style', 'https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css' );
+		wp_register_style('em-booking-main-style', $this->plugin->url . '/assets/css/style.css' );
 
 		// Load these assets specifically on the scheduler page.
 		if ( $_GET['page'] == 'em_booking_schedule' ) {
@@ -121,6 +122,7 @@ class EMB_Admin_Schedule {
 			wp_enqueue_style( 'fullcalendar-style' );
 			wp_enqueue_style( 'bootstrap4-style' );
 			wp_enqueue_style( 'datetimepicker-style' );
+			wp_enqueue_style('em-booking-main-style');
 
 			// Swap WP's super-outdated jquery with the one we need from the CDN.
 			// TODO: Upgrade the rest of the modules to stop them complaining in console.
