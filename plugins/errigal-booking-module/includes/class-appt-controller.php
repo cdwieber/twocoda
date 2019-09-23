@@ -210,8 +210,63 @@ class EMB_Appt_controller {
 		return $title;
 	}
 
+	/**
+	 * Simple backend validation to check for presence of required data.
+	 *
+	 * @param array $args
+	 * @return bool
+	 * @throws EMB_Form_Validation_Exception
+	 */
+	public function validate( array $args ) {
+		$validate_error = "Missing required data: \n";
+		$valid = true;
 
+			if ( null == $args['user_id'] ) {
+				$validate_error .= "User ID. \n";
+				$valid = false;
+			}
+			if ( null == $args['student_id'] ) {
+				$validate_error .= "Student ID. \n";
+				$valid = false;
+			}
+			if ( null == $args['lesson_type'] ) {
+				$validate_error .= "Lesson Type. \n";
+				$valid = false;
+			}
+			if( null == $args['length_in_min'] ) {
+				$validate_error .= "Lesson Length. \n";
+				$valid = false;
+			}
+			if( null == $args['start_time'] ) {
+				$validate_error .= "Lesson start time. \n";
+				$valid = false;
+			}
+
+		if ( false == $valid ) {
+			throw new EMB_Form_Validation_Exception($validate_error);
+		} else {
+			return $valid;
+		}
+	}
+
+
+	/**
+	 * Process incoming data and store or update lesson.
+	 *
+	 * @param array $args
+	 * @return bool
+	 * @throws EMB_Double_Booked_Exception
+	 * @throws EMB_Form_Validation_Exception
+	 * @throws EMB_Past_Appointment_Exception
+	 * @throws \Recurr\Exception\InvalidWeekday
+	 */
 	public function store( array $args ) {
+
+		try {
+			$this->validate( $args );
+		} catch (EMB_Form_Validation_Exception $e) {
+			throw $e;
+		}
 
 		// If an ID is not passed, we're saving a new record
 		if ( ! $args['ID'] ) {

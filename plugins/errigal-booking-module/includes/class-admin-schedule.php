@@ -101,6 +101,7 @@ class EMB_Admin_Schedule {
 		wp_register_script( 'bootstrap4-script', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', [ 'jquery', 'popper' ] );
 		wp_register_script( 'datetimepicker', 'https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js', [ 'jquery' ], null );
 		wp_register_script( 'schedule-script', $this->plugin->url . '/assets/js/schedule.js', [ 'jquery', 'swal', 'datetimepicker' ], null, true );
+		wp_register_script( 'jquery-validate', 'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js', [ 'jquery' ] );
 
 		wp_register_style( 'fullcalendar-style', $this->plugin->url . '/assets/js/fullcalendar-3.9.0/fullcalendar.min.css' );
 		wp_register_style( 'bootstrap4-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' );
@@ -116,6 +117,7 @@ class EMB_Admin_Schedule {
 			wp_enqueue_script( 'popper' );
 			wp_enqueue_script( 'bootstrap4-script' );
 			wp_enqueue_script( 'datetimepicker' );
+			wp_enqueue_script('jquery-validate');
 
 			wp_localize_script( 'schedule-script', 'tcajax', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 

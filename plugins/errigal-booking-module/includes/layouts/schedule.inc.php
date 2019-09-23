@@ -11,9 +11,6 @@ $students = get_users( [ 'role' => 'student' ] );
 </div>
 
 
-
-
-
 <div class="modal fade" id="lessonModal">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
@@ -24,10 +21,10 @@ $students = get_users( [ 'role' => 'student' ] );
 				</button>
 			</div>
 			<div class="modal-body">
-				<form id="lesson-form">
+				<form id="lesson-form" action="#">
 					<input type="hidden" name="id" id="id" value="">
 				<div class="form-group">
-					<input id="datetimepicker" name="start_time"/>
+					<input id="datetimepicker" name="start_time" required/>
 				</div>
 				<div class="form-group">
 					<label for="student">Student</label>
@@ -46,7 +43,7 @@ $students = get_users( [ 'role' => 'student' ] );
 				</div>
 					<div class="form-group">
 						<label for="lesson_type">Lesson Type</label>
-						<select class="form-control" id="lesson_type" name="lesson_type">
+						<select class="form-control" id="lesson-type" name="lesson_type" required>
 							<option></option>
 							<?php
 							if ( have_rows( 'lesson_types', 'option' ) ) {
@@ -67,7 +64,7 @@ $students = get_users( [ 'role' => 'student' ] );
 					</div>
 					<div class="form-group">
 						<label for="location">Lesson Location</label>
-						<select class="form-control" id="lesson_location" name="lesson_location">
+						<select class="form-control" id="lesson-location" name="lesson_location" required>
 							<option></option>
 							<option value="online">Online</option>
 							<option value="student_home">Student's Home</option>

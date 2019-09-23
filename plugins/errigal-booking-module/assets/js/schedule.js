@@ -7,7 +7,12 @@ jQuery(document).ready(function ($) {
 	let lessonModal = $('#lessonModal');
 	let saveButton = $('#saveButton');
 	let lessonForm = $('#lesson-form');
-	let lessonType = $('#lesson_type');
+	let lessonType = $('#lesson-type');
+
+	lessonForm.validate({
+		start_time: "required"
+	});
+
 
 	var cost;
 	var length;
@@ -19,7 +24,7 @@ jQuery(document).ready(function ($) {
 	};
 	getCostAndLength();
 	// Ensure we update every time it changes.
-	$(document).on('change',"#lesson_type", getCostAndLength);
+	$(document).on('change',"#lesson-type", getCostAndLength);
 
 	var clearForm = function() {
 		lessonModal.find('#lesson-modal-title').html("New Lesson");
@@ -49,7 +54,7 @@ jQuery(document).ready(function ($) {
 
 	// Kick off the save request.
 	saveButton.on('click', function (e) {
-		e.preventDefault();
+		//e.preventDefault();
 		// If the hidden field contains an ID, then we know we're editing existing
 		if ("" !== lessonModal.find("#id").val()) {
 			Swal.fire({
@@ -198,8 +203,8 @@ jQuery(document).ready(function ($) {
 				success: function (response) {
 					console.log(response);
 					lessonModal.find("#student").val(response.student_id);
-					lessonModal.find("#lesson_type").val(response.lesson_type);
-					lessonModal.find("#lesson_location").val(response.lesson_location);
+					lessonModal.find("#lesson-type").val(response.lesson_type);
+					lessonModal.find("#lesson-location").val(response.lesson_location);
 					lessonModal.find('#notes').text(response.notes);
 					lessonModal.find("#saveButton").html("Save").prop('disabled', false);
 					getCostAndLength();
